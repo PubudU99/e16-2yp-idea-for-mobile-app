@@ -18,7 +18,7 @@
   </ul>
 
   <h2 id="problem-overview">1. Problem Overview</h2>
-  <p>When we Ask from patients,Doctors,Staff,non staff members of the hospital, They oftenly says that the Hospital need a Patient management system for a hospital,When ourselves attend to a hospital we also get the need of a Patient management system because the current system has many problems regardint patient management.After a quick reserch of a hospital we came up to some problems of the Patient management system.
+  <p>When we Ask from patients,Doctors,Staff,non staff members of the hospital, They always says that the Hospital need a Patient management system for a hospital,When we attend to a hospital we also get the need of a Patient management system because the current system has many problems regarding patient management.After a quick research of a hospital management, we came up to some problems of the Patient management system.
   <h3>Main Problems Found After Research </h3>
   <ol>
     <li>
