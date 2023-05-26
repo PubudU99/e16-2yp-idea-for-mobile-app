@@ -59,7 +59,7 @@
   <p>After discussing with our team members we come up with a plan to design a Android app for all the members in hospital as a solution for the above all problems</p>
 
   <h2 id="solution-architecture">3. Solution Architecture</h2>
-  <p><img src="CAPTURE.png" alt="Italian Trulli"></p>
+  <p><img src="Project_Images/Capture.PNG" alt="Solution_Archi"></p>
 
   <h2 id="software-designs">4. Software Designs</h2>
   <p></p>
