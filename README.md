@@ -63,7 +63,7 @@
   <h2 id="solution-architecture">3. Solution Architecture</h2>
   <p><img src="Project_Images/Capture.PNG" alt="Solution_Archi"></p>
 
-  <h2 id="software-designs">4. Software Designs</h2>
+  <h2 id="software-designs">4. Software designs</h2>
   <p></p>
 </body>
 </html>
