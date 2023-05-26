@@ -1,5 +1,7 @@
-# e19-2yp-idea-for-mobile-app
-<h1>InCarePro - Solution for the Inpatient Hospital Management System</h1>
+# e19-CO225 Project-IDEA FOR MOBILE APP
+
+
+<h1><b>InCarePro</b> - Solution for the Inpatient Hospital Management System</h1>
 
 <h2>Team Members</h2>
 <h4>Group 04</h4>
