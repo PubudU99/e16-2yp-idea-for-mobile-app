@@ -8,12 +8,12 @@
 <li>E/19/034 BAMBARAGAMA H.M.K.D. MR</li>
 <li><a href="https://github.com/Madhushanka00  ">Madhushanka00</a> E/19/226 MADHUSHANKA K.G.M. MR</li>
 <li>E/19/426 WEERASINGHE P.M. MR</li>
-<li>E/19/310 RANAGE R.D.P.R. MR</li>
+<li><a href="https://github.com/PasinduRR">PasinduRR</a> E/19/310 RANAGE R.D.P.R. MR</li>
 
 <h4>Group 10</h4>
 <li>E/19/432 WICKRAMAARACHCHI U.I. MR</li>
 <li>E/19/167 JAYAWARDENA H.D.N.S. MISS</li>
-<li>E/19/028 ATUGEDARA A.N.I. MISS</li>https://github.com/NilakshiInduwara
+<li><a href="https://github.com/NilakshiInduwara">NilakshiInduwara</a> E/19/028 ATUGEDARA A.N.I. MISS</li>
 <li><a href="https://github.com/DhinushikaAbrew">DhinushikaAbrew</a>  E/19/006 ABREW S.T.D. MISS</li>
 
 
