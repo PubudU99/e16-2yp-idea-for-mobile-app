@@ -18,6 +18,7 @@ public class MainActivity3 extends AppCompatActivity {
     TextView Meal;
     TextView TimeDuration;
     ImageButton goBackButton;
+    ImageButton toReport;
     private  String text_Checkup_type="Medical Checkup- Routine";
     private String Doc_Name="Dr. Dhammike Kumara";
     private  String Doc_Title="Medical Specialist";
@@ -40,6 +41,7 @@ public class MainActivity3 extends AppCompatActivity {
         DocName=findViewById(R.id.docName);
         DocTitle=findViewById(R.id.docTitle);
         prescription=findViewById(R.id.prescription);
+        toReport=findViewById(R.id.toReport);
         checkupType.setText(text_Checkup_type);
         Meal=findViewById(R.id.mealID);
         TimeDuration=findViewById(R.id.timeID);
@@ -49,6 +51,14 @@ public class MainActivity3 extends AppCompatActivity {
         prescription.setText(tabletDetails);
         Meal.setText(meal);
         TimeDuration.setText(timeDuration);
+
+        toReport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i3= new Intent(getApplicationContext(), Medical_Report.class);
+                startActivity(i3);
+            }
+        });
 
         goBackButton.setOnClickListener(new View.OnClickListener() {
             @Override
