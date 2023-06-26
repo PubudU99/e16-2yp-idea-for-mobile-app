@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import java.time.LocalDate;
+import java.util.Calendar;
+
 
 public class MainActivity3 extends AppCompatActivity {
 
@@ -14,11 +17,15 @@ public class MainActivity3 extends AppCompatActivity {
     TextView heartRate;
     TextView DocName;
     TextView DocTitle;
+    TextView dateTxt;
     TextView prescription;
     TextView Meal;
     TextView TimeDuration;
     ImageButton goBackButton;
     ImageButton toReport;
+    Calendar calendar;
+    int day, month, year;
+
     private  String text_Checkup_type="Medical Checkup- Routine";
     private String Doc_Name="Dr. Dhammike Kumara";
     private  String Doc_Title="Medical Specialist";
@@ -51,6 +58,14 @@ public class MainActivity3 extends AppCompatActivity {
         prescription.setText(tabletDetails);
         Meal.setText(meal);
         TimeDuration.setText(timeDuration);
+        dateTxt=findViewById(R.id.dateTxt);
+        // create a calender instance
+        calendar = Calendar.getInstance();
+        year = calendar.get(Calendar.YEAR);
+        month = calendar.get(Calendar.MONTH);
+        day = calendar.get(Calendar.DAY_OF_MONTH);
+
+        displayDate(year, month, day);
 
         toReport.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,5 +84,11 @@ public class MainActivity3 extends AppCompatActivity {
         });
 
 
+    }
+
+    private void displayDate(int year, int month, int day) {
+        month=month+1;
+        String date = day+"/"+month+"/"+year;
+        dateTxt.setText(date);
     }
 }

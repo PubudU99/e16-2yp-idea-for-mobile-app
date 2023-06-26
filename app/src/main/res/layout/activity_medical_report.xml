@@ -36,14 +36,14 @@
             android:id="@+id/imageView26"
             android:layout_width="467dp"
             android:layout_height="677dp"
-            android:layout_marginTop="164dp"
+            android:layout_marginTop="204dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/imageView25"
             app:srcCompat="@drawable/rectangle_13" />
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/goBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#00FFFFFF"
@@ -68,7 +68,7 @@
             app:srcCompat="@drawable/healthstatus" />
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/calander"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#00FFFFFF"
@@ -305,12 +305,81 @@
             app:srcCompat="@drawable/ureport" />
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/bloodRepo"
             android:layout_width="325dp"
-            android:layout_height="218dp"
+            android:layout_height="241dp"
+            android:lineSpacingExtra="8sp"
             android:text="TextView"
-            tools:layout_editor_absoluteX="41dp"
-            tools:layout_editor_absoluteY="524dp" />
+            android:textAlignment="textStart"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView54"
+            app:layout_constraintEnd_toEndOf="@+id/imageView54"
+            app:layout_constraintHorizontal_bias="0.548"
+            app:layout_constraintStart_toStartOf="@+id/imageView54"
+            app:layout_constraintTop_toTopOf="@+id/imageView54"
+            app:layout_constraintVertical_bias="0.87" />
+
+        <TextView
+            android:id="@+id/bloodvalues"
+            android:layout_width="201dp"
+            android:layout_height="241dp"
+            android:lineSpacingExtra="8sp"
+            android:text="TextView"
+            android:textAlignment="textEnd"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/bloodRepo"
+            app:layout_constraintEnd_toEndOf="@+id/bloodRepo"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/bloodRepo"
+            app:layout_constraintTop_toTopOf="@+id/imageView54"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/urinerepo"
+            android:layout_width="221dp"
+            android:layout_height="290dp"
+            android:lineSpacingExtra="8sp"
+            android:text="TextView"
+            android:textAlignment="textStart"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView55"
+            app:layout_constraintEnd_toEndOf="@+id/imageView55"
+            app:layout_constraintHorizontal_bias="0.17"
+            app:layout_constraintStart_toStartOf="@+id/imageView55"
+            app:layout_constraintTop_toTopOf="@+id/imageView55"
+            app:layout_constraintVertical_bias="0.73" />
+
+        <TextView
+            android:id="@+id/urinevalues"
+            android:layout_width="221dp"
+            android:layout_height="290dp"
+            android:lineSpacingExtra="8sp"
+            android:text="TextView"
+            android:textAlignment="textEnd"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView55"
+            app:layout_constraintEnd_toEndOf="@+id/imageView55"
+            app:layout_constraintHorizontal_bias="0.896"
+            app:layout_constraintStart_toStartOf="@+id/imageView55"
+            app:layout_constraintTop_toTopOf="@+id/imageView55"
+            app:layout_constraintVertical_bias="0.73" />
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--/--/----"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/imageView42"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.079"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView26"
+            app:layout_constraintVertical_bias="0.809" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
