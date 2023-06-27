@@ -106,7 +106,7 @@
         app:srcCompat="@drawable/status" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/apptSeeAll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#00FFFFFF"

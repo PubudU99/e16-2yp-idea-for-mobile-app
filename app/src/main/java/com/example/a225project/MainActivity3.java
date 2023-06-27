@@ -6,8 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
-import java.time.LocalDate;
+
 import java.util.Calendar;
 
 
@@ -23,6 +24,7 @@ public class MainActivity3 extends AppCompatActivity {
     TextView TimeDuration;
     ImageButton goBackButton;
     ImageButton toReport;
+    ImageButton appointmentSeeAll;
     Calendar calendar;
     int day, month, year;
 
@@ -56,6 +58,7 @@ public class MainActivity3 extends AppCompatActivity {
         DocName.setText(Doc_Name);
         DocTitle.setText(Doc_Title);
         prescription.setText(tabletDetails);
+        appointmentSeeAll=findViewById(R.id.apptSeeAll);
         Meal.setText(meal);
         TimeDuration.setText(timeDuration);
         dateTxt=findViewById(R.id.dateTxt);
@@ -72,6 +75,13 @@ public class MainActivity3 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i3= new Intent(getApplicationContext(), Medical_Report.class);
                 startActivity(i3);
+            }
+        });
+        appointmentSeeAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i4= new Intent(getApplicationContext(), Medical_Appoinments.class);
+                startActivity(i4);
             }
         });
 
