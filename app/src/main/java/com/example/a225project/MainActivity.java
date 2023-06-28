@@ -50,31 +50,41 @@ public class MainActivity extends AppCompatActivity {
                 String username = usernameEditText.getText().toString().trim();
                 String password = passwordEditText.getText().toString().trim();
 
+
+                startActivity(new Intent(getApplicationContext(), MainActivity3.class));
+
                 // check user type.
-                String invalidUserReturns = "invalid";
-                String userType = checkUser(username);
-
-                if(invalidUserReturns.equals(userType)){
-                    Toast.makeText(MainActivity.this, "Invalid username1.", Toast.LENGTH_SHORT).show();
-
-                }else{
-                    // class for each usertype.
-                    Class<?> userActivity = getActivity(userType);
-
-                    getEmailForUsername(username, password, userActivity, userType);
-                }
+//                String invalidUserReturns = "invalid";
+//                String userType;
+//
+//                if(username.length() != 0){
+//                    userType = checkUser(username);
+//                }else{
+//                    userType = invalidUserReturns;
+//                }
+//
+//
+//                if(invalidUserReturns.equals(userType)){
+//                    Toast.makeText(MainActivity.this, "Invalid username1.", Toast.LENGTH_SHORT).show();
+//
+//                }else{
+//                    // class for each usertype.
+//                    Class<?> userActivity = getActivity(userType);
+//
+//                    getEmailForUsername(username, password, userActivity, userType);
+//                }
 
             }
         });
 
         //btnPasswordReset = findViewById(R.id.pw_reset);
 
-        btnPasswordReset.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //startActivity(new Intent(getApplicationContext(), PasswordResetActivity.class));
-            }
-        });
+//        btnPasswordReset.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                //startActivity(new Intent(getApplicationContext(), PasswordResetActivity.class));
+//            }
+//        });
     }
 
     private void loginUserWithEmail(String email, String password, Class<?> userActivity) {
@@ -91,8 +101,7 @@ public class MainActivity extends AppCompatActivity {
                             // Proceed with necessary actions (e.g., navigate to home screen)
                         } else {
                             // Login failed
-                            Toast.makeText(MainActivity.this, "Login failed: " + Objects.requireNonNull(task.getException()).getMessage(),
-                                    // change - getMesssage()
+                            Toast.makeText(MainActivity.this, "Login failed: " + task.getException().getMessage(),
                                     Toast.LENGTH_SHORT).show();
                             System.out.println("Login failed: " + task.getException().getMessage());
                         }
