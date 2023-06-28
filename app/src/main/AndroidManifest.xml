@@ -13,6 +13,9 @@
         android:theme="@style/Theme.225Project"
         tools:targetApi="31">
         <activity
+            android:name=".PatientPrescriptions"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
