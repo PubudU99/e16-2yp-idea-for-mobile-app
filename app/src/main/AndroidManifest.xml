@@ -24,6 +24,47 @@
         <activity
             android:name=".MainActivity3"
             android:exported="false" />
+
+        <activity
+            android:name=".adminHome"
+            android:exported="false" />
+
+        <activity
+            android:name=".registration"
+            android:exported="false" />
+
+        <activity
+            android:name=".adminReg"
+            android:exported="false" />
+
+        <activity
+            android:name=".patientAdmittance"
+            android:exported="false" />
+
+        <activity
+            android:name=".updatesWard"
+            android:exported="false" />
+
+        <activity
+            android:name=".view"
+            android:exported="false" />
+
+        <activity
+            android:name=".patientReg"
+            android:exported="false" />
+
+        <activity
+            android:name=".doctorReg"
+            android:exported="false" />
+
+        <activity
+            android:name=".regNurse"
+            android:exported="false" />
+
+        <activity
+            android:name=".caregiverReg"
+            android:exported="false" />
+
         <activity
             android:name=".MainActivity2"
             android:exported="false" />

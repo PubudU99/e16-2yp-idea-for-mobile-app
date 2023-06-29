@@ -51,28 +51,28 @@ public class MainActivity extends AppCompatActivity {
                 String password = passwordEditText.getText().toString().trim();
 
 
-                startActivity(new Intent(getApplicationContext(), MainActivity3.class));
+                //startActivity(new Intent(getApplicationContext(), MainActivity3.class));
 
                 // check user type.
-//                String invalidUserReturns = "invalid";
-//                String userType;
-//
-//                if(username.length() != 0){
-//                    userType = checkUser(username);
-//                }else{
-//                    userType = invalidUserReturns;
-//                }
-//
-//
-//                if(invalidUserReturns.equals(userType)){
-//                    Toast.makeText(MainActivity.this, "Invalid username1.", Toast.LENGTH_SHORT).show();
-//
-//                }else{
-//                    // class for each usertype.
-//                    Class<?> userActivity = getActivity(userType);
-//
-//                    getEmailForUsername(username, password, userActivity, userType);
-//                }
+                String invalidUserReturns = "invalid";
+                String userType;
+
+                if(username.length() != 0){
+                    userType = checkUser(username);
+                }else{
+                    userType = invalidUserReturns;
+                }
+
+
+                if(invalidUserReturns.equals(userType)){
+                    Toast.makeText(MainActivity.this, "Invalid username1.", Toast.LENGTH_SHORT).show();
+
+                }else{
+                    // class for each usertype.
+                    Class<?> userActivity = getActivity(userType);
+
+                    getEmailForUsername(username, password, userActivity, userType);
+                }
 
             }
         });
@@ -190,7 +190,7 @@ public class MainActivity extends AppCompatActivity {
             return MainActivity2.class;
         }
         else{
-            return MainActivity2.class; // return admin class.
+            return adminHome.class; // return admin class.
         }
 
     }
