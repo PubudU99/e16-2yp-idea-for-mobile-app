@@ -1,417 +1,398 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#6877A1"
-    tools:context=".doctorReg">
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
 
-    <EditText
-        android:id="@+id/editTextText10"
-        android:layout_width="332dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="404dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView100" />
-
-    <EditText
-        android:id="@+id/editTextText9"
-        android:layout_width="332dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="308dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.556"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView100" />
-
-    <EditText
-        android:id="@+id/editTextText8"
-        android:layout_width="332dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="204dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.556"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView100" />
-
-    <EditText
-        android:id="@+id/editTextText7"
-        android:layout_width="332dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="104dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.556"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView100" />
-
-    <EditText
-        android:id="@+id/editTextText6"
-        android:layout_width="332dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.556"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView100" />
-
-    <TextView
-        android:id="@+id/textView36"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="Registration"
-        android:textColor="#FAF9F9"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.06"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="#6877A1"
+        tools:context=".doctorReg">
 
-    <TextView
-        android:id="@+id/textView35"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:text="Doctor"
-        android:textColor="#FAF9F9"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/imageView56"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/coverarea" />
 
-    <ImageView
-        android:id="@+id/imageView84"
-        android:layout_width="515dp"
-        android:layout_height="1148dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView36"
-        app:srcCompat="@drawable/docreg" />
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:text="Doctor"
+            android:textColor="#FAF9F9"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.054"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView104"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.695"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView103"
-        app:srcCompat="@drawable/type" />
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="Registration"
+            android:textColor="#FAF9F9"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.065"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView57"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Assigned Ward"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.098"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView103" />
+        <ImageView
+            android:id="@+id/imageView84"
+            android:layout_width="557dp"
+            android:layout_height="698dp"
+            android:layout_marginTop="156dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/rectangle_13" />
 
-    <ImageView
-        android:id="@+id/imageView103"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="132dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.695"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView101"
-        app:srcCompat="@drawable/type" />
+        <ImageView
+            android:id="@+id/imageView104"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView57"
+            app:srcCompat="@drawable/type" />
 
-    <TextView
-        android:id="@+id/textView56"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Password"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.099"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView102" />
+        <TextView
+            android:id="@+id/textView57"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Assigned Ward"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.098"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView103" />
 
-    <TextView
-        android:id="@+id/textView55"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Doctor ID"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.099"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView101" />
+        <ImageView
+            android:id="@+id/imageView103"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView56"
+            app:srcCompat="@drawable/type" />
 
-    <ImageView
-        android:id="@+id/imageView102"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.695"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView101"
-        app:srcCompat="@drawable/type" />
+        <TextView
+            android:id="@+id/textView56"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.099"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView102" />
 
-    <ImageView
-        android:id="@+id/imageView101"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView100"
-        app:srcCompat="@drawable/type" />
+        <TextView
+            android:id="@+id/textView55"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Doctor ID"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.099"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView101" />
 
-    <TextView
-        android:id="@+id/textView53"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.085"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView100" />
+        <ImageView
+            android:id="@+id/imageView102"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView55"
+            app:srcCompat="@drawable/type" />
 
-    <EditText
-        android:id="@+id/editTextText4"
-        android:layout_width="332dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="204dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.556"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView97" />
+        <ImageView
+            android:id="@+id/imageView101"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView53"
+            app:srcCompat="@drawable/type" />
 
-    <EditText
-        android:id="@+id/editTextText5"
-        android:layout_width="332dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.556"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView100" />
+        <TextView
+            android:id="@+id/textView53"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.085"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView100" />
 
-    <ImageView
-        android:id="@+id/imageView100"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView99"
-        app:srcCompat="@drawable/type" />
+        <ImageButton
+            android:id="@+id/regDoctorSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView104"
+            app:srcCompat="@drawable/submit" />
 
-    <ImageView
-        android:id="@+id/imageViewd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView104"
-        app:srcCompat="@drawable/submit" />
+        <ImageView
+            android:id="@+id/imageView100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView52"
+            app:srcCompat="@drawable/type" />
 
-    <TextView
-        android:id="@+id/textView54"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="176dp"
-        android:text="SUBMIT"
-        android:textColor="#F8F7F7"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView103" />
+        <TextView
+            android:id="@+id/textView54"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUBMIT"
+            android:textColor="#F8F7F7"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView56"
+            app:layout_constraintEnd_toEndOf="@+id/regDoctorSubmit"
+            app:layout_constraintStart_toStartOf="@+id/regDoctorSubmit"
+            app:layout_constraintTop_toBottomOf="@+id/imageView104"
+            app:layout_constraintVertical_bias="0.444" />
 
-    <TextView
-        android:id="@+id/textView52"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Birth Date"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.083"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView99" />
+        <TextView
+            android:id="@+id/textView52"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Birth Date"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.083"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView99" />
 
-    <ImageView
-        android:id="@+id/imageView99"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView98"
-        app:srcCompat="@drawable/type" />
+        <ImageView
+            android:id="@+id/imageView99"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView51"
+            app:srcCompat="@drawable/type" />
 
-    <ImageView
-        android:id="@+id/imageView105"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="368dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/topback" />
+        <TextView
+            android:id="@+id/textView51"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NIC"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.095"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView98" />
 
-    <TextView
-        android:id="@+id/textView51"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="NIC"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.095"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView98" />
+        <ImageView
+            android:id="@+id/imageView98"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView50"
+            app:srcCompat="@drawable/type" />
 
-    <ImageView
-        android:id="@+id/imageView98"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView97"
-        app:srcCompat="@drawable/type" />
+        <TextView
+            android:id="@+id/textView50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.096"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView97" />
 
-    <TextView
-        android:id="@+id/textView50"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Phone Number"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView97" />
+        <TextView
+            android:id="@+id/textView49"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView96" />
 
-    <TextView
-        android:id="@+id/textView49"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Address"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.089"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView96" />
-
-    <EditText
-        android:id="@+id/editTextText3"
-        android:layout_width="332dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="108dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.556"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView97" />
-
-    <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="332dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.556"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView97" />
-
-    <ImageView
-        android:id="@+id/imageView96"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.565"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView84"
-        app:srcCompat="@drawable/type" />
+        <ImageView
+            android:id="@+id/imageView96"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView37"
+            app:srcCompat="@drawable/type" />
 
 
-    <ImageView
-        android:id="@+id/imageView97"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView96"
-        app:srcCompat="@drawable/type" />
+        <ImageView
+            android:id="@+id/imageView97"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView49"
+            app:srcCompat="@drawable/type" />
 
-    <TextView
-        android:id="@+id/textView37"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="Name"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.083"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView84" />
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="Name"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.083"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView84" />
 
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="332dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.556"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView96" />
+        <EditText
+            android:id="@+id/regDoctorName"
+            android:layout_width="338dp"
+            android:layout_height="44dp"
+            android:background="@drawable/edittext_bg"
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView96"
+            app:layout_constraintEnd_toEndOf="@+id/imageView96"
+            app:layout_constraintStart_toStartOf="@+id/imageView96"
+            app:layout_constraintTop_toTopOf="@+id/imageView96" />
+
+        <EditText
+            android:id="@+id/regDoctorAddress"
+            android:layout_width="338dp"
+            android:layout_height="44dp"
+            android:background="@drawable/edittext_bg"
+            android:ems="10"
+            android:hint="Address"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView97"
+            app:layout_constraintEnd_toEndOf="@+id/imageView97"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="@+id/imageView97"
+            app:layout_constraintTop_toTopOf="@+id/imageView97" />
+
+        <EditText
+            android:id="@+id/regDoctorPhoneNo"
+            android:layout_width="338dp"
+            android:layout_height="44dp"
+            android:background="@drawable/edittext_bg"
+            android:ems="10"
+            android:hint="PhonrNo"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView98"
+            app:layout_constraintEnd_toEndOf="@+id/imageView98"
+            app:layout_constraintStart_toStartOf="@+id/imageView98"
+            app:layout_constraintTop_toTopOf="@+id/imageView98" />
+
+        <EditText
+            android:id="@+id/regDoctorNIC"
+            android:layout_width="338dp"
+            android:layout_height="44dp"
+            android:background="@drawable/edittext_bg"
+            android:ems="10"
+            android:hint="NIC"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView99"
+            app:layout_constraintEnd_toEndOf="@+id/imageView99"
+            app:layout_constraintStart_toStartOf="@+id/imageView99"
+            app:layout_constraintTop_toTopOf="@+id/imageView99" />
+
+        <EditText
+            android:id="@+id/regDoctorBDate"
+            android:layout_width="338dp"
+            android:layout_height="44dp"
+            android:background="@drawable/edittext_bg"
+            android:ems="10"
+            android:hint="Birth Date"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView100"
+            app:layout_constraintEnd_toEndOf="@+id/imageView100"
+            app:layout_constraintStart_toStartOf="@+id/imageView100"
+            app:layout_constraintTop_toTopOf="@+id/imageView56" />
+
+        <EditText
+            android:id="@+id/regDoctorEmail"
+            android:layout_width="338dp"
+            android:layout_height="44dp"
+            android:background="@drawable/edittext_bg"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView101"
+            app:layout_constraintEnd_toEndOf="@+id/imageView101"
+            app:layout_constraintStart_toStartOf="@+id/imageView101"
+            app:layout_constraintTop_toTopOf="@+id/imageView101" />
+
+        <EditText
+            android:id="@+id/regDoctorDoctorID"
+            android:layout_width="338dp"
+            android:layout_height="44dp"
+            android:background="@drawable/edittext_bg"
+            android:ems="10"
+            android:hint="Doctor ID"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView102"
+            app:layout_constraintEnd_toEndOf="@+id/imageView102"
+            app:layout_constraintStart_toStartOf="@+id/imageView102"
+            app:layout_constraintTop_toTopOf="@+id/imageView102" />
+
+        <EditText
+            android:id="@+id/regDoctorPassword"
+            android:layout_width="338dp"
+            android:layout_height="44dp"
+            android:background="@drawable/edittext_bg"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView103"
+            app:layout_constraintEnd_toEndOf="@+id/imageView103"
+            app:layout_constraintStart_toStartOf="@+id/imageView103"
+            app:layout_constraintTop_toTopOf="@+id/imageView103" />
+
+        <EditText
+            android:id="@+id/regDoctorAssignWard"
+            android:layout_width="338dp"
+            android:layout_height="44dp"
+            android:background="@drawable/edittext_bg"
+            android:ems="10"
+            android:hint="Assignrd Ward"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView104"
+            app:layout_constraintEnd_toEndOf="@+id/imageView104"
+            app:layout_constraintStart_toStartOf="@+id/imageView104"
+            app:layout_constraintTop_toTopOf="@+id/imageView104" />
+
+        <ImageButton
+            android:id="@+id/regDoctorGoBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="#00FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ionic_arrow_back" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

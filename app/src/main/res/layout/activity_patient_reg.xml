@@ -269,7 +269,7 @@
         android:background="@drawable/edittext_bg"
         android:ems="10"
         android:hint="PhoneNo"
-        android:inputType="text"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="@+id/imageView88"
         app:layout_constraintStart_toStartOf="@+id/imageView88"
         app:layout_constraintTop_toTopOf="@+id/imageView88" />
