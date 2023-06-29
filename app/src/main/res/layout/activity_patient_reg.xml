@@ -26,123 +26,105 @@
         android:id="@+id/imageView93"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="800dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.826"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView85"
+        app:layout_constraintTop_toBottomOf="@+id/textView46"
         app:srcCompat="@drawable/type" />
 
     <TextView
         android:id="@+id/textView47"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="664dp"
         android:text="Patient ID"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.061"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView85" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView91" />
 
     <TextView
         android:id="@+id/textView46"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="764dp"
         android:text="Password"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.061"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView85" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView92" />
 
     <ImageView
         android:id="@+id/imageView92"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="696dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.826"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView85"
+        app:layout_constraintTop_toBottomOf="@+id/textView47"
         app:srcCompat="@drawable/type" />
 
     <TextView
         android:id="@+id/textView41"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="136dp"
         android:text="Address"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.074"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView85" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView86" />
 
     <ImageView
         android:id="@+id/imageView91"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="596dp"
-        android:layout_marginEnd="4dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView45"
         app:srcCompat="@drawable/type" />
 
     <ImageView
         android:id="@+id/imageView90"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="492dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.695"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView85"
+        app:layout_constraintTop_toBottomOf="@+id/textView44"
         app:srcCompat="@drawable/type" />
 
     <ImageView
         android:id="@+id/imageView89"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="384dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.695"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView85"
+        app:layout_constraintTop_toBottomOf="@+id/textView43"
         app:srcCompat="@drawable/type" />
 
     <ImageView
         android:id="@+id/imageView88"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="276dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.695"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView85"
+        app:layout_constraintTop_toBottomOf="@+id/textView42"
         app:srcCompat="@drawable/type" />
 
     <ImageView
         android:id="@+id/imageView87"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="168dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.695"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView85"
+        app:layout_constraintTop_toBottomOf="@+id/textView41"
         app:srcCompat="@drawable/type" />
 
     <ImageView
         android:id="@+id/imageView86"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.695"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView85"
+        app:layout_constraintTop_toBottomOf="@+id/textView40"
         app:srcCompat="@drawable/type" />
 
     <TextView
@@ -175,22 +157,23 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/imageView85"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView93"
         app:srcCompat="@drawable/submit" />
 
     <TextView
         android:id="@+id/textView48"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
         android:text="SUBMIT"
         android:textColor="#FFFCFC"
         android:textColorHint="#FFFDFD"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView94"
         app:layout_constraintEnd_toEndOf="@+id/imageView94"
-        app:layout_constraintStart_toStartOf="@+id/imageView94" />
+        app:layout_constraintStart_toStartOf="@+id/imageView94"
+        app:layout_constraintTop_toTopOf="@+id/imageView94"
+        app:layout_constraintVertical_bias="0.32999998" />
 
     <TextView
         android:id="@+id/textView39"
@@ -204,7 +187,8 @@
         app:layout_constraintBottom_toTopOf="@+id/imageView85"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.076"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView38" />
 
     <TextView
         android:id="@+id/textView40"
@@ -222,49 +206,149 @@
         android:id="@+id/textView45"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="564dp"
         android:text="Email"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.074"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView85" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView90" />
 
     <TextView
         android:id="@+id/textView44"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="460dp"
         android:text="Birth Date"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.074"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView85" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView89" />
 
     <TextView
         android:id="@+id/textView42"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="244dp"
         android:text="Phone Number"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.077"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView85" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView87" />
 
     <TextView
         android:id="@+id/textView43"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="352dp"
         android:text="NIC"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.077"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView85" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView88" />
+
+    <EditText
+        android:id="@+id/editTextText11"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Name"
+        app:layout_constraintEnd_toEndOf="@+id/imageView86"
+        app:layout_constraintStart_toStartOf="@+id/imageView86"
+        app:layout_constraintTop_toTopOf="@+id/imageView86" />
+
+    <EditText
+        android:id="@+id/editTextText12"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:hint="Adress"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/imageView87"
+        app:layout_constraintStart_toStartOf="@+id/imageView87"
+        app:layout_constraintTop_toTopOf="@+id/imageView87" />
+
+    <EditText
+        android:id="@+id/editTextText13"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Name"
+        app:layout_constraintEnd_toEndOf="@+id/imageView88"
+        app:layout_constraintStart_toStartOf="@+id/imageView88"
+        app:layout_constraintTop_toTopOf="@+id/imageView88" />
+
+    <EditText
+        android:id="@+id/editTextText14"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Name"
+        app:layout_constraintEnd_toEndOf="@+id/imageView89"
+        app:layout_constraintStart_toStartOf="@+id/imageView89"
+        app:layout_constraintTop_toTopOf="@+id/imageView89" />
+
+    <EditText
+        android:id="@+id/editTextText16"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Name"
+        app:layout_constraintEnd_toEndOf="@+id/imageView90"
+        app:layout_constraintStart_toStartOf="@+id/imageView90"
+        app:layout_constraintTop_toTopOf="@+id/imageView90" />
+
+    <EditText
+        android:id="@+id/editTextText17"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Name"
+        app:layout_constraintEnd_toEndOf="@+id/imageView91"
+        app:layout_constraintStart_toStartOf="@+id/imageView91"
+        app:layout_constraintTop_toTopOf="@+id/imageView91" />
+
+    <EditText
+        android:id="@+id/editTextText18"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Name"
+        app:layout_constraintEnd_toEndOf="@+id/imageView92"
+        app:layout_constraintStart_toStartOf="@+id/imageView92"
+        app:layout_constraintTop_toTopOf="@+id/imageView92" />
+
+    <EditText
+        android:id="@+id/editTextText19"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Name"
+        app:layout_constraintEnd_toEndOf="@+id/imageView93"
+        app:layout_constraintStart_toStartOf="@+id/imageView93"
+        app:layout_constraintTop_toTopOf="@+id/imageView93" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
