@@ -141,18 +141,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView95"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.042"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/topback" />
-
-    <ImageView
-        android:id="@+id/imageView94"
+        android:id="@+id/btnPatientReg_Submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/imageView85"
@@ -169,10 +158,10 @@
         android:textColor="#FFFCFC"
         android:textColorHint="#FFFDFD"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView94"
-        app:layout_constraintEnd_toEndOf="@+id/imageView94"
-        app:layout_constraintStart_toStartOf="@+id/imageView94"
-        app:layout_constraintTop_toTopOf="@+id/imageView94"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPatientReg_Submit"
+        app:layout_constraintEnd_toEndOf="@+id/btnPatientReg_Submit"
+        app:layout_constraintStart_toStartOf="@+id/btnPatientReg_Submit"
+        app:layout_constraintTop_toTopOf="@+id/btnPatientReg_Submit"
         app:layout_constraintVertical_bias="0.32999998" />
 
     <TextView
@@ -247,20 +236,20 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView88" />
 
     <EditText
-        android:id="@+id/editTextText11"
+        android:id="@+id/regPatientName"
         android:layout_width="338dp"
         android:layout_height="44dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/edittext_bg"
         android:ems="10"
-        android:inputType="text"
         android:hint="Name"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="@+id/imageView86"
         app:layout_constraintStart_toStartOf="@+id/imageView86"
         app:layout_constraintTop_toTopOf="@+id/imageView86" />
 
     <EditText
-        android:id="@+id/editTextText12"
+        android:id="@+id/regPatientAddress"
         android:layout_width="338dp"
         android:layout_height="44dp"
         android:layout_marginTop="8dp"
@@ -273,82 +262,94 @@
         app:layout_constraintTop_toTopOf="@+id/imageView87" />
 
     <EditText
-        android:id="@+id/editTextText13"
+        android:id="@+id/regPatientPhoneNo"
         android:layout_width="338dp"
         android:layout_height="44dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/edittext_bg"
         android:ems="10"
+        android:hint="PhoneNo"
         android:inputType="text"
-        android:hint="Name"
         app:layout_constraintEnd_toEndOf="@+id/imageView88"
         app:layout_constraintStart_toStartOf="@+id/imageView88"
         app:layout_constraintTop_toTopOf="@+id/imageView88" />
 
     <EditText
-        android:id="@+id/editTextText14"
+        android:id="@+id/regPatientNIC"
         android:layout_width="338dp"
         android:layout_height="44dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/edittext_bg"
         android:ems="10"
+        android:hint="NIC"
         android:inputType="text"
-        android:hint="Name"
         app:layout_constraintEnd_toEndOf="@+id/imageView89"
         app:layout_constraintStart_toStartOf="@+id/imageView89"
         app:layout_constraintTop_toTopOf="@+id/imageView89" />
 
     <EditText
-        android:id="@+id/editTextText16"
+        android:id="@+id/regPatientBDate"
         android:layout_width="338dp"
         android:layout_height="44dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/edittext_bg"
         android:ems="10"
-        android:inputType="text"
-        android:hint="Name"
+        android:hint="BDate"
+        android:inputType="datetime|date"
         app:layout_constraintEnd_toEndOf="@+id/imageView90"
         app:layout_constraintStart_toStartOf="@+id/imageView90"
         app:layout_constraintTop_toTopOf="@+id/imageView90" />
 
     <EditText
-        android:id="@+id/editTextText17"
+        android:id="@+id/regPatientEmail"
         android:layout_width="338dp"
         android:layout_height="44dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/edittext_bg"
         android:ems="10"
-        android:inputType="text"
-        android:hint="Name"
+        android:hint="Email"
+        android:inputType="text|textWebEmailAddress"
         app:layout_constraintEnd_toEndOf="@+id/imageView91"
         app:layout_constraintStart_toStartOf="@+id/imageView91"
         app:layout_constraintTop_toTopOf="@+id/imageView91" />
 
     <EditText
-        android:id="@+id/editTextText18"
+        android:id="@+id/regPatientPatientID"
         android:layout_width="338dp"
         android:layout_height="44dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/edittext_bg"
         android:ems="10"
+        android:hint="Patient ID"
         android:inputType="text"
-        android:hint="Name"
         app:layout_constraintEnd_toEndOf="@+id/imageView92"
         app:layout_constraintStart_toStartOf="@+id/imageView92"
         app:layout_constraintTop_toTopOf="@+id/imageView92" />
 
     <EditText
-        android:id="@+id/editTextText19"
+        android:id="@+id/regPatientPassword"
         android:layout_width="338dp"
         android:layout_height="44dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/edittext_bg"
         android:ems="10"
+        android:hint="Password"
         android:inputType="text"
-        android:hint="Name"
         app:layout_constraintEnd_toEndOf="@+id/imageView93"
         app:layout_constraintStart_toStartOf="@+id/imageView93"
         app:layout_constraintTop_toTopOf="@+id/imageView93" />
+
+    <ImageButton
+        android:id="@+id/btn_regPatientGoBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ionic_arrow_back" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
