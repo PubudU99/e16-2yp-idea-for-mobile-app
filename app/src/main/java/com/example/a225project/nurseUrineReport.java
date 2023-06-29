@@ -33,7 +33,7 @@ public class nurseUrineReport extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nurse_blood_report);
+        setContentView(R.layout.activity_nurse_urine_report);
         AndroidThreeTen.init(this);
 
         color = findViewById(R.id.editTextText5);
