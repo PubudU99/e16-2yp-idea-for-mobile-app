@@ -37,18 +37,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView137" />
 
-    <TextView
-        android:id="@+id/textView92"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Password"
-        android:textColor="#040303"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.083"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView138" />
-
     <ImageView
         android:id="@+id/imageView131"
         android:layout_width="481dp"
@@ -80,15 +68,24 @@
         app:srcCompat="@drawable/type" />
 
     <ImageView
+        android:id="@+id/imageView181"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/imageView131"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/type"
+        tools:layout_editor_absoluteY="944dp" />
+
+    <ImageView
         android:id="@+id/imageView141"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="56dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView138"
         app:srcCompat="@drawable/submit" />
 
     <ImageView
@@ -145,6 +142,18 @@
         app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView135" />
+
+    <TextView
+        android:id="@+id/textView92"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textColor="#040303"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView138" />
 
     <ImageView
         android:id="@+id/imageView135"
@@ -263,7 +272,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView132" />
 
     <EditText
-        android:id="@+id/editTextText12"
+        android:id="@+id/regAdminAddress"
         android:layout_width="338dp"
         android:layout_height="44dp"
         android:layout_marginTop="8dp"
@@ -276,7 +285,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView133" />
 
     <EditText
-        android:id="@+id/editTextText13"
+        android:id="@+id/regAdminPhoneNum"
         android:layout_width="338dp"
         android:layout_height="44dp"
         android:layout_marginTop="8dp"
@@ -289,7 +298,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView134" />
 
     <EditText
-        android:id="@+id/editTextText14"
+        android:id="@+id/regAdminNIC"
         android:layout_width="338dp"
         android:layout_height="44dp"
         android:layout_marginTop="8dp"
@@ -302,7 +311,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView135" />
 
     <EditText
-        android:id="@+id/editTextText16"
+        android:id="@+id/regAdminBdate"
         android:layout_width="338dp"
         android:layout_height="44dp"
         android:layout_marginTop="8dp"
@@ -316,16 +325,16 @@
         app:layout_constraintTop_toTopOf="@+id/imageView136" />
 
     <EditText
-        android:id="@+id/editTextText17"
+        android:id="@+id/regAdminEmail"
         android:layout_width="338dp"
         android:layout_height="44dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/edittext_bg"
         android:ems="10"
         android:hint="Email"
-        app:layout_constraintHorizontal_bias="0.366"
         android:inputType="text|textWebEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.397"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView137" />
@@ -343,7 +352,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView137" />
 
     <EditText
-        android:id="@+id/editTextText11"
+        android:id="@+id/regAdminPassword"
         android:layout_width="338dp"
         android:layout_height="44dp"
         android:layout_marginTop="8dp"
