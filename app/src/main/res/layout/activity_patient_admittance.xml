@@ -11,6 +11,15 @@
     android:background="#6877A1"
     tools:context=".patientAdmittance">
 
+    <ImageView
+        android:id="@+id/imageView152"
+        android:layout_width="442dp"
+        android:layout_height="529dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/overlay" />
+
     <TextView
         android:id="@+id/textView94"
         android:layout_width="wrap_content"
@@ -27,11 +36,10 @@
 
     <ImageView
         android:id="@+id/imageView139"
-        android:layout_width="402dp"
-        android:layout_height="1829dp"
+        android:layout_width="485dp"
+        android:layout_height="1885dp"
         android:layout_marginTop="144dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/patient_reg" />
@@ -42,8 +50,9 @@
         android:layout_height="wrap_content"
         android:text="Medical History"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView158" />
 
@@ -63,7 +72,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.695"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView108"
         app:srcCompat="@drawable/type" />
@@ -94,13 +102,14 @@
         android:id="@+id/textView111"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="12dp"
         android:text="SUBMIT"
         android:textColor="#FAF8F8"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView160"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="@+id/imageView160"
-        app:layout_constraintTop_toBottomOf="@+id/imageView159" />
+        app:layout_constraintTop_toTopOf="@+id/imageView160" />
 
     <ImageView
         android:id="@+id/imageView159"
@@ -116,7 +125,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView107"
         app:srcCompat="@drawable/type" />
@@ -210,9 +218,11 @@
         android:id="@+id/imageView158"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView109"
-        app:srcCompat="@drawable/diagnosis"
-        tools:layout_editor_absoluteX="12dp" />
+        app:srcCompat="@drawable/diagnosis" />
 
     <ImageView
         android:id="@+id/imageView150"
@@ -396,5 +406,219 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView95"
         app:srcCompat="@drawable/type" />
+
+    <EditText
+        android:id="@+id/editTextText24"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Name"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView143"
+        app:layout_constraintEnd_toEndOf="@+id/imageView143"
+        app:layout_constraintStart_toStartOf="@+id/imageView143"
+        app:layout_constraintTop_toTopOf="@+id/imageView143" />
+
+    <EditText
+        android:id="@+id/editTextText26"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:hint="Phone No"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView145"
+        app:layout_constraintEnd_toEndOf="@+id/imageView145"
+        app:layout_constraintStart_toStartOf="@+id/imageView145"
+        app:layout_constraintTop_toTopOf="@+id/imageView145" />
+
+    <EditText
+        android:id="@+id/editTextText27"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:hint="NIC"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView146"
+        app:layout_constraintEnd_toEndOf="@+id/imageView146"
+        app:layout_constraintStart_toStartOf="@+id/imageView146"
+        app:layout_constraintTop_toTopOf="@+id/imageView146" />
+
+    <EditText
+        android:id="@+id/editTextText28"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:hint="Birth Date"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView147"
+        app:layout_constraintEnd_toEndOf="@+id/imageView147"
+        app:layout_constraintStart_toStartOf="@+id/imageView147"
+        app:layout_constraintTop_toTopOf="@+id/imageView147" />
+
+    <EditText
+        android:id="@+id/editTextText29"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView148"
+        app:layout_constraintEnd_toEndOf="@+id/imageView148"
+        app:layout_constraintStart_toStartOf="@+id/imageView148"
+        app:layout_constraintTop_toTopOf="@+id/imageView148" />
+
+    <EditText
+        android:id="@+id/editTextText30"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:hint="Patient ID"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView149"
+        app:layout_constraintEnd_toEndOf="@+id/imageView149"
+        app:layout_constraintStart_toStartOf="@+id/imageView149"
+        app:layout_constraintTop_toTopOf="@+id/imageView149" />
+
+    <EditText
+        android:id="@+id/editTextText31"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView150"
+        app:layout_constraintEnd_toEndOf="@+id/imageView150"
+        app:layout_constraintStart_toStartOf="@+id/imageView150"
+        app:layout_constraintTop_toTopOf="@+id/imageView150" />
+
+    <EditText
+        android:id="@+id/editTextText32"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:hint="Name Of Caregiver"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView151"
+        app:layout_constraintEnd_toEndOf="@+id/imageView151"
+        app:layout_constraintStart_toStartOf="@+id/imageView151"
+        app:layout_constraintTop_toTopOf="@+id/imageView151" />
+
+    <EditText
+        android:id="@+id/editTextText33"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:hint="Caregivers phone no"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView154"
+        app:layout_constraintEnd_toEndOf="@+id/imageView154"
+        app:layout_constraintStart_toStartOf="@+id/imageView154"
+        app:layout_constraintTop_toTopOf="@+id/imageView154" />
+
+    <EditText
+        android:id="@+id/editTextText34"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:hint="Assignrd Doctor"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView155"
+        app:layout_constraintEnd_toEndOf="@+id/imageView155"
+        app:layout_constraintStart_toStartOf="@+id/imageView155"
+        app:layout_constraintTop_toTopOf="@+id/imageView155" />
+
+    <EditText
+        android:id="@+id/editTextText35"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:hint="Assignrd Nurse"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView156"
+        app:layout_constraintEnd_toEndOf="@+id/imageView156"
+        app:layout_constraintStart_toStartOf="@+id/imageView156"
+        app:layout_constraintTop_toTopOf="@+id/imageView156" />
+
+    <EditText
+        android:id="@+id/editTextText36"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:hint="Assigned Ward"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView157"
+        app:layout_constraintEnd_toEndOf="@+id/imageView157"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="@+id/imageView157"
+        app:layout_constraintTop_toTopOf="@+id/imageView157" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine2"
+        android:layout_width="332dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:hint="Diagnostics"
+        android:inputType="text|textMultiLine"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView158"
+        app:layout_constraintEnd_toEndOf="@+id/imageView158"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toStartOf="@+id/imageView158"
+        app:layout_constraintTop_toTopOf="@+id/imageView158"
+        app:layout_constraintVertical_bias="0.169" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine3"
+        android:layout_width="325dp"
+        android:layout_height="158dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:hint="History"
+        android:inputType="text|textMultiLine"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView159"
+        app:layout_constraintEnd_toEndOf="@+id/imageView159"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toStartOf="@+id/imageView159"
+        app:layout_constraintTop_toTopOf="@+id/imageView159"
+        app:layout_constraintVertical_bias="0.125" />
+
+    <EditText
+        android:id="@+id/editTextText38"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:hint="Address"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView144"
+        app:layout_constraintEnd_toEndOf="@+id/imageView144"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="@+id/imageView144"
+        app:layout_constraintTop_toTopOf="@+id/imageView144" />
 </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

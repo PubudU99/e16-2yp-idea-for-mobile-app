@@ -13,6 +13,9 @@
         android:theme="@style/Theme.225Project"
         tools:targetApi="31">
         <activity
+            android:name=".EditProfile"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
@@ -24,70 +27,54 @@
         <activity
             android:name=".MainActivity3"
             android:exported="false" />
-
         <activity
             android:name=".adminHome"
             android:exported="false" />
-
         <activity
             android:name=".registration"
             android:exported="false" />
-
         <activity
             android:name=".adminReg"
             android:exported="false" />
-
         <activity
             android:name=".patientAdmittance"
             android:exported="false" />
-
         <activity
             android:name=".updatesWard"
             android:exported="false" />
-
         <activity
             android:name=".view"
             android:exported="false" />
-
         <activity
             android:name=".patientReg"
             android:exported="false" />
-
         <activity
             android:name=".doctorReg"
             android:exported="false" />
-
         <activity
             android:name=".regNurse"
             android:exported="false" />
-
         <activity
             android:name=".caregiverReg"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity2"
             android:exported="false" />
-
         <activity
             android:name=".nursrHome"
             android:exported="false" />
-
         <activity
             android:name=".SelectReport"
             android:exported="false" />
-
         <activity
             android:name=".nurseNewReports"
             android:exported="false" />
         <activity
             android:name=".nurseBloodReport"
             android:exported="false" />
-
         <activity
             android:name=".nurseUrineReport"
             android:exported="false" />
-
         <activity
             android:name=".SplashScreen"
             android:exported="true">
