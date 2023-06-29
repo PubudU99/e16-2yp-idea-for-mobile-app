@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -38,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
 
         usernameEditText = findViewById(R.id.editTextTextEmailAddress);
         passwordEditText = findViewById(R.id.editTextTextPassword);
+
+
 
         // Set OnClickListener for the login button
         loginButton = findViewById(R.id.loginBtn);

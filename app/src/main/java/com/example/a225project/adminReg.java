@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -31,10 +32,22 @@ public class adminReg extends AppCompatActivity {
     EditText  name, address, phoneNumber, NIC, birthDate, email, adminID, password;
     ImageButton submitBtn;
 
+    ImageView goBackBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_reg);
+
+        goBackBtn = findViewById(R.id.goBackbtn);
+
+        goBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i2 = new Intent(getApplicationContext(), registration.class);
+                startActivity(i2);
+            }
+        });
 
         mFirebaseDatabase = FirebaseDatabase.getInstance();
 

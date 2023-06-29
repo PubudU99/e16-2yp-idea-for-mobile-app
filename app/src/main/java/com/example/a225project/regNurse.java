@@ -3,6 +3,7 @@ package com.example.a225project;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -29,12 +30,22 @@ public class regNurse extends AppCompatActivity {
     // variables edittext
 
     EditText name, address, phoneNumber, NIC, birthDate, email, adminID, password, assignedWard;
-    ImageView submitBtn;
+    ImageView submitBtn, goBackBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reg_nurse);
+
+        goBackBtn = findViewById(R.id.imageView117);
+
+        goBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i2 = new Intent(getApplicationContext(), registration.class);
+                startActivity(i2);
+            }
+        });
 
         mFirebaseDatabase = FirebaseDatabase.getInstance();
 

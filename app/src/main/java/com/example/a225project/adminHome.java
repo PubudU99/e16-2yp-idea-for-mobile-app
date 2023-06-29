@@ -15,10 +15,22 @@ public class adminHome extends AppCompatActivity {
     ImageView updateImg;
     ImageView viewImg;
 
+    ImageView goBackBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_home);
+
+        goBackBtn = findViewById(R.id.imageButton);
+
+        goBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i2 = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(i2);
+            }
+        });
 
         registartionImg = findViewById(R.id.imageView63);
 

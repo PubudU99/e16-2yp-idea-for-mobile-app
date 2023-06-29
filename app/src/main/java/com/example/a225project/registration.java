@@ -9,12 +9,22 @@ import android.widget.ImageView;
 
 public class registration extends AppCompatActivity {
 
-    ImageView patientReg, doctorReg, nurseReg, caregiverReg, adminReg;
+    ImageView patientReg, doctorReg, nurseReg, caregiverReg, adminReg, goBackBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+
+        goBackBtn = findViewById(R.id.imageView62);
+
+        goBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i2 = new Intent(getApplicationContext(), adminHome.class);
+                startActivity(i2);
+            }
+        });
 
         patientReg = findViewById(R.id.patientImg);
 
