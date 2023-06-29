@@ -74,7 +74,7 @@
         android:id="@+id/imageView138"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView90"
         app:srcCompat="@drawable/type" />
@@ -162,11 +162,13 @@
         android:layout_height="wrap_content"
         android:text="SUBMIT"
         android:textColor="#FAF7F7"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView141" />
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView141"
+        app:layout_constraintEnd_toEndOf="@+id/imageView141"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toStartOf="@+id/imageView141"
+        app:layout_constraintTop_toTopOf="@+id/imageView141"
+        app:layout_constraintVertical_bias="0.4" />
 
     <TextView
         android:id="@+id/textView87"
@@ -307,8 +309,9 @@
         android:background="@drawable/edittext_bg"
         android:ems="10"
         android:hint="Birth Date"
-        android:inputType="datetime|date"
+        android:inputType="date"
         app:layout_constraintEnd_toEndOf="@+id/imageView136"
+
         app:layout_constraintStart_toStartOf="@+id/imageView136"
         app:layout_constraintTop_toTopOf="@+id/imageView136" />
 
@@ -320,8 +323,10 @@
         android:background="@drawable/edittext_bg"
         android:ems="10"
         android:hint="Email"
+        app:layout_constraintHorizontal_bias="0.366"
         android:inputType="text|textWebEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView137" />
 
@@ -336,6 +341,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView137" />
+
+    <EditText
+        android:id="@+id/editTextText11"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:hint="Admin ID"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.366"
+        app:layout_constraintStart_toStartOf="@+id/imageView138"
+        app:layout_constraintTop_toTopOf="@+id/imageView138" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
