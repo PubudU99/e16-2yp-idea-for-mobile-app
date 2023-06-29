@@ -20,7 +20,7 @@ public class adminHome extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_home);
 
-        registartionImg = findViewById(R.id.registraionImg);
+        registartionImg = findViewById(R.id.imageView63);
 
         registartionImg.setOnClickListener(new View.OnClickListener() {
             @Override

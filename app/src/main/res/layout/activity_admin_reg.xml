@@ -327,7 +327,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView137" />
 
     <EditText
-        android:id="@+id/regAdminAdminId"
+        android:id="@+id/regAdminId"
         android:layout_width="338dp"
         android:layout_height="44dp"
         android:layout_marginTop="8dp"

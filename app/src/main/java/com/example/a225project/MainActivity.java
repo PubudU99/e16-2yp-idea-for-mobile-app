@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 String password = passwordEditText.getText().toString().trim();
 
 
-                //startActivity(new Intent(getApplicationContext(), MainActivity3.class));
+                //startActivity(new Intent(getApplicationContext(), adminHome.class));
 
                 // check user type.
                 String invalidUserReturns = "invalid";
@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void getEmailForUsername(String username, String password, Class<?> userActivity, String usertype) {
         DatabaseReference usersRef = FirebaseDatabase.getInstance().getReference(usertype);
-        Query query = usersRef.orderByChild("username").equalTo(username);
+        Query query = usersRef.orderByChild("adminID").equalTo(username);
         query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -178,16 +178,16 @@ public class MainActivity extends AppCompatActivity {
     // return the class based on the usertype.
     private Class<?>  getActivity(String usertype){
         if(usertype.equals("patient")){
-            return MainActivity2.class;
+            return MainActivity3.class;
 
         } else if (usertype.equals("nurse")) {
-            return MainActivity2.class;
+            return MainActivity3.class;
 
         }else if (usertype.equals("doctor")) {
-            return MainActivity2.class;
+            return MainActivity3.class;
 
         }else if (usertype.equals("caregiver")) {
-            return MainActivity2.class;
+            return MainActivity3.class;
         }
         else{
             return adminHome.class; // return admin class.
