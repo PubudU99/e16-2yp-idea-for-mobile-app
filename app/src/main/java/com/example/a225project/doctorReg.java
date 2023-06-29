@@ -27,7 +27,7 @@ public class doctorReg extends AppCompatActivity {
 
     // variables edittext
 
-    EditText  name, address, phoneNumber, NIC, birthDate, email, adminID, password, assignedWard;
+    EditText  name, address, phoneNumber, NIC, birthDate, email, adminID, password, assignedWard, specialization;
     ImageButton submitBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +44,8 @@ public class doctorReg extends AppCompatActivity {
         email = findViewById(R.id.regDoctorEmail);
         adminID = findViewById(R.id.regDoctorDoctorID);
         password = findViewById(R.id.regDoctorPassword);
-        password = findViewById(R.id.regDoctorAssignWard);
+        assignedWard = findViewById(R.id.regDoctorAssignWard);
+        specialization = findViewById(R.id.editTextText23);
 
         submitBtn = findViewById(R.id.regDoctorSubmit);
 
@@ -61,16 +62,16 @@ public class doctorReg extends AppCompatActivity {
                 String email_s = (email.getText().toString().trim()).toLowerCase();
                 String adminIdk_s = (adminID.getText().toString().trim()).toLowerCase(); // admin id shoud pass as username
                 String pw_s = password.getText().toString().trim();
+                String assignedWard_s = assignedWard.getText().toString().trim();
+                String specialization_s = specialization.getText().toString();
 
                 // Check whether the all fields are filled.
 
-
-
                 if(pw_s.length() >= 6){
 
-                    if(!name_s.isEmpty() && !address_s.isEmpty() && !phoneNumber_s.isEmpty() && !NIC_s.isEmpty() && !birthDate_s.isEmpty() && !adminIdk_s.isEmpty() && !email_s.isEmpty() && !pw_s.isEmpty()){
+                    if(!name_s.isEmpty() && !address_s.isEmpty() && !phoneNumber_s.isEmpty() && !NIC_s.isEmpty() && !birthDate_s.isEmpty() && !adminIdk_s.isEmpty() && !email_s.isEmpty() && !pw_s.isEmpty() && !assignedWard_s.isEmpty() && !specialization_s.isEmpty()){
                         if(checkUserType(adminIdk_s)){
-                            registerUser(name_s, address_s, phoneNumber_s,NIC_s, birthDate_s, email_s,adminIdk_s,pw_s);
+                            registerUser(name_s, address_s, phoneNumber_s,NIC_s, birthDate_s, email_s,adminIdk_s,pw_s, assignedWard_s, specialization_s);
 
                         }else {
                             Toast.makeText(doctorReg.this, "Please enter username starting with a",
@@ -92,10 +93,9 @@ public class doctorReg extends AppCompatActivity {
 
     }
 
-    private void registerUser(String name, String address, String phoneNumber, String NIC,String birthDate,String email, String adminID ,String  password) {
+    private void registerUser(String name, String address, String phoneNumber, String NIC,String birthDate,String email, String adminID ,String  password, String assignedWard, String specialization) {
         // Get a reference to the "caregiver" node in the database
-        mDatabase = mFirebaseDatabase.getReference("admin");
-
+        mDatabase = mFirebaseDatabase.getReference("doctor");
 
         // Check if the username and email already exist in the database
         mDatabase.orderByChild("adminID").equalTo(adminID).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -113,7 +113,7 @@ public class doctorReg extends AppCompatActivity {
                             Toast.makeText(doctorReg.this, "Username or email already exists.", Toast.LENGTH_SHORT).show();
                         } else {
                             // Username and email are available, create a new user entry in the database
-                            UserAdmin user = new UserAdmin( name,   address,  phoneNumber,   NIC,  birthDate,  email, adminID);
+                            UserDoctor user = new UserDoctor( name,   address,  phoneNumber,   NIC,  birthDate,  email, adminID, assignedWard, specialization);
                             mDatabase.child(adminID).setValue(user); // use push if you need to assign an ID based on Firebase
                             registerUserWithEmail(email, password);
 
@@ -161,7 +161,7 @@ public class doctorReg extends AppCompatActivity {
     //check the user type is matching.
     private boolean checkUserType(String userid){
         boolean dtype;
-        if(Character.toLowerCase(userid.charAt(0)) == 'a'){
+        if(Character.toLowerCase(userid.charAt(0)) == 'd'){
             dtype = true;
         }else{
             dtype = false;

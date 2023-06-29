@@ -1,6 +1,7 @@
 package com.example.a225project;
 
-public class UserDoctor {
+
+public class UserNurse {
 
     private String name;
     private String address;
@@ -11,21 +12,12 @@ public class UserDoctor {
     private String adminID;
 
     private String assignedWard;
-    private String specialization;
 
 
-    public UserDoctor(){
+    public UserNurse(){
     }
 
-    public String getSpecialization() {
-        return specialization;
-    }
-
-    public void setSpecialization(String specialization) {
-        this.specialization = specialization;
-    }
-
-    public UserDoctor(String name, String address, String phoneNumber, String NIC, String birthDate, String email, String adminID, String assignedWard, String specialization){
+    public UserNurse(String name, String address, String phoneNumber, String NIC,String birthDate,String email, String adminID, String assignedWard){
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
@@ -34,7 +26,7 @@ public class UserDoctor {
         this.email = email;
         this.adminID = adminID;
         this.assignedWard = assignedWard;
-        this.specialization = specialization;
+
 
     }
 

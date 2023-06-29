@@ -181,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
             return MainActivity3.class;
 
         } else if (usertype.equals("nurse")) {
-            return MainActivity3.class;
+            return nursrHome.class;
 
         }else if (usertype.equals("doctor")) {
             return MainActivity3.class;

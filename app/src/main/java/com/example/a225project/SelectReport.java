@@ -5,35 +5,39 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.Button;
 
-public class nurseNewReports extends AppCompatActivity {
+public class SelectReport extends AppCompatActivity {
 
-    ImageView Blood, Urine;
+    Button bloodBtn, urineBtn;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nurse_new_reports);
+        setContentView(R.layout.activity_select_report);
 
-        Blood = findViewById(R.id.imageView140);
-        Urine = findViewById(R.id.imageView141);
+        bloodBtn = findViewById(R.id.blood);
+        urineBtn = findViewById(R.id.urine);
 
-        Blood.setOnClickListener(new View.OnClickListener() {
+        bloodBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 startActivity(new Intent(getApplicationContext(), nurseBloodReport.class));
 
             }
         });
 
-        Urine.setOnClickListener(new View.OnClickListener() {
+
+        urineBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 startActivity(new Intent(getApplicationContext(), nurseUrineReport.class));
 
             }
         });
+
     }
 }
