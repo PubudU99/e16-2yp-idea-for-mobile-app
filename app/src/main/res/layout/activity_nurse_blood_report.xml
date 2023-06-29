@@ -137,37 +137,41 @@
 
         <EditText
             android:id="@+id/editTextText13"
-            android:layout_width="296dp"
-            android:layout_height="47dp"
-            android:layout_marginTop="216dp"
+            android:layout_width="338dp"
+            android:layout_height="44dp"
+            android:background="@drawable/edittext_bg"
             android:ems="10"
+            android:hint="HDL Choleterol"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="@+id/imageView88"
             app:layout_constraintStart_toStartOf="@+id/imageView88"
-            app:layout_constraintTop_toTopOf="@+id/imageView90" />
+            app:layout_constraintTop_toTopOf="@+id/imageView92" />
 
         <EditText
             android:id="@+id/editTextText12"
-            android:layout_width="296dp"
-            android:layout_height="47dp"
-            android:layout_marginTop="108dp"
+            android:layout_width="338dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_bg"
             android:ems="10"
+            android:hint="LDL Cholesterol"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="@+id/imageView88"
-            app:layout_constraintHorizontal_bias="0.445"
             app:layout_constraintStart_toStartOf="@+id/imageView88"
             app:layout_constraintTop_toTopOf="@+id/imageView90" />
 
         <EditText
             android:id="@+id/editTextText11"
-            android:layout_width="296dp"
-            android:layout_height="47dp"
+            android:layout_width="338dp"
+            android:layout_height="44dp"
             android:layout_marginTop="12dp"
+            android:background="@drawable/edittext_bg"
             android:ems="10"
+            android:hint="Triglycerides"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="@+id/imageView88"
             app:layout_constraintStart_toStartOf="@+id/imageView88"
-            app:layout_constraintTop_toTopOf="@+id/imageView90" />
+            app:layout_constraintTop_toTopOf="@+id/imageView91" />
 
         <ImageView
             android:id="@+id/imageView94"
@@ -178,24 +182,30 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView92"
             app:srcCompat="@drawable/submit" />
 
         <EditText
             android:id="@+id/editTextText10"
-            android:layout_width="296dp"
-            android:layout_height="47dp"
+            android:layout_width="338dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edittext_bg"
             android:ems="10"
+            android:hint="Total Cholesterol"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="@+id/imageView88"
-            app:layout_constraintHorizontal_bias="0.445"
             app:layout_constraintStart_toStartOf="@+id/imageView88"
             app:layout_constraintTop_toTopOf="@+id/imageView89" />
 
         <EditText
             android:id="@+id/editTextText9"
-            android:layout_width="296dp"
-            android:layout_height="47dp"
+            android:layout_width="338dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edittext_bg"
             android:ems="10"
+            android:hint="Platelet Count"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="@+id/imageView88"
             app:layout_constraintStart_toStartOf="@+id/imageView88"
@@ -203,10 +213,13 @@
 
         <EditText
             android:id="@+id/editTextText8"
-            android:layout_width="296dp"
-            android:layout_height="47dp"
-            android:layout_marginEnd="56dp"
+            android:layout_width="338dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="36dp"
+            android:background="@drawable/edittext_bg"
             android:ems="10"
+            android:hint="White Blood Cells"
             android:inputType="text"
             app:layout_constraintEnd_toStartOf="@+id/textView177"
             app:layout_constraintTop_toTopOf="@+id/imageView87" />
@@ -222,14 +235,19 @@
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/imageView94"
-            app:layout_constraintStart_toStartOf="@+id/imageView94" />
+            app:layout_constraintStart_toStartOf="@+id/imageView94"
+            app:layout_constraintTop_toTopOf="@+id/imageView94"
+            app:layout_constraintVertical_bias="0.314" />
 
         <EditText
             android:id="@+id/editTextText5"
-            android:layout_width="296dp"
-            android:layout_height="47dp"
-            android:layout_marginEnd="56dp"
+            android:layout_width="338dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="36dp"
+            android:background="@drawable/edittext_bg"
             android:ems="10"
+            android:hint="Hemoglobin"
             android:inputType="text"
             app:layout_constraintEnd_toStartOf="@+id/textView177"
             app:layout_constraintTop_toTopOf="@+id/imageView86" />
