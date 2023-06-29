@@ -48,7 +48,7 @@
         app:srcCompat="@drawable/adminreg" />
 
     <ImageView
-        android:id="@+id/imageView142"
+        android:id="@+id/goBackbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -71,22 +71,12 @@
         android:id="@+id/imageView181"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="@+id/imageView131"
-        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintHorizontal_bias="0.135"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/type"
-        tools:layout_editor_absoluteY="944dp" />
-
-    <ImageView
-        android:id="@+id/imageView141"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/submit" />
+        app:layout_constraintTop_toBottomOf="@+id/textView92"
+        app:srcCompat="@drawable/type" />
 
     <ImageView
         android:id="@+id/imageView137"
@@ -164,20 +154,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView87"
         app:srcCompat="@drawable/type" />
-
-    <TextView
-        android:id="@+id/textView93"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SUBMIT"
-        android:textColor="#FAF7F7"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView141"
-        app:layout_constraintEnd_toEndOf="@+id/imageView141"
-        app:layout_constraintHorizontal_bias="0.534"
-        app:layout_constraintStart_toStartOf="@+id/imageView141"
-        app:layout_constraintTop_toTopOf="@+id/imageView141"
-        app:layout_constraintVertical_bias="0.4" />
 
     <TextView
         android:id="@+id/textView87"
@@ -333,10 +309,9 @@
         android:ems="10"
         android:hint="Email"
         android:inputType="text|textWebEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.397"
 
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView137"
+        app:layout_constraintStart_toStartOf="@+id/imageView137"
         app:layout_constraintTop_toTopOf="@+id/imageView137" />
 
     <TextView
@@ -352,7 +327,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView137" />
 
     <EditText
-        android:id="@+id/regAdminPassword"
+        android:id="@+id/regAdminAdminId"
         android:layout_width="338dp"
         android:layout_height="44dp"
         android:layout_marginTop="8dp"
@@ -360,10 +335,47 @@
         android:ems="10"
         android:hint="Admin ID"
         android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.366"
+        app:layout_constraintEnd_toEndOf="@+id/imageView138"
+        app:layout_constraintHorizontal_bias="0.58"
         app:layout_constraintStart_toStartOf="@+id/imageView138"
         app:layout_constraintTop_toTopOf="@+id/imageView138" />
+
+    <EditText
+        android:id="@+id/regAdimPassword"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/imageView181"
+        app:layout_constraintStart_toStartOf="@+id/imageView181"
+        app:layout_constraintTop_toTopOf="@+id/imageView181" />
+
+    <ImageButton
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/imageView131"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView181"
+        app:srcCompat="@drawable/submit" />
+
+    <TextView
+        android:id="@+id/textView93"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="SUBMIT"
+        android:textColor="#FAF7F7"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnSubmit"
+        app:layout_constraintStart_toStartOf="@+id/btnSubmit"
+        app:layout_constraintTop_toTopOf="@+id/btnSubmit" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
