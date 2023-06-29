@@ -11,6 +11,15 @@
     android:background="#6877A1"
     tools:context=".updatesWard">
 
+    <ImageView
+        android:id="@+id/imageView64"
+        android:layout_width="433dp"
+        android:layout_height="539dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/overlay" />
+
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
@@ -177,8 +186,10 @@
         android:textColor="#FDFCFC"
         app:layout_constraintBottom_toBottomOf="@+id/imageView28"
         app:layout_constraintEnd_toEndOf="@+id/imageView37"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="@+id/imageView37"
-        app:layout_constraintTop_toBottomOf="@+id/imageView36" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView36"
+        app:layout_constraintVertical_bias="0.65999997" />
 
     <TextView
         android:id="@+id/textView113"

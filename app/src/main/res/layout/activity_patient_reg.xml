@@ -12,6 +12,15 @@
     tools:context=".patientReg" >
 
     <ImageView
+        android:id="@+id/imageView72"
+        android:layout_width="421dp"
+        android:layout_height="531dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/overlay" />
+
+    <ImageView
         android:id="@+id/imageView85"
         android:layout_width="618dp"
         android:layout_height="937dp"

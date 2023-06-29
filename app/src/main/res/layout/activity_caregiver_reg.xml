@@ -11,18 +11,14 @@
     android:background="#6877A1"
     tools:context=".caregiverReg">
 
-    <EditText
-        android:id="@+id/editTextText20"
-        android:layout_width="309dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/imageView119"
-        app:layout_constraintHorizontal_bias="0.477"
-        app:layout_constraintStart_toStartOf="@+id/imageView119"
-        app:layout_constraintTop_toTopOf="@+id/imageView119" />
+    <ImageView
+        android:id="@+id/imageView41"
+        android:layout_width="433dp"
+        android:layout_height="533dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/overlay" />
 
     <TextView
         android:id="@+id/textView71"
@@ -44,25 +40,12 @@
         android:id="@+id/imageView118"
         android:layout_width="404dp"
         android:layout_height="1083dp"
-        android:layout_marginTop="184dp"
+        android:layout_marginTop="180dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/caregiver" />
-
-    <EditText
-        android:id="@+id/editTextText27"
-        android:layout_width="309dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="112dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/imageView119"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="@+id/imageView119"
-        app:layout_constraintTop_toTopOf="@+id/imageView125" />
 
     <ImageView
         android:id="@+id/imageView128"
@@ -70,101 +53,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.608"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView79"
         app:srcCompat="@drawable/type" />
-
-    <EditText
-        android:id="@+id/editTextText29"
-        android:layout_width="309dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/imageView119"
-        app:layout_constraintHorizontal_bias="0.481"
-        app:layout_constraintStart_toStartOf="@+id/imageView119"
-        app:layout_constraintTop_toTopOf="@+id/imageView128" />
-
-    <EditText
-        android:id="@+id/editTextText28"
-        android:layout_width="309dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/imageView119"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="@+id/imageView119"
-        app:layout_constraintTop_toTopOf="@+id/imageView127" />
-
-    <EditText
-        android:id="@+id/editTextText26"
-        android:layout_width="309dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/imageView119"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="@+id/imageView119"
-        app:layout_constraintTop_toTopOf="@+id/imageView125" />
-
-    <EditText
-        android:id="@+id/editTextText24"
-        android:layout_width="309dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="112dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/imageView119"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="@+id/imageView119"
-        app:layout_constraintTop_toTopOf="@+id/imageView122" />
-
-    <EditText
-        android:id="@+id/editTextText23"
-        android:layout_width="309dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/imageView119"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="@+id/imageView119"
-        app:layout_constraintTop_toTopOf="@+id/imageView122" />
-
-    <EditText
-        android:id="@+id/editTextText22"
-        android:layout_width="309dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="104dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/imageView119"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="@+id/imageView119"
-        app:layout_constraintTop_toTopOf="@+id/imageView120" />
-
-    <EditText
-        android:id="@+id/editTextText21"
-        android:layout_width="309dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/imageView119"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="@+id/imageView119"
-        app:layout_constraintTop_toTopOf="@+id/imageView120" />
 
     <TextView
         android:id="@+id/textView81"
@@ -204,7 +95,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.608"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView79"
         app:srcCompat="@drawable/type" />
@@ -236,7 +126,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.608"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView78"
         app:srcCompat="@drawable/type" />
@@ -267,14 +156,15 @@
         android:id="@+id/textView82"
         android:layout_width="95dp"
         android:layout_height="26dp"
-        android:layout_marginTop="64dp"
         android:text="SUBMIT"
         android:textColor="#FAF7F7"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView128" />
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView129"
+        app:layout_constraintEnd_toEndOf="@+id/imageView129"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="@+id/imageView129"
+        app:layout_constraintTop_toTopOf="@+id/imageView129"
+        app:layout_constraintVertical_bias="0.387" />
 
     <ImageView
         android:id="@+id/imageView124"
@@ -282,7 +172,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.695"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView76"
         app:srcCompat="@drawable/type" />
@@ -304,7 +193,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.695"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView75"
         app:srcCompat="@drawable/type" />
@@ -325,7 +213,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.695"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView74"
         app:srcCompat="@drawable/type" />
@@ -346,7 +233,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView73"
         app:srcCompat="@drawable/type" />
@@ -399,19 +285,123 @@
         app:srcCompat="@drawable/type" />
 
     <EditText
-        android:id="@+id/editTextText15"
-        android:layout_width="309dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
+        android:id="@+id/editTextText14"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
         android:background="@drawable/edittext_bg"
         android:ems="10"
+        android:hint="Name"
         android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView119"
         app:layout_constraintEnd_toEndOf="@+id/imageView119"
-        app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="@+id/imageView119"
         app:layout_constraintTop_toTopOf="@+id/imageView119" />
 
+    <EditText
+        android:id="@+id/editTextText15"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView120"
+        app:layout_constraintEnd_toEndOf="@+id/imageView120"
+        app:layout_constraintStart_toStartOf="@+id/imageView120"
+        app:layout_constraintTop_toTopOf="@+id/imageView120" />
 
+    <EditText
+        android:id="@+id/editTextText16"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView121"
+        app:layout_constraintEnd_toEndOf="@+id/imageView121"
+        app:layout_constraintStart_toStartOf="@+id/imageView121"
+        app:layout_constraintTop_toTopOf="@+id/imageView121" />
+
+    <EditText
+        android:id="@+id/editTextText17"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView122"
+        app:layout_constraintEnd_toEndOf="@+id/imageView122"
+        app:layout_constraintStart_toStartOf="@+id/imageView122"
+        app:layout_constraintTop_toTopOf="@+id/imageView122" />
+
+    <EditText
+        android:id="@+id/editTextText18"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView124"
+        app:layout_constraintEnd_toEndOf="@+id/imageView124"
+        app:layout_constraintStart_toStartOf="@+id/imageView124"
+        app:layout_constraintTop_toTopOf="@+id/imageView124" />
+
+    <EditText
+        android:id="@+id/editTextText19"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView125"
+        app:layout_constraintEnd_toEndOf="@+id/imageView125"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="@+id/imageView125"
+        app:layout_constraintTop_toTopOf="@+id/imageView125" />
+
+    <EditText
+        android:id="@+id/editTextText20"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView126"
+        app:layout_constraintEnd_toEndOf="@+id/imageView126"
+        app:layout_constraintStart_toStartOf="@+id/imageView126"
+        app:layout_constraintTop_toTopOf="@+id/imageView126" />
+
+    <EditText
+        android:id="@+id/editTextText21"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView127"
+        app:layout_constraintEnd_toEndOf="@+id/imageView127"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="@+id/imageView127"
+        app:layout_constraintTop_toTopOf="@+id/imageView127" />
+
+    <EditText
+        android:id="@+id/editTextText22"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView128"
+        app:layout_constraintEnd_toEndOf="@+id/imageView128"
+        app:layout_constraintStart_toStartOf="@+id/imageView128"
+        app:layout_constraintTop_toTopOf="@+id/imageView128" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

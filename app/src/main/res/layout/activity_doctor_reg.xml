@@ -13,12 +13,22 @@
         tools:context=".doctorReg">
 
         <ImageView
-            android:id="@+id/imageView56"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/imageView69"
+            android:layout_width="478dp"
+            android:layout_height="596dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/overlay" />
+
+        <ImageView
+            android:id="@+id/imageView56"
+            android:layout_width="500dp"
+            android:layout_height="539dp"
+            android:layout_marginTop="500dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView84"
             app:srcCompat="@drawable/coverarea" />
 
         <TextView
@@ -50,10 +60,11 @@
 
         <ImageView
             android:id="@+id/imageView84"
-            android:layout_width="557dp"
-            android:layout_height="698dp"
-            android:layout_marginTop="156dp"
+            android:layout_width="529dp"
+            android:layout_height="709dp"
+            android:layout_marginTop="144dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/rectangle_13" />
@@ -72,7 +83,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Assigned Ward"
-            android:textSize="24sp"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.098"
             app:layout_constraintStart_toStartOf="parent"
@@ -92,7 +103,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Password"
-            android:textSize="24sp"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.099"
             app:layout_constraintStart_toStartOf="parent"
@@ -103,7 +114,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Doctor ID"
-            android:textSize="24sp"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.099"
             app:layout_constraintStart_toStartOf="parent"
@@ -132,7 +143,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Email"
-            android:textSize="24sp"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.085"
             app:layout_constraintStart_toStartOf="parent"
@@ -142,10 +153,11 @@
             android:id="@+id/regDoctorSubmit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
             android:backgroundTint="#00FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView104"
+            app:layout_constraintTop_toBottomOf="@+id/imageView105"
             app:srcCompat="@drawable/submit" />
 
         <ImageView
@@ -164,18 +176,18 @@
             android:text="SUBMIT"
             android:textColor="#F8F7F7"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView56"
+            app:layout_constraintBottom_toBottomOf="@+id/regDoctorSubmit"
             app:layout_constraintEnd_toEndOf="@+id/regDoctorSubmit"
             app:layout_constraintStart_toStartOf="@+id/regDoctorSubmit"
-            app:layout_constraintTop_toBottomOf="@+id/imageView104"
-            app:layout_constraintVertical_bias="0.444" />
+            app:layout_constraintTop_toTopOf="@+id/regDoctorSubmit"
+            app:layout_constraintVertical_bias="0.43" />
 
         <TextView
             android:id="@+id/textView52"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Birth Date"
-            android:textSize="24sp"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.083"
             app:layout_constraintStart_toStartOf="parent"
@@ -195,7 +207,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="NIC"
-            android:textSize="24sp"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.095"
             app:layout_constraintStart_toStartOf="parent"
@@ -215,7 +227,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Phone Number"
-            android:textSize="24sp"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.096"
             app:layout_constraintStart_toStartOf="parent"
@@ -226,7 +238,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Address"
-            android:textSize="24sp"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.089"
             app:layout_constraintStart_toStartOf="parent"
@@ -255,9 +267,9 @@
             android:id="@+id/textView37"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="16dp"
             android:text="Name"
-            android:textSize="24sp"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.083"
             app:layout_constraintStart_toStartOf="parent"
@@ -392,6 +404,39 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ionic_arrow_back" />
+
+        <ImageView
+            android:id="@+id/imageView105"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView19"
+            app:srcCompat="@drawable/type" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Specialization"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.099"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView104" />
+
+        <EditText
+            android:id="@+id/editTextText23"
+            android:layout_width="338dp"
+            android:layout_height="44dp"
+            android:background="@drawable/edittext_bg"
+            android:ems="10"
+            android:hint="Doctor ID"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView105"
+            app:layout_constraintEnd_toEndOf="@+id/imageView105"
+            app:layout_constraintStart_toStartOf="@+id/imageView105"
+            app:layout_constraintTop_toTopOf="@+id/imageView105" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,6 +11,15 @@
     android:background="#6877A1"
     tools:context=".regNurse">
 
+    <ImageView
+        android:id="@+id/imageView58"
+        android:layout_width="431dp"
+        android:layout_height="534dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/overlay" />
+
     <TextView
         android:id="@+id/textView59"
         android:layout_width="wrap_content"
