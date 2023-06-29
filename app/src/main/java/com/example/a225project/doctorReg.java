@@ -46,7 +46,7 @@ public class doctorReg extends AppCompatActivity {
         password = findViewById(R.id.regDoctorPassword);
         password = findViewById(R.id.regDoctorAssignWard);
 
-        //submitBtn = findViewById(R.id.btnSubmit);
+        submitBtn = findViewById(R.id.regDoctorSubmit);
 
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
