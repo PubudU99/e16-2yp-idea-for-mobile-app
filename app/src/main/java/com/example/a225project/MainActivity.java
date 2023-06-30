@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
 //        });
     }
 
-    private void loginUserWithEmail(String email, String password, Class<?> userActivity) {
+    private void loginUserWithEmail(String email, String password, Class<?> userActivity, String username) {
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -107,7 +107,9 @@ public class MainActivity extends AppCompatActivity {
                             // Login successful
                             Toast.makeText(MainActivity.this, "Login successful",
                                     Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), userActivity));
+                            Intent intent = new Intent(MainActivity.this, userActivity);
+                            intent.putExtra("username", username);
+                            startActivity(intent);
 
                             // Proceed with necessary actions (e.g., navigate to home screen)
                         } else {
@@ -134,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
 
                         Toast.makeText(MainActivity.this, "Email: " + email,
                                 Toast.LENGTH_SHORT).show();
-                        loginUserWithEmail(email, password, userActivity);
+                        loginUserWithEmail(email, password, userActivity,username);
 
                     } else {
                         // Email not found for the given username
