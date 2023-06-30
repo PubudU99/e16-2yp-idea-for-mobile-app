@@ -135,7 +135,14 @@ public class patientReg extends AppCompatActivity {
                             String  lungs = "";
                             String  temperature = "";
                             String  image = "";
-                            UserPatient user = new UserPatient( name,   address,  phoneNumber,   NIC,  birthDate,  email, adminID,  heartRate, pressure, lungs,temperature, image);
+                            String caregiverID = "";
+                            String nurse = "";
+                            String wardID = "";
+                            String bedID = "";
+                            String date = "";
+
+
+                            UserPatient user = new UserPatient(name,  address,  phoneNumber,   NIC,  birthDate,  email, adminID,  heartRate, pressure, lungs,temperature, image, caregiverID,nurse,wardID,bedID,date);
                             mDatabase.child(adminID).setValue(user); // use push if you need to assign an ID based on Firebase
                             registerUserWithEmail(email, password);
 
