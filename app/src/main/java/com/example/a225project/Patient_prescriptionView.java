@@ -30,7 +30,7 @@ public class Patient_prescriptionView extends AppCompatActivity {
         setUpPrescriptionModels();
         Patient_presctiption_Adapter adapter = new Patient_presctiption_Adapter(this,prescriptionmodels);
         recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL, false));
 
         ImageButton gobacktoHome=findViewById(R.id.imageButton2);
         gobacktoHome.setOnClickListener(new View.OnClickListener() {

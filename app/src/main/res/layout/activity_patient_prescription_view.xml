@@ -80,6 +80,7 @@
             android:id="@+id/prescriptionRecyclerView"
             android:layout_width="394dp"
             android:layout_height="373dp"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.47"
             app:layout_constraintStart_toStartOf="parent"
