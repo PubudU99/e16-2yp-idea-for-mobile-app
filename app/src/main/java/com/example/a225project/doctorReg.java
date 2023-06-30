@@ -38,7 +38,7 @@ public class doctorReg extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_reg);
 
-        goBackBtn = findViewById(R.id.regDoctorGoBack);
+        goBackBtn = findViewById(R.id.imageView214);
 
         goBackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
