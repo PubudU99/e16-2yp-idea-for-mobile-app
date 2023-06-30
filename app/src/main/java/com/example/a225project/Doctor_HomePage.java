@@ -1,5 +1,6 @@
 package com.example.a225project;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -10,8 +11,38 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.List;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.GenericTypeIndicator;
+import com.google.firebase.database.ValueEventListener;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.HashMap;
+import java.util.List;
+
+
 
 public class Doctor_HomePage extends AppCompatActivity {
 
@@ -21,6 +52,15 @@ public class Doctor_HomePage extends AppCompatActivity {
     TextView dateTxt;
 
     ImageView toAppoin;
+
+    ////////// lists related to patients ////////////////
+    List<String> PatientList = new ArrayList<>();
+    List<String> nicList = new ArrayList<>();
+    List<String> admitDateList = new ArrayList<>();
+    List<String> bedIDList = new ArrayList<>();
+    List<String> nurseList = new ArrayList<>();
+    List<String> wardIDList = new ArrayList<>();
+
 
 
     ArrayList<doctorTodayPatientsModel> doctorTodayPatientsModels= new ArrayList<>();
@@ -43,9 +83,12 @@ public class Doctor_HomePage extends AppCompatActivity {
         month = calendar.get(Calendar.MONTH);
         day = calendar.get(Calendar.DAY_OF_MONTH);
 
+        retrieveData();
         displayDate(year, month, day);
 
+
         toAppoin =  findViewById(R.id.imageView199);
+
 
         toAppoin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,4 +118,49 @@ public class Doctor_HomePage extends AppCompatActivity {
         String date = day+"/"+month+"/"+year;
         dateTxt.setText(date);
     }
+
+
+    ////retrievieng data to a list
+    public void retrieveData()
+    {
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("patient");
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot datasnapshot) {
+
+
+                //getting patients
+                for (DataSnapshot snapshot : datasnapshot.getChildren()){
+                    String patientKey = snapshot.getKey();
+                    PatientList.add(patientKey);   //list of the patients
+
+                    HashMap<String, Object> ma = (HashMap<String, Object>) snapshot.getValue();
+
+                    nicList.add(ma.get("nic").toString());      //list of nic
+                    //admitDateList.add(ma.get("admitDate").toString());      //list of admit date
+                    //bedIDList.add(ma.get("bedID").toString());      //list of bed ID
+                    //nurseList.add(ma.get("nurse").toString());      //list of nurse
+                    //wardIDList.add(ma.get("wardID").toString());        //list of ward ID
+
+                }
+
+                ///printing to check correctness
+
+                System.out.println(PatientList);
+                System.out.println(nicList);
+                System.out.println(admitDateList);
+                System.out.println(bedIDList);
+                System.out.println(nurseList);
+                System.out.println(wardIDList);
+
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
+
+
 }
