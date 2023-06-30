@@ -78,6 +78,7 @@ public class doctorReg extends AppCompatActivity {
                 String pw_s = password.getText().toString().trim();
                 String assignedWard_s = assignedWard.getText().toString().trim();
                 String specialization_s = specialization.getText().toString();
+                String image_s= "";
 
                 // Check whether the all fields are filled.
 
@@ -125,7 +126,8 @@ public class doctorReg extends AppCompatActivity {
                             Toast.makeText(doctorReg.this, "Username or email already exists.", Toast.LENGTH_SHORT).show();
                         } else {
                             // Username and email are available, create a new user entry in the database
-                            UserDoctor user = new UserDoctor( name,   address,  phoneNumber,   NIC,  birthDate,  email, adminID, assignedWard, specialization);
+                            String image_s="";
+                            UserDoctor user = new UserDoctor( name,   address,  phoneNumber,   NIC,  birthDate,  email, adminID, assignedWard, specialization,image_s);
                             mDatabase.child(adminID).setValue(user); // use push if you need to assign an ID based on Firebase
                             registerUserWithEmail(email, password);
 

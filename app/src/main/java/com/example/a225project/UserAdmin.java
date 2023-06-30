@@ -1,13 +1,21 @@
 package com.example.a225project;
 
 public class UserAdmin {
-    private String name, address, phoneNumber, NIC, birthDate, email, adminID;
+    private String name, address, phoneNumber, NIC, birthDate, email, adminID,image;
 
 
     public UserAdmin(){
     }
 
-    public UserAdmin(String name, String address, String phoneNumber, String NIC,String birthDate,String email, String adminID){
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public UserAdmin(String name, String address, String phoneNumber, String NIC, String birthDate, String email, String adminID,String image){
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
@@ -15,6 +23,7 @@ public class UserAdmin {
         this.birthDate = birthDate;
         this.email = email;
         this.adminID = adminID;
+        this.image=image;
 
     }
 

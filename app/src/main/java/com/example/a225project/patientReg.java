@@ -94,7 +94,7 @@ public class patientReg extends AppCompatActivity {
                     }
                 }else{
                     Toast.makeText(patientReg.this, "Password should have more than 6 characters",
-                            Toast.LENGTH_SHORT).show();
+                            Toast.LENGTH_SHORT).show();//
 
                 }
 
@@ -130,7 +130,12 @@ public class patientReg extends AppCompatActivity {
                             Toast.makeText(patientReg.this, "Username or email already exists.", Toast.LENGTH_SHORT).show();
                         } else {
                             // Username and email are available, create a new user entry in the database
-                            UserAdmin user = new UserAdmin( name,   address,  phoneNumber,   NIC,  birthDate,  email, adminID);
+                            String  heartRate = "";
+                            String  pressure = "";
+                            String  lungs = "";
+                            String  temperature = "";
+                            String  image = "";
+                            UserPatient user = new UserPatient( name,   address,  phoneNumber,   NIC,  birthDate,  email, adminID,  heartRate, pressure, lungs,temperature, image);
                             mDatabase.child(adminID).setValue(user); // use push if you need to assign an ID based on Firebase
                             registerUserWithEmail(email, password);
 
