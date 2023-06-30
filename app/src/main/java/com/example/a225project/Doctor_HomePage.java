@@ -8,14 +8,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -52,30 +47,16 @@ public class Doctor_HomePage extends AppCompatActivity {
     TextView dateTxt;
 
     ImageView toAppoin;
-
-    ////////// lists related to patients ////////////////
-    List<String> PatientList = new ArrayList<>();
-    List<String> nicList = new ArrayList<>();
-    List<String> admitDateList = new ArrayList<>();
-    List<String> bedIDList = new ArrayList<>();
-    List<String> nurseList = new ArrayList<>();
-    List<String> wardIDList = new ArrayList<>();
-
+    Button button;
 
 
     ArrayList<doctorTodayPatientsModel> doctorTodayPatientsModels= new ArrayList<>();
     String[] PatientNames={"Mahesha Madhushanka","Kavindu Bambaragama","Dinushika Abrew","Nikalshi Sepalika","Pasindu Rangana","Pubudu Madhushith","Uthsara wikramarachchi","Sapuni Nithya","Tharidi Sadewmi","John Seena"};
-    //String[] PatientNames;
     String[] WardNo={"102D","133F","202A","402H","202D","102D","133F","202D","202A","102D"};
-    //String WardNo = "234";
-
     String[] bedNo={"10","7","3","6","14","9","33","62","13","12"};
-    //String bedNo="234";
-
     String[] tTime={"10.00 AM","10.30 AM","11.00 AM","11.30 AM","12.00 PM","01.00 PM","02.00 PM","02.30 PM","03.00 PM","03.30 PM"};
-    //String tTime="10.00 AM";
     int[] patientProfilePics={R.drawable.pdp1,R.drawable.pdp2,R.drawable.pdp3,R.drawable.pdp4,R.drawable.pdp5,R.drawable.pdp6,R.drawable.pdp7,R.drawable.pdp8,R.drawable.pdp9,R.drawable.pdp10};
-    //int patientProfilePics=R.drawable.dp1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,12 +77,16 @@ public class Doctor_HomePage extends AppCompatActivity {
 
         displayDate(year, month, day);
 
-
         toAppoin =  findViewById(R.id.imageView199);
+        button=findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),doctorAddPrescription.class);
+                startActivity(i);
 
-
-
-
+            }
+        });
 
         toAppoin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -162,12 +147,7 @@ public class Doctor_HomePage extends AppCompatActivity {
 
                 ///printing to check correctness
 
-                System.out.println(PatientList);
-                System.out.println(nicList);
-                System.out.println(admitDateList);
-                System.out.println(bedIDList);
-                System.out.println(nurseList);
-                System.out.println(wardIDList);
+
 
 //                PatientNames=PatientList.toArray(new String[PatientList.size()]);
 //                System.out.println(PatientList);

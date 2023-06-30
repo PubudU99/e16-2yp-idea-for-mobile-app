@@ -48,6 +48,15 @@ public class EditProfile extends AppCompatActivity {
         profileImageView = findViewById(R.id.imageView168);
         selectImageButton = findViewById(R.id.imageButton4);
 
+        ImageButton goBack = findViewById(R.id.editProfileGoBack);
+
+        goBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         selectImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

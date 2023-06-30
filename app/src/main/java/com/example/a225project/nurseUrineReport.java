@@ -1,5 +1,6 @@
 package com.example.a225project;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -45,6 +46,16 @@ public class nurseUrineReport extends AppCompatActivity {
         ketones = findViewById(R.id.editTextText13);
 
         submitBtn = findViewById(R.id.imageView94);
+
+        ImageView goBack =findViewById(R.id.imageView211);
+
+        goBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1= new Intent(getApplicationContext(),nurseNewReports.class);
+                startActivity(i1);
+            }
+        });
 
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override

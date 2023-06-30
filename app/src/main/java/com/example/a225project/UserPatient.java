@@ -1,7 +1,7 @@
 package com.example.a225project;
 
 public class UserPatient {
-    private String name, address, phoneNumber, NIC, birthDate, email, adminID, heartrate, pressure, lungs,temperature, image;
+    private String name, address, phoneNumber, NIC, birthDate, email, adminID, heartrate, pressure, lungs,temperature, image, caregiverID,nurse,wardID,bedID,date;
 
     public String getName() {
         return name;
@@ -71,6 +71,46 @@ public class UserPatient {
         return pressure;
     }
 
+    public String getCaregiverID() {
+        return caregiverID;
+    }
+
+    public void setCaregiverID(String caregiverID) {
+        this.caregiverID = caregiverID;
+    }
+
+    public String getNurse() {
+        return nurse;
+    }
+
+    public void setNurse(String nurse) {
+        this.nurse = nurse;
+    }
+
+    public String getWardID() {
+        return wardID;
+    }
+
+    public void setWardID(String wardID) {
+        this.wardID = wardID;
+    }
+
+    public String getBedID() {
+        return bedID;
+    }
+
+    public void setBedID(String bedID) {
+        this.bedID = bedID;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
     public void setPressure(String pressure) {
         this.pressure = pressure;
     }
@@ -102,7 +142,7 @@ public class UserPatient {
     public UserPatient(){
     }
 
-    public UserPatient(String name, String address, String phoneNumber, String NIC,String birthDate,String email, String adminID,String heartrate,String pressure,String lungs,String temperature, String image){
+    public UserPatient(String name, String address, String phoneNumber, String NIC,String birthDate,String email, String adminID,String heartrate, String pressure,String lungs,String temperature, String image,String caregiverID,String nurse, String wardID, String bedID, String date){
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
@@ -114,6 +154,12 @@ public class UserPatient {
         this.lungs = lungs;
         this.temperature = temperature;
         this.image = image;
+        this.pressure = pressure;
+        this.caregiverID = caregiverID;
+        this.nurse = nurse;
+        this.wardID = wardID;
+        this.bedID = bedID;
+        this.date = date;
 
 
     }

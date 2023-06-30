@@ -9,7 +9,7 @@ import android.widget.ImageView;
 
 public class nursrHome extends AppCompatActivity {
 
-    ImageView patientDetails;
+    ImageView patientDetails, profilePic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +17,15 @@ public class nursrHome extends AppCompatActivity {
         setContentView(R.layout.activity_nursr_home);
 
         patientDetails = findViewById(R.id.imageView175);
+        profilePic = findViewById(R.id.imageView195);
+
+        profilePic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1=new Intent(getApplicationContext(),EditProfile.class);
+                startActivity(i1);
+            }
+        });
 
         patientDetails.setOnClickListener(new View.OnClickListener() {
             @Override
