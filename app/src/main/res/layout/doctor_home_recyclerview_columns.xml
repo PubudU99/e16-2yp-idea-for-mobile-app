@@ -21,9 +21,9 @@
                 android:id="@+id/imageView201"
                 android:layout_width="154dp"
                 android:layout_height="234dp"
-                android:layout_marginStart="4dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:layout_marginEnd="4dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +34,7 @@
                 app:srcCompat="@drawable/patientcardviewbg" />
 
             <ImageView
-                android:id="@+id/imageView203"
+                android:id="@+id/parientProfilePic"
                 android:layout_width="102dp"
                 android:layout_height="105dp"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView201"
@@ -45,7 +45,7 @@
                 app:srcCompat="@drawable/dp3" />
 
             <TextView
-                android:id="@+id/textView186"
+                android:id="@+id/txtPatientName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Patient Name"
@@ -53,7 +53,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/imageView201"
                 app:layout_constraintEnd_toEndOf="@+id/imageView201"
                 app:layout_constraintStart_toStartOf="@+id/imageView201"
-                app:layout_constraintTop_toBottomOf="@+id/imageView203"
+                app:layout_constraintTop_toBottomOf="@+id/parientProfilePic"
                 app:layout_constraintVertical_bias="0.071" />
 
             <ImageView
@@ -63,9 +63,86 @@
                 app:layout_constraintBottom_toBottomOf="@+id/imageView201"
                 app:layout_constraintEnd_toEndOf="@+id/imageView201"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView186"
+                app:layout_constraintTop_toBottomOf="@+id/txtPatientName"
                 app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/lineseperator" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView201"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView205"
+                app:layout_constraintVertical_bias="0.07999998">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView103"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingRight="4dp"
+                        android:text="Ward ID :"
+                        android:textAlignment="textEnd"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/txtWardID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="4dp"
+                        android:text="TextView"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+                    <TextView
+                        android:id="@+id/textView105"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingRight="4dp"
+                        android:text="Bed No :"
+                        android:textAlignment="textEnd"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/txtBedNO"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="4dp"
+                        android:text="TextView"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/txtTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="TextView"
+                android:textColor="#FAF7F7"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView201"
+                app:layout_constraintEnd_toEndOf="@+id/imageView201"
+                app:layout_constraintHorizontal_bias="0.505"
+                app:layout_constraintStart_toStartOf="@+id/imageView201" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

@@ -60,6 +60,8 @@
         <activity
             android:name=".doctorReg"
             android:exported="false" />
+
+
         <activity
             android:name=".regNurse"
             android:exported="false" />

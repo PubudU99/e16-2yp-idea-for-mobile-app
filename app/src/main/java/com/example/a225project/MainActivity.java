@@ -187,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
             return nursrHome.class;
 
         }else if (usertype.equals("doctor")) {
-            return doctorAddPrescription.class;
+            return Doctor_HomePage.class;
 
         }else if (usertype.equals("caregiver")) {
             return MainActivity3.class;
