@@ -59,8 +59,8 @@ public class adminReg extends AppCompatActivity {
         email = findViewById(R.id.regAdminEmail);
         adminID = findViewById(R.id.regAdminId);
         password = findViewById(R.id.regAdimPassword);
-
         submitBtn = findViewById(R.id.btnSubmit);
+
 
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,6 +75,7 @@ public class adminReg extends AppCompatActivity {
                 String email_s = (email.getText().toString().trim()).toLowerCase();
                 String adminIdk_s = (adminID.getText().toString().trim()).toLowerCase(); // admin id shoud pass as username
                 String pw_s = password.getText().toString().trim();
+                String image_s = "";
 
                 // Check whether the all fields are filled.
 
@@ -127,7 +128,9 @@ public class adminReg extends AppCompatActivity {
                             Toast.makeText(adminReg.this, "Username or email already exists.", Toast.LENGTH_SHORT).show();
                         } else {
                             // Username and email are available, create a new user entry in the database
-                            UserAdmin user = new UserAdmin( name,   address,  phoneNumber,   NIC,  birthDate,  email, adminID);
+
+                            String image_s ="";
+                            UserAdmin user = new UserAdmin(name,   address,  phoneNumber,   NIC,  birthDate,  email, adminID, image_s);
                             mDatabase.child(adminID).setValue(user); // use push if you need to assign an ID based on Firebase
                             registerUserWithEmail(email, password);
 

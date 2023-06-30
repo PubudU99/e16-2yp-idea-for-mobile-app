@@ -11,12 +11,29 @@ public class UserCaregiver{
     private String adminID;
 
     private String patientID;
+    private String image;
 
 
     public UserCaregiver(){
     }
 
-    public UserCaregiver(String name, String address, String phoneNumber, String NIC,String birthDate,String email, String adminID, String patientID){
+    public String getPatientID() {
+        return patientID;
+    }
+
+    public void setPatientID(String patientID) {
+        this.patientID = patientID;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public UserCaregiver(String name, String address, String phoneNumber, String NIC, String birthDate, String email, String adminID, String patientID, String image){
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
@@ -25,6 +42,7 @@ public class UserCaregiver{
         this.email = email;
         this.adminID = adminID;
         this.patientID = patientID;
+        this.image=image;
 
 
     }

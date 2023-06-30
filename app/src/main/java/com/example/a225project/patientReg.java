@@ -74,8 +74,6 @@ public class patientReg extends AppCompatActivity {
                 String adminIdk_s = (adminID.getText().toString().trim()).toLowerCase(); // admin id should pass as username
                 String pw_s = password.getText().toString().trim();
 
-
-
                 // Check whether the all fields are filled.
 
 
@@ -105,6 +103,11 @@ public class patientReg extends AppCompatActivity {
         });
 
     }
+
+
+
+
+
 
     private void registerUser(String name, String address, String phoneNumber, String NIC,String birthDate,String email, String adminID ,String  password) {
         // Get a reference to the "caregiver" node in the database

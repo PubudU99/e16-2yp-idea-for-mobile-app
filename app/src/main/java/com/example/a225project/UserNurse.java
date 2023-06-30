@@ -12,12 +12,20 @@ public class UserNurse {
     private String adminID;
 
     private String assignedWard;
+    private String image;
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 
     public UserNurse(){
     }
 
-    public UserNurse(String name, String address, String phoneNumber, String NIC,String birthDate,String email, String adminID, String assignedWard){
+    public UserNurse(String name, String address, String phoneNumber, String NIC,String birthDate,String email, String adminID, String assignedWard,String image){
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
@@ -26,6 +34,7 @@ public class UserNurse {
         this.email = email;
         this.adminID = adminID;
         this.assignedWard = assignedWard;
+        this.image= image;
 
 
     }

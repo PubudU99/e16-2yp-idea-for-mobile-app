@@ -126,7 +126,8 @@ public class regNurse extends AppCompatActivity {
                             Toast.makeText(regNurse.this, "Username or email already exists.", Toast.LENGTH_SHORT).show();
                         } else {
                             // Username and email are available, create a new user entry in the database
-                            UserNurse user = new UserNurse( name,   address,  phoneNumber,   NIC,  birthDate,  email, adminID, assignedWard);
+                            String image_s ="";
+                            UserNurse user = new UserNurse( name,   address,  phoneNumber,   NIC,  birthDate,  email, adminID, assignedWard,image_s);
                             mDatabase.child(adminID).setValue(user); // use push if you need to assign an ID based on Firebase
                             registerUserWithEmail(email, password);
 

@@ -12,7 +12,15 @@ public class UserDoctor {
 
     private String assignedWard;
     private String specialization;
+    private String image;
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 
     public UserDoctor(){
     }
@@ -25,7 +33,7 @@ public class UserDoctor {
         this.specialization = specialization;
     }
 
-    public UserDoctor(String name, String address, String phoneNumber, String NIC, String birthDate, String email, String adminID, String assignedWard, String specialization){
+    public UserDoctor(String name, String address, String phoneNumber, String NIC, String birthDate, String email, String adminID, String assignedWard, String specialization,String image){
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
@@ -35,6 +43,7 @@ public class UserDoctor {
         this.adminID = adminID;
         this.assignedWard = assignedWard;
         this.specialization = specialization;
+        this.image=image;
 
     }
 
