@@ -152,8 +152,8 @@ public class regNurse extends AppCompatActivity {
         });
     }
 
-    private void registerUserWithEmail(String email, String password) {
-        FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
+    private void registerUserWithEmail(String email_, String password_) {
+        FirebaseAuth.getInstance().createUserWithEmailAndPassword(email_, password_)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -161,6 +161,7 @@ public class regNurse extends AppCompatActivity {
                             // Registration successful
                             Toast.makeText(regNurse.this, "Registration successful",
                                     Toast.LENGTH_SHORT).show();
+                            clear(name, address, phoneNumber, NIC, birthDate, email, adminID, password, assignedWard);
 
                             // Proceed with necessary actions (e.g., navigate to home screen)
                         } else {
@@ -182,6 +183,17 @@ public class regNurse extends AppCompatActivity {
         }
         return dtype;
 
+    }
+    private void clear(EditText name, EditText address, EditText phoneNumber, EditText NIC, EditText birthDate, EditText email, EditText adminID, EditText password, EditText assignedWard){
+        name.setText("");
+        address.setText("");
+        phoneNumber.setText("");
+        NIC.setText("");
+        birthDate.setText("");
+        email.setText("");
+        adminID.setText("");
+        password.setText("");
+        assignedWard.setText("");
     }
 
 }

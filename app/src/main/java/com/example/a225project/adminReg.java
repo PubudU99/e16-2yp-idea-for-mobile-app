@@ -155,8 +155,8 @@ public class adminReg extends AppCompatActivity {
         });
     }
 
-    private void registerUserWithEmail(String email, String password) {
-        FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
+    private void registerUserWithEmail(String email_, String password_) {
+        FirebaseAuth.getInstance().createUserWithEmailAndPassword(email_, password_)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -164,6 +164,7 @@ public class adminReg extends AppCompatActivity {
                             // Registration successful
                             Toast.makeText(adminReg.this, "Registration successful",
                                     Toast.LENGTH_SHORT).show();
+                            clear(name, address, phoneNumber, NIC, birthDate, email, adminID, password);
 
                             // Proceed with necessary actions (e.g., navigate to home screen)
                         } else {
@@ -184,7 +185,17 @@ public class adminReg extends AppCompatActivity {
             dtype = false;
         }
         return dtype;
+    }
 
+    private void clear(EditText name, EditText address, EditText phoneNumber, EditText NIC, EditText birthDate, EditText email, EditText adminID, EditText password){
+        name.setText("");
+        address.setText("");
+        phoneNumber.setText("");
+        NIC.setText("");
+        birthDate.setText("");
+        email.setText("");
+        adminID.setText("");
+        password.setText("");
     }
 
 }
