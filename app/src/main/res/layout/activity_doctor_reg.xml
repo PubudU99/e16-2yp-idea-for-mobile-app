@@ -134,6 +134,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.521"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView53"
             app:srcCompat="@drawable/type" />
@@ -165,6 +166,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.521"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView52"
             app:srcCompat="@drawable/type" />
@@ -221,6 +223,31 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView50"
             app:srcCompat="@drawable/type" />
+
+        <EditText
+            android:id="@+id/regDoctorEmail"
+            android:layout_width="338dp"
+            android:layout_height="44dp"
+            android:background="@drawable/edittext_bg"
+            android:ems="10"
+            android:hint="NIC"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/imageView99"
+            app:layout_constraintStart_toStartOf="@+id/imageView99"
+            app:layout_constraintTop_toTopOf="@+id/imageView101" />
+
+        <EditText
+            android:id="@+id/regDoctorPhoneNIC"
+            android:layout_width="338dp"
+            android:layout_height="44dp"
+            android:background="@drawable/edittext_bg"
+            android:ems="10"
+            android:hint="PhonrNo"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/imageView98"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="@+id/imageView98"
+            app:layout_constraintTop_toTopOf="@+id/imageView99" />
 
         <TextView
             android:id="@+id/textView50"
@@ -298,9 +325,9 @@
             android:inputType="text"
             app:layout_constraintBottom_toBottomOf="@+id/imageView97"
             app:layout_constraintEnd_toEndOf="@+id/imageView97"
-            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="@+id/imageView97"
-            app:layout_constraintTop_toTopOf="@+id/imageView97" />
+            app:layout_constraintTop_toTopOf="@+id/imageView97"
+            app:layout_constraintVertical_bias="0.333" />
 
         <EditText
             android:id="@+id/regDoctorPhoneNo"
@@ -310,23 +337,9 @@
             android:ems="10"
             android:hint="PhonrNo"
             android:inputType="text"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView98"
             app:layout_constraintEnd_toEndOf="@+id/imageView98"
             app:layout_constraintStart_toStartOf="@+id/imageView98"
             app:layout_constraintTop_toTopOf="@+id/imageView98" />
-
-        <EditText
-            android:id="@+id/regDoctorNIC"
-            android:layout_width="338dp"
-            android:layout_height="44dp"
-            android:background="@drawable/edittext_bg"
-            android:ems="10"
-            android:hint="NIC"
-            android:inputType="text"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView99"
-            app:layout_constraintEnd_toEndOf="@+id/imageView99"
-            app:layout_constraintStart_toStartOf="@+id/imageView99"
-            app:layout_constraintTop_toTopOf="@+id/imageView99" />
 
         <EditText
             android:id="@+id/regDoctorBDate"
@@ -334,25 +347,12 @@
             android:layout_height="44dp"
             android:background="@drawable/edittext_bg"
             android:ems="10"
-            android:hint="Birth Date"
+            android:hint="NIC"
             android:inputType="text"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView100"
-            app:layout_constraintEnd_toEndOf="@+id/imageView100"
-            app:layout_constraintStart_toStartOf="@+id/imageView100"
-            app:layout_constraintTop_toTopOf="@+id/imageView56" />
+            app:layout_constraintEnd_toEndOf="@+id/imageView99"
+            app:layout_constraintStart_toStartOf="@+id/imageView99"
+            app:layout_constraintTop_toTopOf="@+id/imageView100" />
 
-        <EditText
-            android:id="@+id/regDoctorEmail"
-            android:layout_width="338dp"
-            android:layout_height="44dp"
-            android:background="@drawable/edittext_bg"
-            android:ems="10"
-            android:hint="Email"
-            android:inputType="text"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView101"
-            app:layout_constraintEnd_toEndOf="@+id/imageView101"
-            app:layout_constraintStart_toStartOf="@+id/imageView101"
-            app:layout_constraintTop_toTopOf="@+id/imageView101" />
 
         <EditText
             android:id="@+id/regDoctorDoctorID"

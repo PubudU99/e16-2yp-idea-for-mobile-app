@@ -39,7 +39,7 @@ public class doctorReg extends AppCompatActivity {
         name = findViewById(R.id.regDoctorName);
         address = findViewById(R.id.regDoctorAddress);
         phoneNumber = findViewById(R.id.regDoctorPhoneNo);
-        NIC = findViewById(R.id.regDoctorNIC);
+        NIC = findViewById(R.id.regDoctorPhoneNIC);
         birthDate = findViewById(R.id.regDoctorBDate);
         email = findViewById(R.id.regDoctorEmail);
         adminID = findViewById(R.id.regDoctorDoctorID);
@@ -60,7 +60,7 @@ public class doctorReg extends AppCompatActivity {
                 String NIC_s = NIC.getText().toString().trim();
                 String birthDate_s = birthDate.getText().toString().trim();
                 String email_s = (email.getText().toString().trim()).toLowerCase();
-                String adminIdk_s = (adminID.getText().toString().trim()).toLowerCase(); // admin id shoud pass as username
+                String adminIdk_s = (adminID.getText().toString().trim()).toLowerCase(); // admin id should pass as username
                 String pw_s = password.getText().toString().trim();
                 String assignedWard_s = assignedWard.getText().toString().trim();
                 String specialization_s = specialization.getText().toString();
@@ -74,7 +74,7 @@ public class doctorReg extends AppCompatActivity {
                             registerUser(name_s, address_s, phoneNumber_s,NIC_s, birthDate_s, email_s,adminIdk_s,pw_s, assignedWard_s, specialization_s);
 
                         }else {
-                            Toast.makeText(doctorReg.this, "Please enter username starting with a",
+                            Toast.makeText(doctorReg.this, "Please enter username starting with d",
                                     Toast.LENGTH_SHORT).show();
                         }
                     }else{
@@ -86,8 +86,6 @@ public class doctorReg extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
 
                 }
-
-
             }
         });
 

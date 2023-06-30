@@ -1,13 +1,22 @@
 package com.example.a225project;
 
-public class UserAdmin {
-    private String name, address, phoneNumber, NIC, birthDate, email, adminID;
+public class UserCaregiver{
+
+    private String name;
+    private String address;
+    private String phoneNumber;
+    private String NIC;
+    private String birthDate;
+    private String email;
+    private String adminID;
+
+    private String patientID;
 
 
-    public UserAdmin(){
+    public UserCaregiver(){
     }
 
-    public UserAdmin(String name, String address, String phoneNumber, String NIC,String birthDate,String email, String adminID){
+    public UserCaregiver(String name, String address, String phoneNumber, String NIC,String birthDate,String email, String adminID, String patientID){
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
@@ -15,7 +24,17 @@ public class UserAdmin {
         this.birthDate = birthDate;
         this.email = email;
         this.adminID = adminID;
+        this.patientID = patientID;
 
+
+    }
+
+    public String getAssignedWard() {
+        return patientID;
+    }
+
+    public void setAssignedWard(String assignedWard) {
+        this.patientID = assignedWard;
     }
 
     public String getName() {
@@ -73,6 +92,7 @@ public class UserAdmin {
     public void setAdminID(String adminID) {
         this.adminID = adminID;
     }
+
 
 
 }
