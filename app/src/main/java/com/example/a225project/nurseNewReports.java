@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -40,6 +41,16 @@ public class nurseNewReports extends AppCompatActivity {
 
         Blood = findViewById(R.id.imageView140);
         Urine = findViewById(R.id.imageView141);
+
+        ImageView goBack =findViewById(R.id.imageView209);
+
+        goBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1= new Intent(getApplicationContext(),nursrHome.class);
+                startActivity(i1);
+            }
+        });
 
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override

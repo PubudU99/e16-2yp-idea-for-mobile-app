@@ -87,8 +87,8 @@ public class MainActivity3 extends AppCompatActivity {
         profilePic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i4=new Intent(getApplicationContext(),EditProfile.class);
-                startActivity(i4);
+                Intent i1=new Intent(getApplicationContext(),EditProfile.class);
+                startActivity(i1);
             }
         });
 
