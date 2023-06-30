@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     ImageButton loginButton;
     Button btnPasswordReset;
+    ImageView forgotPasswordBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +41,14 @@ public class MainActivity extends AppCompatActivity {
         usernameEditText = findViewById(R.id.editTextTextEmailAddress);
         passwordEditText = findViewById(R.id.editTextTextPassword);
 
-
+        forgotPasswordBtn=findViewById(R.id.forgorPassword);
+        forgotPasswordBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i2=new Intent(getApplicationContext(),ForgotPassword.class);
+                startActivity(i2);
+            }
+        });
 
         // Set OnClickListener for the login button
         loginButton = findViewById(R.id.loginBtn);
