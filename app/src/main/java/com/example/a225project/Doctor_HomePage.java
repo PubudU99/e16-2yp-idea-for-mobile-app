@@ -133,7 +133,7 @@ public class Doctor_HomePage extends AppCompatActivity {
                 //getting patients
                 for (DataSnapshot snapshot : datasnapshot.getChildren()){
                     String patientKey = snapshot.getKey();
-                    PatientList.add(patientKey);   //list of the patients
+                    //PatientList.add(patientKey);   //list of the patients
 
                     HashMap<String, Object> ma = (HashMap<String, Object>) snapshot.getValue();
 
