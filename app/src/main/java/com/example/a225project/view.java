@@ -10,6 +10,7 @@ import android.widget.ImageView;
 public class view extends AppCompatActivity {
 
     ImageView goBackBtn;
+    ImageView viewPatients;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,16 @@ public class view extends AppCompatActivity {
                 startActivity(i2);
             }
         });
+        viewPatients=findViewById(R.id.imageView77);
+        viewPatients.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1= new Intent(getApplicationContext(),Admin_viewAllPatients.class);
+                startActivity(i1);
+            }
+        });
 
     }
+
+
 }

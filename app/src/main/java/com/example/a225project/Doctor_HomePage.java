@@ -65,11 +65,17 @@ public class Doctor_HomePage extends AppCompatActivity {
 
     ArrayList<doctorTodayPatientsModel> doctorTodayPatientsModels= new ArrayList<>();
     String[] PatientNames={"Mahesha Madhushanka","Kavindu Bambaragama","Dinushika Abrew","Nikalshi Sepalika","Pasindu Rangana","Pubudu Madhushith","Uthsara wikramarachchi","Sapuni Nithya","Tharidi Sadewmi","John Seena"};
+    //String[] PatientNames;
     String[] WardNo={"102D","133F","202A","402H","202D","102D","133F","202D","202A","102D"};
-    String[] bedNo={"10","7","3","6","14","9","33","62","13","12"};
-    String[] tTime={"10.00 AM","10.30 AM","11.00 AM","11.30 AM","12.00 PM","01.00 PM","02.00 PM","02.30 PM","03.00 PM","03.30 PM"};
-    int[] patientProfilePics={R.drawable.pdp1,R.drawable.pdp2,R.drawable.pdp3,R.drawable.pdp4,R.drawable.pdp5,R.drawable.pdp6,R.drawable.pdp7,R.drawable.pdp8,R.drawable.pdp9,R.drawable.pdp10};
+    //String WardNo = "234";
 
+    String[] bedNo={"10","7","3","6","14","9","33","62","13","12"};
+    //String bedNo="234";
+
+    String[] tTime={"10.00 AM","10.30 AM","11.00 AM","11.30 AM","12.00 PM","01.00 PM","02.00 PM","02.30 PM","03.00 PM","03.30 PM"};
+    //String tTime="10.00 AM";
+    int[] patientProfilePics={R.drawable.pdp1,R.drawable.pdp2,R.drawable.pdp3,R.drawable.pdp4,R.drawable.pdp5,R.drawable.pdp6,R.drawable.pdp7,R.drawable.pdp8,R.drawable.pdp9,R.drawable.pdp10};
+    //int patientProfilePics=R.drawable.dp1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,10 +90,17 @@ public class Doctor_HomePage extends AppCompatActivity {
         day = calendar.get(Calendar.DAY_OF_MONTH);
 
         retrieveData();
+
+        //WardNo=wardIDList.toArray(new String[wardIDList.size()]);
+        //bedNo=bedIDList.toArray(new String[bedIDList.size()]);
+
         displayDate(year, month, day);
 
 
         toAppoin =  findViewById(R.id.imageView199);
+
+
+
 
 
         toAppoin.setOnClickListener(new View.OnClickListener() {
@@ -109,6 +122,7 @@ public class Doctor_HomePage extends AppCompatActivity {
 
     private void setUpDoctorTodayPatientsModels(){
         for(int i=0;i<PatientNames.length;i++){
+            //doctorTodayPatientsModels.add(new doctorTodayPatientsModel(PatientNames[i],WardNo[i],bedNo[i],tTime[i],patientProfilePics));
             doctorTodayPatientsModels.add(new doctorTodayPatientsModel(PatientNames[i],WardNo[i],bedNo[i],tTime[i],patientProfilePics[i]));
         }
 
@@ -123,6 +137,8 @@ public class Doctor_HomePage extends AppCompatActivity {
     ////retrievieng data to a list
     public void retrieveData()
     {
+        Toast.makeText(Doctor_HomePage.this, "wada.", Toast.LENGTH_SHORT).show();
+
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("patient");
         reference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -136,7 +152,7 @@ public class Doctor_HomePage extends AppCompatActivity {
 
                     HashMap<String, Object> ma = (HashMap<String, Object>) snapshot.getValue();
 
-                    nicList.add(ma.get("nic").toString());      //list of nic
+                    //nicList.add(ma.get("nic").toString());      //list of nic
                     //admitDateList.add(ma.get("admitDate").toString());      //list of admit date
                     //bedIDList.add(ma.get("bedID").toString());      //list of bed ID
                     //nurseList.add(ma.get("nurse").toString());      //list of nurse
@@ -152,6 +168,10 @@ public class Doctor_HomePage extends AppCompatActivity {
                 System.out.println(bedIDList);
                 System.out.println(nurseList);
                 System.out.println(wardIDList);
+
+//                PatientNames=PatientList.toArray(new String[PatientList.size()]);
+//                System.out.println(PatientList);
+//                System.out.println(PatientNames);
 
             }
             @Override

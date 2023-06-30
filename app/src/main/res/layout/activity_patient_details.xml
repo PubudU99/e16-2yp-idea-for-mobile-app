@@ -8,100 +8,30 @@
     tools:context=".patientDetails">
 
     <ImageView
-        android:id="@+id/imageView215"
-        android:layout_width="424dp"
-        android:layout_height="384dp"
+        android:id="@+id/imageView36"
+        android:layout_width="421dp"
+        android:layout_height="389dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/bluebackgroundeditprofile" />
 
     <ImageView
-        android:id="@+id/imageView36"
-        android:layout_width="455dp"
-        android:layout_height="543dp"
+        android:id="@+id/imageView215"
+        android:layout_width="430dp"
+        android:layout_height="519dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/overlay" />
 
-    <TextView
-        android:id="@+id/textView105"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Patient"
-        android:textColor="#FBFAFA"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.348"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="66dp" />
-
-    <TextView
-        android:id="@+id/textView112"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Details"
-        android:textColor="#FBFAFA"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
-        app:layout_constraintStart_toEndOf="@+id/textView105"
-        app:layout_constraintTop_toTopOf="@+id/textView105" />
-
     <ImageView
-        android:id="@+id/imageView152"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:id="@+id/imageView221"
+        android:layout_width="427dp"
+        android:layout_height="682dp"
+        android:layout_marginTop="148dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView112"
-        app:srcCompat="@drawable/search" />
-
-    <ImageView
-        android:id="@+id/imageView153"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView152"
-        app:layout_constraintHorizontal_bias="0.084"
-        app:layout_constraintStart_toStartOf="@+id/imageView152"
-        app:layout_constraintTop_toBottomOf="@+id/textView112"
-        app:srcCompat="@drawable/search_icon" />
-
-    <ImageView
-        android:id="@+id/imageView162"
-        android:layout_width="439dp"
-        android:layout_height="648dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView152"
-        app:srcCompat="@drawable/details_white" />
-
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="221dp"
-        android:layout_height="41dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:hint="Search"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView152"
-        app:layout_constraintEnd_toEndOf="@+id/imageView152"
-        app:layout_constraintHorizontal_bias="0.34"
-        app:layout_constraintStart_toEndOf="@+id/imageView153"
-        app:layout_constraintTop_toTopOf="@+id/imageView152" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/patientDtailsRecyclerView"
-        android:layout_width="366dp"
-        android:layout_height="633dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView162" />
+        app:layout_constraintTop_toTopOf="@+id/imageView36"
+        app:srcCompat="@drawable/rectangle_13" />
 </androidx.constraintlayout.widget.ConstraintLayout>
