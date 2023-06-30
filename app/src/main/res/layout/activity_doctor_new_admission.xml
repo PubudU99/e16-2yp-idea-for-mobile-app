@@ -205,9 +205,9 @@
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="@+id/imageView168"
         app:layout_constraintEnd_toEndOf="@+id/imageView168"
-        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="@+id/imageView168"
-        app:layout_constraintTop_toTopOf="@+id/imageView168" />
+        app:layout_constraintTop_toTopOf="@+id/imageView168"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/editTextText25"

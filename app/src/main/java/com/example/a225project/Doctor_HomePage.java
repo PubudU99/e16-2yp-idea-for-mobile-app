@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -16,6 +19,8 @@ public class Doctor_HomePage extends AppCompatActivity {
     int day, month, year;
 
     TextView dateTxt;
+
+    ImageView toAppoin;
 
 
     ArrayList<doctorTodayPatientsModel> doctorTodayPatientsModels= new ArrayList<>();
@@ -39,6 +44,16 @@ public class Doctor_HomePage extends AppCompatActivity {
         day = calendar.get(Calendar.DAY_OF_MONTH);
 
         displayDate(year, month, day);
+
+        toAppoin =  findViewById(R.id.imageView199);
+
+        toAppoin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), doctorNewAdmission.class));
+                System.out.println("hello");
+            }
+        });
 
 
 

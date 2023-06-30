@@ -90,6 +90,11 @@
         <activity
             android:name=".doctorAddPrescription"
             android:exported="false" />
+
+        <activity
+            android:name=".doctorNewAdmission"
+            android:exported="false" />
+
         <activity
             android:name=".SplashScreen"
             android:exported="true">
