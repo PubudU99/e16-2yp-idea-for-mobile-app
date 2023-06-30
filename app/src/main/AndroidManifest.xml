@@ -13,12 +13,6 @@
         android:theme="@style/Theme.225Project"
         tools:targetApi="31">
         <activity
-            android:name=".admin_ward_inside_details"
-            android:exported="false" />
-        <activity
-            android:name=".admin_ward_details"
-            android:exported="false" />
-        <activity
             android:name=".ForgotPassword"
             android:exported="false" />
         <activity
@@ -32,6 +26,9 @@
             android:exported="false" />
         <activity
             android:name=".EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".AddMedicine"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -96,9 +93,11 @@
         <activity
             android:name=".doctorAddPrescription"
             android:exported="false" />
+
         <activity
             android:name=".doctorNewAdmission"
             android:exported="false" />
+
         <activity
             android:name=".SplashScreen"
             android:exported="true">
