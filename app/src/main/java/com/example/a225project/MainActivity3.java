@@ -68,10 +68,22 @@ public class MainActivity3 extends AppCompatActivity {
         year = calendar.get(Calendar.YEAR);
         month = calendar.get(Calendar.MONTH);
         day = calendar.get(Calendar.DAY_OF_MONTH);
+        ImageButton toPrescription;
+        toPrescription=findViewById(R.id.patientPrescriptionSeeall);
+
 
         displayDate(year, month, day);
 
         profilePic=findViewById(R.id.imageView11);
+
+        toPrescription.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i5= new Intent(getApplicationContext(),Patient_prescriptionView.class);
+                startActivity(i5);
+            }
+        });
+
         profilePic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

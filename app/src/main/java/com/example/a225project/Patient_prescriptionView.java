@@ -1,8 +1,13 @@
 package com.example.a225project;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
 import java.util.ArrayList;
 
@@ -20,12 +25,27 @@ public class Patient_prescriptionView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_prescription_view);
+
+        RecyclerView recyclerView= findViewById(R.id.prescriptionRecyclerView);
+        setUpPrescriptionModels();
+        Patient_presctiption_Adapter adapter = new Patient_presctiption_Adapter(this,prescriptionmodels);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        ImageButton gobacktoHome=findViewById(R.id.imageButton2);
+        gobacktoHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1= new Intent(getApplicationContext(), MainActivity3.class);
+                startActivity(i1);
+            }
+        });
+
     }
-// need to construct
-//    private  void setUpPrescriptionModels(){
-//        for (int i=0;i<TabletNames.length;i++){
-//            prescriptionmodels.add(new )
-//        }
-//    }
+    private  void setUpPrescriptionModels(){
+        for (int i=0;i<TabletNames.length;i++){
+            prescriptionmodels.add(new PrescripionModel(TabletNames[i],TabletWeights[i],amountsPerMeal[i],noOfDays[i],noOfMeals[i]));
+        }
+    }
 
 }

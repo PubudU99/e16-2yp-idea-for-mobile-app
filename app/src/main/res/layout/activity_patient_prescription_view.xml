@@ -1,80 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollview1"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Patient_prescriptionView">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView169"
-        android:layout_width="436dp"
-        android:layout_height="408dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bluebackgroundeditprofile" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/gobackprescription"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Patient_prescriptionView">
 
-    <ImageView
-        android:id="@+id/imageView173"
-        android:layout_width="422dp"
-        android:layout_height="539dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/overlay" />
 
-    <ImageView
-        android:id="@+id/imageView172"
-        android:layout_width="431dp"
-        android:layout_height="693dp"
-        android:layout_marginTop="188dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView169"
-        app:srcCompat="@drawable/rectangle_13" />
+        <ImageView
+            android:id="@+id/imageView169"
+            android:layout_width="436dp"
+            android:layout_height="408dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bluebackgroundeditprofile" />
 
-    <ImageView
-        android:id="@+id/imageView174"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.071"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView169"
-        app:srcCompat="@drawable/yourprescription" />
+        <ImageView
+            android:id="@+id/imageView173"
+            android:layout_width="422dp"
+            android:layout_height="539dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.545"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/overlay" />
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#00FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ionic_arrow_back" />
+        <ImageView
+            android:id="@+id/imageView172"
+            android:layout_width="431dp"
+            android:layout_height="693dp"
+            android:layout_marginTop="188dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView169"
+            app:srcCompat="@drawable/rectangle_13" />
 
-    <ImageView
-        android:id="@+id/imageView176"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.141"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView172"
-        app:srcCompat="@drawable/disctiptionprescription" />
+        <ImageView
+            android:id="@+id/imageView174"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="76dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.071"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView169"
+            app:srcCompat="@drawable/yourprescription" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/prescriptionRecyclerView"
-        android:layout_width="394dp"
-        android:layout_height="373dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView176" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#00FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.044"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ionic_arrow_back" />
+
+        <ImageView
+            android:id="@+id/imageView176"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.141"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView172"
+            app:srcCompat="@drawable/disctiptionprescription" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/prescriptionRecyclerView"
+            android:layout_width="394dp"
+            android:layout_height="373dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView176" />
+
+        <ImageView
+            android:id="@+id/imageView193"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.134"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/prescriptionRecyclerView"
+            app:srcCompat="@drawable/importantdtailstext" />
+
+        <ImageView
+            android:id="@+id/imageView194"
+            android:layout_width="355dp"
+            android:layout_height="142dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView193"
+            app:srcCompat="@drawable/importantdetalistextbox" />
+
+        <TextView
+            android:id="@+id/textView183"
+            android:layout_width="313dp"
+            android:layout_height="82dp"
+            android:layout_marginTop="24dp"
+            android:text="details"
+            app:layout_constraintEnd_toEndOf="@+id/imageView194"
+            app:layout_constraintStart_toStartOf="@+id/imageView194"
+            app:layout_constraintTop_toTopOf="@+id/imageView194" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
