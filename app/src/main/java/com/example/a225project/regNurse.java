@@ -87,7 +87,7 @@ public class regNurse extends AppCompatActivity {
                             registerUser(name_s, address_s, phoneNumber_s,NIC_s, birthDate_s, email_s,adminIdk_s,pw_s, assignedWard_s);
 
                         }else {
-                            Toast.makeText(regNurse.this, "Please enter username starting with a",
+                            Toast.makeText(regNurse.this, "Please enter username starting with n",
                                     Toast.LENGTH_SHORT).show();
                         }
                     }else{

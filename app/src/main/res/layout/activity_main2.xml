@@ -131,7 +131,7 @@
         app:srcCompat="@drawable/bgg" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/patientPrescriptionSeeall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#00FFFFFF"

@@ -12,6 +12,7 @@
         android:layout_width="420dp"
         android:layout_height="525dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/overlay" />
@@ -170,6 +171,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView117" />
 
+    <ImageView
+        android:id="@+id/imageView149"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/topback" />
+
     <TextView
         android:id="@+id/textView117"
         android:layout_width="wrap_content"
@@ -245,14 +256,14 @@
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="4dp"
         android:text="Prescription"
         android:textColor="#FBFAFA"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.056"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView41" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView149" />
 
     <TextView
         android:id="@+id/textView20"

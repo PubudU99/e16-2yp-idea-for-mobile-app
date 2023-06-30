@@ -47,12 +47,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#00FFFFFF"
-            app:layout_constraintBottom_toTopOf="@+id/imageView26"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/imageView25"
-            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/ionic_arrow_back" />
 
         <ImageView
@@ -63,7 +61,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.071"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageView25"
+            app:layout_constraintTop_toBottomOf="@+id/goBack"
             app:layout_constraintVertical_bias="0.863"
             app:srcCompat="@drawable/healthstatus" />
 
@@ -71,12 +69,12 @@
             android:id="@+id/calander"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
             android:backgroundTint="#00FFFFFF"
             app:layout_constraintBottom_toBottomOf="@+id/imageView27"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.73"
-            app:layout_constraintStart_toEndOf="@+id/imageView27"
-            app:layout_constraintTop_toTopOf="@+id/imageView27"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.805"
             app:srcCompat="@drawable/calander_icon" />
 
         <ImageView

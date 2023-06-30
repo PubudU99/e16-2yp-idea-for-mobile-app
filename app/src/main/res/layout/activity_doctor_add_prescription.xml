@@ -11,7 +11,6 @@
         android:id="@+id/textView137"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
         android:text="Prescription"
         android:textColor="#FAF9F9"
         android:textSize="24sp"
@@ -19,17 +18,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.047"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView136" />
 
     <ImageView
         android:id="@+id/imageView170"
         android:layout_width="438dp"
         android:layout_height="795dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView137"
         app:srcCompat="@drawable/doctor_white" />
 
     <TextView
@@ -48,14 +47,14 @@
         android:id="@+id/textView136"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="12dp"
         android:text="Add"
         android:textColor="#FAF9F9"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintHorizontal_bias="0.043"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView156" />
 
     <TextView
         android:id="@+id/textView138"
@@ -115,5 +114,16 @@
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="@+id/imageView189"
         app:layout_constraintTop_toTopOf="@+id/imageView189" />
+
+    <ImageView
+        android:id="@+id/imageView156"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.034"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/topback" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,7 +16,6 @@ public class UserAdmin {
         this.email = email;
         this.adminID = adminID;
 
-
     }
 
     public String getName() {

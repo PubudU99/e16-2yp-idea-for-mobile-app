@@ -24,15 +24,14 @@
         android:id="@+id/textView83"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
         android:text="Registration"
         android:textColor="#FAF7F7"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintHorizontal_bias="0.057"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView77" />
 
     <TextView
         android:id="@+id/textView90"
@@ -50,7 +49,7 @@
         android:id="@+id/imageView131"
         android:layout_width="481dp"
         android:layout_height="923dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView83"
@@ -224,14 +223,13 @@
         android:id="@+id/textView77"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
         android:text="Admin"
         android:textColor="#FAF7F7"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.046"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/goBackbtn" />
 
     <ImageView
         android:id="@+id/imageView132"
@@ -368,7 +366,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#00FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/imageView131"
-        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintHorizontal_bias="0.425"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView181"
         app:srcCompat="@drawable/submit" />

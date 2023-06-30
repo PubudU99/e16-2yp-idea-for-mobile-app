@@ -5,620 +5,315 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#6877A1"
-    tools:context=".patientAdmittance">
 
-    <ImageView
-        android:id="@+id/imageView152"
-        android:layout_width="442dp"
-        android:layout_height="529dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/overlay" />
-
-    <TextView
-        android:id="@+id/textView94"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
-        android:text="Admission"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.094"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="#FFFFFF"
+        tools:context=".patientAdmittance">
 
-    <ImageView
-        android:id="@+id/imageView139"
-        android:layout_width="485dp"
-        android:layout_height="1885dp"
-        android:layout_marginTop="144dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/patient_reg" />
+        <ImageView
+            android:id="@+id/imageView148"
+            android:layout_width="546dp"
+            android:layout_height="482dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bluebackgroundeditprofile" />
 
-    <TextView
-        android:id="@+id/textView110"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Medical History"
-        android:textSize="24sp"
-        app:layout_constraintHorizontal_bias="0.109"
-        app:layout_constraintEnd_toEndOf="parent"
+        <ImageView
+            android:id="@+id/imageView152"
+            android:layout_width="442dp"
+            android:layout_height="529dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/overlay" />
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView158" />
+        <ImageView
+            android:id="@+id/imageView139"
+            android:layout_width="431dp"
+            android:layout_height="722dp"
+            android:layout_marginTop="144dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/rectangle_13" />
 
-    <TextView
-        android:id="@+id/textView109"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Any Diagnosis"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView157" />
+        <ImageView
+            android:id="@+id/imageView160"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView158"
+            app:srcCompat="@drawable/submit" />
 
-    <ImageView
-        android:id="@+id/imageView157"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView108"
-        app:srcCompat="@drawable/type" />
+        <TextView
+            android:id="@+id/textView111"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="ADMIT"
+            android:textColor="#FAF8F8"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView160"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toStartOf="@+id/imageView160"
+            app:layout_constraintTop_toTopOf="@+id/imageView160" />
 
-    <ImageView
-        android:id="@+id/imageView160"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView159"
-        app:srcCompat="@drawable/submit" />
+        <ImageView
+            android:id="@+id/imageView161"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="84dp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView139"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.029"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/topback" />
 
-    <TextView
-        android:id="@+id/textView108"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Assigned Ward"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.115"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView156" />
+        <ImageView
+            android:id="@+id/imageView158"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView100"
+            app:srcCompat="@drawable/diagnosis" />
 
-    <TextView
-        android:id="@+id/textView111"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="SUBMIT"
-        android:textColor="#FAF8F8"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView160"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="@+id/imageView160"
-        app:layout_constraintTop_toTopOf="@+id/imageView160" />
+        <TextView
+            android:id="@+id/textView100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Special Notes"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.109"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView147" />
 
-    <ImageView
-        android:id="@+id/imageView159"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView110"
-        app:srcCompat="@drawable/history" />
+        <ImageView
+            android:id="@+id/imageView147"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.521"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView99"
+            app:srcCompat="@drawable/type" />
 
-    <ImageView
-        android:id="@+id/imageView156"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView107"
-        app:srcCompat="@drawable/type" />
+        <TextView
+            android:id="@+id/textView99"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bed ID"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.109"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView146" />
 
-    <TextView
-        android:id="@+id/textView107"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Assigned Nurse"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView155" />
+        <ImageView
+            android:id="@+id/imageView146"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.521"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView98"
+            app:srcCompat="@drawable/type" />
 
-    <ImageView
-        android:id="@+id/imageView155"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView106"
-        app:srcCompat="@drawable/type" />
+        <TextView
+            android:id="@+id/textView98"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ward ID"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.109"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView145" />
 
-    <TextView
-        android:id="@+id/textView106"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Assigned Doctor"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView154" />
+        <ImageView
+            android:id="@+id/imageView145"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.478"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView97"
+            app:srcCompat="@drawable/type" />
 
-    <ImageView
-        android:id="@+id/imageView161"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="84dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView139"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.029"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/topback" />
+        <TextView
+            android:id="@+id/textView97"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="96dp"
+            android:text="Appointed Nurse"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.109"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView143" />
 
-    <ImageView
-        android:id="@+id/imageView154"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView104"
-        app:srcCompat="@drawable/type" />
+        <ImageView
+            android:id="@+id/imageView144"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.478"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView96"
+            app:srcCompat="@drawable/type" />
 
-    <TextView
-        android:id="@+id/textView104"
-        android:layout_width="256dp"
-        android:layout_height="40dp"
-        android:text="Caregiver's Phone No."
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.174"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView151" />
+        <TextView
+            android:id="@+id/textView96"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Caregiver ID"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.109"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView143" />
 
-    <ImageView
-        android:id="@+id/imageView151"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView103"
-        app:srcCompat="@drawable/type" />
+        <TextView
+            android:id="@+id/textView91"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Patient"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView139"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.074"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.607" />
 
-    <TextView
-        android:id="@+id/textView103"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Caregiver's Name"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView150" />
+        <TextView
+            android:id="@+id/textView94"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="Admission"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.09"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView158"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView109"
-        app:srcCompat="@drawable/diagnosis" />
+        <TextView
+            android:id="@+id/textView95"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Patient NIC"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView139" />
 
-    <ImageView
-        android:id="@+id/imageView150"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView102"
-        app:srcCompat="@drawable/type" />
+        <ImageView
+            android:id="@+id/imageView143"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView95"
+            app:srcCompat="@drawable/type" />
 
-    <TextView
-        android:id="@+id/textView102"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Password"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView149" />
+        <EditText
+            android:id="@+id/editTextText24"
+            android:layout_width="338dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_bg"
+            android:ems="10"
+            android:hint="NIC"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView143"
+            app:layout_constraintEnd_toEndOf="@+id/imageView143"
+            app:layout_constraintStart_toStartOf="@+id/imageView143"
+            app:layout_constraintTop_toTopOf="@+id/imageView143" />
 
-    <ImageView
-        android:id="@+id/imageView149"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView101"
-        app:srcCompat="@drawable/type" />
+        <EditText
+            android:id="@+id/editTextText26"
+            android:layout_width="338dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_bg"
+            android:ems="10"
+            android:hint="Nuese ID"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView145"
+            app:layout_constraintEnd_toEndOf="@+id/imageView145"
+            app:layout_constraintStart_toStartOf="@+id/imageView145"
+            app:layout_constraintTop_toTopOf="@+id/imageView145" />
 
-    <ImageView
-        android:id="@+id/imageView148"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView100"
-        app:srcCompat="@drawable/type" />
+        <EditText
+            android:id="@+id/editTextText27"
+            android:layout_width="338dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_bg"
+            android:ems="10"
+            android:hint="Ward ID"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView146"
+            app:layout_constraintEnd_toEndOf="@+id/imageView146"
+            app:layout_constraintStart_toStartOf="@+id/imageView146"
+            app:layout_constraintTop_toTopOf="@+id/imageView146" />
 
-    <TextView
-        android:id="@+id/textView100"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView147" />
+        <EditText
+            android:id="@+id/editTextText28"
+            android:layout_width="338dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_bg"
+            android:ems="10"
+            android:hint="Bed ID"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView147"
+            app:layout_constraintEnd_toEndOf="@+id/imageView147"
+            app:layout_constraintStart_toStartOf="@+id/imageView147"
+            app:layout_constraintTop_toTopOf="@+id/imageView147" />
 
-    <ImageView
-        android:id="@+id/imageView147"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView99"
-        app:srcCompat="@drawable/type" />
+        <EditText
+            android:id="@+id/editTextTextMultiLine2"
+            android:layout_width="332dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_bg"
+            android:ems="10"
+            android:hint="Notes"
+            android:inputType="text|textMultiLine"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView158"
+            app:layout_constraintEnd_toEndOf="@+id/imageView158"
+            app:layout_constraintHorizontal_bias="0.44"
+            app:layout_constraintStart_toStartOf="@+id/imageView158"
+            app:layout_constraintTop_toTopOf="@+id/imageView158"
+            app:layout_constraintVertical_bias="0.169" />
 
-    <TextView
-        android:id="@+id/textView99"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Birth Date"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView146" />
-
-    <ImageView
-        android:id="@+id/imageView146"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView98"
-        app:srcCompat="@drawable/type" />
-
-    <TextView
-        android:id="@+id/textView98"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="NIC"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView145" />
-
-    <ImageView
-        android:id="@+id/imageView145"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView97"
-        app:srcCompat="@drawable/type" />
-
-    <TextView
-        android:id="@+id/textView97"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
-        android:text="Phone Number"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView143" />
-
-    <ImageView
-        android:id="@+id/imageView144"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView96"
-        app:srcCompat="@drawable/type" />
-
-    <TextView
-        android:id="@+id/textView101"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Patient ID"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView148" />
-
-    <TextView
-        android:id="@+id/textView96"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Address"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView143" />
-
-    <TextView
-        android:id="@+id/textView91"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Patient"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView139"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.077"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.535" />
-
-    <TextView
-        android:id="@+id/textView95"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Name"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.11"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView139" />
-
-    <ImageView
-        android:id="@+id/imageView143"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView95"
-        app:srcCompat="@drawable/type" />
-
-    <EditText
-        android:id="@+id/editTextText24"
-        android:layout_width="338dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:inputType="text"
-        android:hint="Name"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView143"
-        app:layout_constraintEnd_toEndOf="@+id/imageView143"
-        app:layout_constraintStart_toStartOf="@+id/imageView143"
-        app:layout_constraintTop_toTopOf="@+id/imageView143" />
-
-    <EditText
-        android:id="@+id/editTextText26"
-        android:layout_width="338dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:hint="Phone No"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView145"
-        app:layout_constraintEnd_toEndOf="@+id/imageView145"
-        app:layout_constraintStart_toStartOf="@+id/imageView145"
-        app:layout_constraintTop_toTopOf="@+id/imageView145" />
-
-    <EditText
-        android:id="@+id/editTextText27"
-        android:layout_width="338dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:hint="NIC"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView146"
-        app:layout_constraintEnd_toEndOf="@+id/imageView146"
-        app:layout_constraintStart_toStartOf="@+id/imageView146"
-        app:layout_constraintTop_toTopOf="@+id/imageView146" />
-
-    <EditText
-        android:id="@+id/editTextText28"
-        android:layout_width="338dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:hint="Birth Date"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView147"
-        app:layout_constraintEnd_toEndOf="@+id/imageView147"
-        app:layout_constraintStart_toStartOf="@+id/imageView147"
-        app:layout_constraintTop_toTopOf="@+id/imageView147" />
-
-    <EditText
-        android:id="@+id/editTextText29"
-        android:layout_width="338dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView148"
-        app:layout_constraintEnd_toEndOf="@+id/imageView148"
-        app:layout_constraintStart_toStartOf="@+id/imageView148"
-        app:layout_constraintTop_toTopOf="@+id/imageView148" />
-
-    <EditText
-        android:id="@+id/editTextText30"
-        android:layout_width="338dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:hint="Patient ID"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView149"
-        app:layout_constraintEnd_toEndOf="@+id/imageView149"
-        app:layout_constraintStart_toStartOf="@+id/imageView149"
-        app:layout_constraintTop_toTopOf="@+id/imageView149" />
-
-    <EditText
-        android:id="@+id/editTextText31"
-        android:layout_width="338dp"
-        android:layout_height="44dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView150"
-        app:layout_constraintEnd_toEndOf="@+id/imageView150"
-        app:layout_constraintStart_toStartOf="@+id/imageView150"
-        app:layout_constraintTop_toTopOf="@+id/imageView150" />
-
-    <EditText
-        android:id="@+id/editTextText32"
-        android:layout_width="338dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:hint="Name Of Caregiver"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView151"
-        app:layout_constraintEnd_toEndOf="@+id/imageView151"
-        app:layout_constraintStart_toStartOf="@+id/imageView151"
-        app:layout_constraintTop_toTopOf="@+id/imageView151" />
-
-    <EditText
-        android:id="@+id/editTextText33"
-        android:layout_width="338dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:hint="Caregivers phone no"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView154"
-        app:layout_constraintEnd_toEndOf="@+id/imageView154"
-        app:layout_constraintStart_toStartOf="@+id/imageView154"
-        app:layout_constraintTop_toTopOf="@+id/imageView154" />
-
-    <EditText
-        android:id="@+id/editTextText34"
-        android:layout_width="338dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:hint="Assignrd Doctor"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView155"
-        app:layout_constraintEnd_toEndOf="@+id/imageView155"
-        app:layout_constraintStart_toStartOf="@+id/imageView155"
-        app:layout_constraintTop_toTopOf="@+id/imageView155" />
-
-    <EditText
-        android:id="@+id/editTextText35"
-        android:layout_width="338dp"
-        android:layout_height="44dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:hint="Assignrd Nurse"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView156"
-        app:layout_constraintEnd_toEndOf="@+id/imageView156"
-        app:layout_constraintStart_toStartOf="@+id/imageView156"
-        app:layout_constraintTop_toTopOf="@+id/imageView156" />
-
-    <EditText
-        android:id="@+id/editTextText36"
-        android:layout_width="338dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:hint="Assigned Ward"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView157"
-        app:layout_constraintEnd_toEndOf="@+id/imageView157"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="@+id/imageView157"
-        app:layout_constraintTop_toTopOf="@+id/imageView157" />
-
-    <EditText
-        android:id="@+id/editTextTextMultiLine2"
-        android:layout_width="332dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:hint="Diagnostics"
-        android:inputType="text|textMultiLine"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView158"
-        app:layout_constraintEnd_toEndOf="@+id/imageView158"
-        app:layout_constraintHorizontal_bias="0.44"
-        app:layout_constraintStart_toStartOf="@+id/imageView158"
-        app:layout_constraintTop_toTopOf="@+id/imageView158"
-        app:layout_constraintVertical_bias="0.169" />
-
-    <EditText
-        android:id="@+id/editTextTextMultiLine3"
-        android:layout_width="325dp"
-        android:layout_height="158dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:hint="History"
-        android:inputType="text|textMultiLine"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView159"
-        app:layout_constraintEnd_toEndOf="@+id/imageView159"
-        app:layout_constraintHorizontal_bias="0.44"
-        app:layout_constraintStart_toStartOf="@+id/imageView159"
-        app:layout_constraintTop_toTopOf="@+id/imageView159"
-        app:layout_constraintVertical_bias="0.125" />
-
-    <EditText
-        android:id="@+id/editTextText38"
-        android:layout_width="338dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/edittext_bg"
-        android:ems="10"
-        android:hint="Address"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView144"
-        app:layout_constraintEnd_toEndOf="@+id/imageView144"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="@+id/imageView144"
-        app:layout_constraintTop_toTopOf="@+id/imageView144" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/editTextText38"
+            android:layout_width="338dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_bg"
+            android:ems="10"
+            android:hint="Caregiver ID"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView144"
+            app:layout_constraintEnd_toEndOf="@+id/imageView144"
+            app:layout_constraintHorizontal_bias="0.516"
+            app:layout_constraintStart_toStartOf="@+id/imageView144"
+            app:layout_constraintTop_toTopOf="@+id/imageView144" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

@@ -26,8 +26,7 @@ public class MainActivity3 extends AppCompatActivity {
     ImageButton toReport;
     ImageButton appointmentSeeAll;
     Calendar calendar;
-
-    ImageView goBackBtn;
+    ImageView profilePic;
     int day, month, year;
 
     private  String text_Checkup_type="Medical Checkup- Routine";
@@ -70,17 +69,16 @@ public class MainActivity3 extends AppCompatActivity {
         month = calendar.get(Calendar.MONTH);
         day = calendar.get(Calendar.DAY_OF_MONTH);
 
-        goBackBtn = findViewById(R.id.goBackbttn1);
+        displayDate(year, month, day);
 
-        goBackBtn.setOnClickListener(new View.OnClickListener() {
+        profilePic=findViewById(R.id.imageView11);
+        profilePic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i2 = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(i2);
+                Intent i4=new Intent(getApplicationContext(),EditProfile.class);
+                startActivity(i4);
             }
         });
-
-        displayDate(year, month, day);
 
         toReport.setOnClickListener(new View.OnClickListener() {
             @Override

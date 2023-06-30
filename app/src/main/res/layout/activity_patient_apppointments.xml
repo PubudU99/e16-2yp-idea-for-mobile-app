@@ -109,20 +109,19 @@
         android:id="@+id/textView136"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
         android:text="Patient"
         android:textColor="#FAF9F9"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.047"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView212" />
 
     <ImageView
         android:id="@+id/imageView175"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="84dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView137"
@@ -153,6 +152,17 @@
         app:layout_constraintHorizontal_bias="0.781"
         app:layout_constraintStart_toEndOf="@+id/imageView181"
         app:layout_constraintTop_toTopOf="@+id/imageView180" />
+
+    <ImageView
+        android:id="@+id/imageView212"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.034"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/topback" />
 
     <TextView
         android:id="@+id/textView139"

@@ -24,7 +24,6 @@
         android:id="@+id/textView59"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
         android:text="Registration"
         android:textColor="#FAF9F9"
         android:textSize="24sp"
@@ -32,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.039"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView58" />
 
     <ImageView
         android:id="@+id/imageView106"
@@ -249,14 +248,13 @@
         android:id="@+id/textView58"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
         android:text="Nurse"
         android:textColor="#FAF9F9"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.034"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView117" />
 
     <TextView
         android:id="@+id/textView60"
