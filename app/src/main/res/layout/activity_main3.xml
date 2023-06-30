@@ -65,7 +65,6 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="UserName"
             android:textColor="#F6F0F0"
             android:textSize="34sp"
             app:layout_constraintBottom_toTopOf="@+id/imageView9"
