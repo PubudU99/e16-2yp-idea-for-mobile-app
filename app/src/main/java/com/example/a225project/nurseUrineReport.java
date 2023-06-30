@@ -26,7 +26,7 @@ public class nurseUrineReport extends AppCompatActivity {
 
     EditText color, appearance, specific_gravity,ph, protein, glucose, ketones;
     ImageView submitBtn;
-    String adminID = "p_bro"; //  adminID = username... I used that please use it everywhere.
+    String adminID = "p_john"; //  adminID = username... I used that please use it everywhere.
 
     // initialize user images
 

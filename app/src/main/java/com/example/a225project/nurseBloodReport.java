@@ -26,7 +26,7 @@ public class nurseBloodReport extends AppCompatActivity {
 
     EditText himoglobin, whileBlood, Platelet, Chorestrol, tryglisarides, ldl, hdl;
     ImageView submitBtn;
-    String adminID = "a_bro"; //  adminID = username... I used that please use it everywhere.
+    String adminID = "p_john"; //  adminID = username... I used that please use it everywhere.
 
     // initialize user images
 
