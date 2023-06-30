@@ -25,6 +25,7 @@ public class MainActivity3 extends AppCompatActivity {
     ImageButton goBackButton;
     ImageButton toReport;
     ImageButton appointmentSeeAll;
+    ImageButton prescriptionSeeAll;
     Calendar calendar;
     ImageView profilePic;
     int day, month, year;
@@ -75,8 +76,8 @@ public class MainActivity3 extends AppCompatActivity {
         profilePic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i4=new Intent(getApplicationContext(),EditProfile.class);
-                startActivity(i4);
+                Intent i6=new Intent(getApplicationContext(),EditProfile.class);
+                startActivity(i6);
             }
         });
 
@@ -100,6 +101,14 @@ public class MainActivity3 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i2= new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(i2);
+            }
+        });
+        prescriptionSeeAll=findViewById(R.id.patientPrescriptionSeeall);
+        prescriptionSeeAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i7=new Intent(getApplicationContext(),Patient_prescriptionView.class);
+                startActivity(i7);
             }
         });
 
