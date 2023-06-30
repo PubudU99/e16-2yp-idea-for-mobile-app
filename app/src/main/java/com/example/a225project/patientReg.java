@@ -96,7 +96,7 @@ public class patientReg extends AppCompatActivity {
                     }
                 }else{
                     Toast.makeText(patientReg.this, "Password should have more than 6 characters",
-                            Toast.LENGTH_SHORT).show();
+                            Toast.LENGTH_SHORT).show();//
 
                 }
 
