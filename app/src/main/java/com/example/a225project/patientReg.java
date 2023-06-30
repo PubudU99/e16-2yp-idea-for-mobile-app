@@ -74,6 +74,8 @@ public class patientReg extends AppCompatActivity {
                 String adminIdk_s = (adminID.getText().toString().trim()).toLowerCase(); // admin id should pass as username
                 String pw_s = password.getText().toString().trim();
 
+
+
                 // Check whether the all fields are filled.
 
 
@@ -104,11 +106,6 @@ public class patientReg extends AppCompatActivity {
 
     }
 
-
-
-
-
-
     private void registerUser(String name, String address, String phoneNumber, String NIC,String birthDate,String email, String adminID ,String  password) {
         // Get a reference to the "caregiver" node in the database
         mDatabase = mFirebaseDatabase.getReference("patient");
@@ -130,7 +127,12 @@ public class patientReg extends AppCompatActivity {
                             Toast.makeText(patientReg.this, "Username or email already exists.", Toast.LENGTH_SHORT).show();
                         } else {
                             // Username and email are available, create a new user entry in the database
-                            UserAdmin user = new UserAdmin( name,   address,  phoneNumber,   NIC,  birthDate,  email, adminID);
+                            String  heartRate = "";
+                            String  pressure = "";
+                            String  lungs = "";
+                            String  temperature = "";
+                            String  image = "";
+                            UserPatient user = new UserPatient( name,   address,  phoneNumber,   NIC,  birthDate,  email, adminID,  heartRate, pressure, lungs,temperature, image);
                             mDatabase.child(adminID).setValue(user); // use push if you need to assign an ID based on Firebase
                             registerUserWithEmail(email, password);
 
