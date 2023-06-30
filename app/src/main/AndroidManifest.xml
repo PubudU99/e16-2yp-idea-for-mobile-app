@@ -28,6 +28,9 @@
             android:name=".EditProfile"
             android:exported="false" />
         <activity
+            android:name=".AddMedicine"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity

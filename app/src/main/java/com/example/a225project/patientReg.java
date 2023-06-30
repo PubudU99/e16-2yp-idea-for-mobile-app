@@ -85,7 +85,7 @@ public class patientReg extends AppCompatActivity {
                             registerUser(name_s, address_s, phoneNumber_s,NIC_s, birthDate_s, email_s,adminIdk_s,pw_s);
 
                         }else {
-                            Toast.makeText(patientReg.this, "Please enter username starting with a",
+                            Toast.makeText(patientReg.this, "Please enter username starting with 'p_'",
                                     Toast.LENGTH_SHORT).show();
                         }
                     }else{
@@ -135,7 +135,14 @@ public class patientReg extends AppCompatActivity {
                             String  lungs = "";
                             String  temperature = "";
                             String  image = "";
-                            UserPatient user = new UserPatient( name,   address,  phoneNumber,   NIC,  birthDate,  email, adminID,  heartRate, pressure, lungs,temperature, image);
+                            String caregiverID = "";
+                            String nurse = "";
+                            String wardID = "";
+                            String bedID = "";
+                            String date = "";
+
+
+                            UserPatient user = new UserPatient(name,  address,  phoneNumber,   NIC,  birthDate,  email, adminID,  heartRate, pressure, lungs,temperature, image, caregiverID,nurse,wardID,bedID,date);
                             mDatabase.child(adminID).setValue(user); // use push if you need to assign an ID based on Firebase
                             registerUserWithEmail(email, password);
 
@@ -184,7 +191,7 @@ public class patientReg extends AppCompatActivity {
     //check the user type is matching.
     private boolean checkUserType(String userid){
         boolean dtype;
-        if(Character.toLowerCase(userid.charAt(0)) == 'p'){
+        if(Character.toLowerCase(userid.charAt(0)) == 'p' && userid.charAt(1) == '_'){
             dtype = true;
         }else{
             dtype = false;

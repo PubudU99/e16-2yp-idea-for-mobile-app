@@ -26,6 +26,5 @@ public class caregiverReg extends AppCompatActivity {
                 startActivity(i2);
             }
         });
-
     }
 }
