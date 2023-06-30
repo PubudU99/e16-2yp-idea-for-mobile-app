@@ -85,7 +85,7 @@ public class patientReg extends AppCompatActivity {
                             registerUser(name_s, address_s, phoneNumber_s,NIC_s, birthDate_s, email_s,adminIdk_s,pw_s);
 
                         }else {
-                            Toast.makeText(patientReg.this, "Please enter username starting with a",
+                            Toast.makeText(patientReg.this, "Please enter username starting with 'p_'",
                                     Toast.LENGTH_SHORT).show();
                         }
                     }else{
@@ -191,7 +191,7 @@ public class patientReg extends AppCompatActivity {
     //check the user type is matching.
     private boolean checkUserType(String userid){
         boolean dtype;
-        if(Character.toLowerCase(userid.charAt(0)) == 'p'){
+        if(Character.toLowerCase(userid.charAt(0)) == 'p' && userid.charAt(1) == '_'){
             dtype = true;
         }else{
             dtype = false;
