@@ -69,6 +69,6 @@
         app:layout_constraintTop_toTopOf="@+id/imageView170" />
 
 
-    
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
