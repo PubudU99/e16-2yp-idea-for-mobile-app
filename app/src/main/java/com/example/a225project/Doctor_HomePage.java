@@ -80,6 +80,26 @@ public class Doctor_HomePage extends AppCompatActivity {
 
         retrieveData();
 
+
+        ///////////////////////////////////////////////////////////////////////////
+
+
+
+        ImageView myImage = findViewById(R.id.imageButton5);
+
+        myImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start the second activity when the image is clicked
+                Intent intent = new Intent(Doctor_HomePage.this, doctorPatientDetails.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+        ///////////////////////////////////////////////////////////////////////////
+
         //WardNo=wardIDList.toArray(new String[wardIDList.size()]);
         //bedNo=bedIDList.toArray(new String[bedIDList.size()]);
 
@@ -103,6 +123,7 @@ public class Doctor_HomePage extends AppCompatActivity {
                 System.out.println("hello");
             }
         });
+
 
 
         RecyclerView recyclerView= findViewById(R.id.DoctorHomeRecyclerView);
