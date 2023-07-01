@@ -4,66 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6877A1"
+    android:background="#FFFFFF"
     tools:context=".patientDetails">
 
-    <TextView
-        android:id="@+id/textView112"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="Details"
-        android:textColor="#FBFAFA"
-        android:textSize="24sp"
-        android:textStyle="bold"
+    <ImageView
+        android:id="@+id/imageView225"
+        android:layout_width="433dp"
+        android:layout_height="458dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rectangle50" />
+
+    <ImageView
+        android:id="@+id/imageView226"
+        android:layout_width="419dp"
+        android:layout_height="514dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/overlay" />
+
+    <ImageView
+        android:id="@+id/imageView227"
+        android:layout_width="438dp"
+        android:layout_height="688dp"
+        android:layout_marginTop="144dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView225"
+        app:srcCompat="@drawable/rectangle_13" />
 
     <TextView
         android:id="@+id/textView105"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="60dp"
         android:text="Caregiver"
         android:textColor="#FBFAFA"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView152"
+    <TextView
+        android:id="@+id/textView112"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="92dp"
+        android:text="Details"
+        android:textColor="#FBFAFA"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView112"
-        app:srcCompat="@drawable/search" />
-
-    <ImageView
-        android:id="@+id/imageView153"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView152"
-        app:layout_constraintHorizontal_bias="0.084"
-        app:layout_constraintStart_toStartOf="@+id/imageView152"
-        app:layout_constraintTop_toBottomOf="@+id/textView112"
-        app:srcCompat="@drawable/search_icon" />
-
-    <ImageView
-        android:id="@+id/imageView162"
-        android:layout_width="410dp"
-        android:layout_height="623dp"
-        android:layout_marginTop="108dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView152"
-        app:srcCompat="@drawable/details_white" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView166"
@@ -103,13 +100,15 @@
         android:id="@+id/textView124"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
         android:layout_marginBottom="24dp"
         android:text="Name"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView164"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.131"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView118" />
 
     <TextView
         android:id="@+id/textView122"
@@ -258,10 +257,9 @@
         android:id="@+id/imageView163"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView162"
+        app:layout_constraintTop_toTopOf="@+id/imageView227"
         app:srcCompat="@drawable/details" />
 
     <TextView
@@ -312,16 +310,4 @@
         app:layout_constraintHorizontal_bias="0.611"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Search"
-        app:layout_constraintEnd_toEndOf="@+id/imageView152"
-        app:layout_constraintHorizontal_bias="0.486"
-        app:layout_constraintStart_toEndOf="@+id/imageView153"
-        app:layout_constraintTop_toTopOf="@+id/imageView152" />
 </androidx.constraintlayout.widget.ConstraintLayout>

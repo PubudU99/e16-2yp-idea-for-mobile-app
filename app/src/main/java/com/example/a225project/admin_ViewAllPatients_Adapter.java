@@ -35,8 +35,8 @@ public class admin_ViewAllPatients_Adapter extends FirebaseRecyclerAdapter<MainM
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            txtPatiendID = itemView.findViewById(R.id.txtPatiendID);
-            txtName = itemView.findViewById(R.id.txtName);
+            txtPatiendID = itemView.findViewById(R.id.txtadminWardID);
+            txtName = itemView.findViewById(R.id.txtadminwardName);
         }
     }
 }
