@@ -4,6 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".admin_viewAllNurses">
+    tools:context=".Admin_viewAllPatients">
 
+    <ImageView
+        android:id="@+id/imageView222"
+        android:layout_width="432dp"
+        android:layout_height="382dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bluebackgroundeditprofile" />
+
+    <ImageView
+        android:id="@+id/imageView223"
+        android:layout_width="439dp"
+        android:layout_height="513dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/overlay" />
+
+    <ImageView
+        android:id="@+id/imageView224"
+        android:layout_width="460dp"
+        android:layout_height="689dp"
+        android:layout_marginTop="132dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView222"
+        app:srcCompat="@drawable/rectangle_13" />
+
+    <TextView
+        android:id="@+id/textView108"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nurse Details"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView224"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.433"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView222"
+        app:layout_constraintVertical_bias="0.57" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/MyRecyclerview"
+        android:layout_width="380dp"
+        android:layout_height="529dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView224" />
 </androidx.constraintlayout.widget.ConstraintLayout>

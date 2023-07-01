@@ -21,7 +21,7 @@ public class admin_viewAllDoctors extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_view_all_doctors);
 
-        doctorRecycl=findViewById(R.id.doctorRecycl);
+        doctorRecycl=findViewById(R.id.MyRecyclerview);
 
         setup_adminViewAllDoctorsModels();
 
