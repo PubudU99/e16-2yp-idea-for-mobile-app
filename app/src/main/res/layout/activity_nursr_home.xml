@@ -293,4 +293,16 @@
         app:layout_constraintStart_toEndOf="@+id/imageView181"
         app:layout_constraintTop_toTopOf="@+id/imageView175" />
 
+    <ImageButton
+        android:id="@+id/imageButton_nurse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ionic_arrow_back" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

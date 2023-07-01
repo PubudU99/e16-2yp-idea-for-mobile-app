@@ -15,7 +15,7 @@ public class doctorPatientDetails extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nurse_patient_details);
+        setContentView(R.layout.activity_doctor_my_patients);
 
         reportHistory = findViewById(R.id.imageView185);
         prescriptionHistory = findViewById(R.id.imageView186);

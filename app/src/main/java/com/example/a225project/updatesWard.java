@@ -56,8 +56,19 @@ public class updatesWard extends AppCompatActivity {
 
                 databaseReference.child(wardId).setValue(ward);
                 Toast.makeText(getApplicationContext(), "Data added successfully", Toast.LENGTH_SHORT).show();
+                clear(uploadWardId,uploadWardName,uploadDoc,uploadNurse,uploadBeds);
 
             }
         });
     }
+
+
+    private void clear(EditText uploadWardId, EditText uploadWardName, EditText uploadDoc, EditText uploadNurse, EditText uploadBeds){
+        uploadBeds.setText("");
+        uploadDoc.setText("");
+        uploadNurse.setText("");
+        uploadWardId.setText("");
+        uploadWardName.setText("");
+    }
+
 }

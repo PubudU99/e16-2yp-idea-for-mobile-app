@@ -42,8 +42,6 @@ public class nursePatientDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nurse_patient_details);
 
-
-
         reportHistory = findViewById(R.id.imageView185);
         prescriptionHistory = findViewById(R.id.imageView186);
         newReport = findViewById(R.id.imageView188);
@@ -130,6 +128,9 @@ public class nursePatientDetails extends AppCompatActivity {
                         patientBedNumber.setText(patientBedList.get(i));
 
                     }
+
+
+
                 }
 
             }

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class adminHome extends AppCompatActivity {
@@ -14,8 +15,7 @@ public class adminHome extends AppCompatActivity {
     ImageView admissionImg;
     ImageView updateImg;
     ImageView viewImg;
-
-    ImageView goBackBtn;
+    ImageButton goBackBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

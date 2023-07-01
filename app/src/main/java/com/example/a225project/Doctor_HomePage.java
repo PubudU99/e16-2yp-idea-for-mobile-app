@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -43,12 +44,9 @@ public class Doctor_HomePage extends AppCompatActivity {
 
     Calendar calendar;
     int day, month, year;
-
     TextView dateTxt;
-
-    ImageView toAppoin;
-    Button button;
-
+    ImageView toAppoin, viewBtn;
+    ImageButton goBackBtn;
 
     ArrayList<doctorTodayPatientsModel> doctorTodayPatientsModels= new ArrayList<>();
     String[] PatientNames={"Mahesha Madhushanka","Kavindu Bambaragama","Dinushika Abrew","Nikalshi Sepalika","Pasindu Rangana","Pubudu Madhushith","Uthsara wikramarachchi","Sapuni Nithya","Tharidi Sadewmi","John Seena"};
@@ -62,6 +60,16 @@ public class Doctor_HomePage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_home_page);
+
+        goBackBtn = findViewById(R.id.imageButton3);
+
+        goBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i2 = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(i2);
+            }
+        });
 
         dateTxt=findViewById(R.id.txtdatedoctorhome);
 
@@ -78,11 +86,11 @@ public class Doctor_HomePage extends AppCompatActivity {
         displayDate(year, month, day);
 
         toAppoin =  findViewById(R.id.imageView199);
-        button=findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+        viewBtn=findViewById(R.id.imageButton5);
+        viewBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),doctorAddPrescription.class);
+                Intent i = new Intent(getApplicationContext(),doctorPatientDetails.class);
                 startActivity(i);
 
             }
@@ -95,7 +103,6 @@ public class Doctor_HomePage extends AppCompatActivity {
                 System.out.println("hello");
             }
         });
-
 
 
         RecyclerView recyclerView= findViewById(R.id.DoctorHomeRecyclerView);
