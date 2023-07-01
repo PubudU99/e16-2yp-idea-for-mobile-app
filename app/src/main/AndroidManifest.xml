@@ -21,6 +21,10 @@
         <activity
             android:name=".caregiverHome"
             android:exported="false" />
+
+        <activity
+            android:name=".nursePatientDetails"
+            android:exported="false" />
         <activity
             android:name=".Doctor_HomePage"
             android:exported="false" />
