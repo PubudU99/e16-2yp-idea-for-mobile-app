@@ -225,9 +225,10 @@
             android:id="@+id/regDoctorEmail"
             android:layout_width="338dp"
             android:layout_height="44dp"
+            android:layout_marginTop="8dp"
             android:background="@drawable/edittext_bg"
             android:ems="10"
-            android:hint="NIC"
+            android:hint="Email"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="@+id/imageView99"
             app:layout_constraintStart_toStartOf="@+id/imageView99"
@@ -239,7 +240,7 @@
             android:layout_height="44dp"
             android:background="@drawable/edittext_bg"
             android:ems="10"
-            android:hint="PhonrNo"
+            android:hint="NIC"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="@+id/imageView98"
             app:layout_constraintHorizontal_bias="0.4"
@@ -332,24 +333,25 @@
             android:layout_height="44dp"
             android:background="@drawable/edittext_bg"
             android:ems="10"
-            android:hint="PhonrNo"
+            android:hint="Phone No"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="@+id/imageView98"
             app:layout_constraintStart_toStartOf="@+id/imageView98"
             app:layout_constraintTop_toTopOf="@+id/imageView98" />
 
+
         <EditText
             android:id="@+id/regDoctorBDate"
             android:layout_width="338dp"
             android:layout_height="44dp"
+            android:layout_marginTop="8dp"
             android:background="@drawable/edittext_bg"
             android:ems="10"
-            android:hint="NIC"
+            android:hint="Birth Date"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="@+id/imageView99"
             app:layout_constraintStart_toStartOf="@+id/imageView99"
             app:layout_constraintTop_toTopOf="@+id/imageView100" />
-
 
         <EditText
             android:id="@+id/regDoctorDoctorID"
@@ -383,7 +385,7 @@
             android:layout_height="44dp"
             android:background="@drawable/edittext_bg"
             android:ems="10"
-            android:hint="Assignrd Ward"
+            android:hint="Assigned Ward"
             android:inputType="text"
             app:layout_constraintBottom_toBottomOf="@+id/imageView104"
             app:layout_constraintEnd_toEndOf="@+id/imageView104"

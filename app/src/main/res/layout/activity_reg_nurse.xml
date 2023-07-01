@@ -91,10 +91,10 @@
         android:id="@+id/imageView113"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView65"
+        app:layout_constraintTop_toBottomOf="@+id/textView66"
         app:srcCompat="@drawable/type" />
 
     <TextView
@@ -149,15 +149,16 @@
 
     <TextView
         android:id="@+id/textView69"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_width="79dp"
+        android:layout_height="33dp"
         android:text="SUBMIT"
         android:textColor="#FAF6F6"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView116"
         app:layout_constraintEnd_toEndOf="@+id/imageView116"
-        app:layout_constraintHorizontal_bias="0.534"
-        app:layout_constraintStart_toStartOf="@+id/imageView116" />
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="@+id/imageView116"
+        app:layout_constraintTop_toTopOf="@+id/imageView116" />
 
     <ImageView
         android:id="@+id/imageView117"

@@ -30,7 +30,7 @@ import java.util.HashMap;
 
 public class patientAdmittance extends AppCompatActivity {
 
-    ImageView admitBtn;
+    ImageView admitBtn, goBackBtn;
 
     EditText patientNIC, caregiverID, nurse, wardID, bedID, notes;
 
