@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -29,6 +30,7 @@ public class nursrHome extends AppCompatActivity {
     private List<Patient> patientList;
     ImageView patientDetails, profilePic;
     ImageButton goBackBtn;
+    TextView name;
 
 
 
@@ -37,6 +39,12 @@ public class nursrHome extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nursr_home);
+
+        Intent intent=getIntent();
+        String Username =intent.getStringExtra("username");
+
+        name= findViewById(R.id.textView137);
+        name.setText(Username);
 
         recyclerView = findViewById(R.id.MyRecyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -77,6 +85,9 @@ public class nursrHome extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 // Handle any errors
             }
-   });
-}
+        });
+//        patientDetails = findViewById(R.id.imageView175);
+//        profilePic = findViewById(R.id.imageView195);
+
+    }
 }

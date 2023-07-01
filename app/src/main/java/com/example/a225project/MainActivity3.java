@@ -2,6 +2,7 @@ package com.example.a225project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -28,6 +29,7 @@ public class MainActivity3 extends AppCompatActivity {
     Calendar calendar;
     ImageView profilePic;
     int day, month, year;
+    TextView name;
 
     private  String text_Checkup_type="Medical Checkup- Routine";
     private String Doc_Name="Dr. Dhammike Kumara";
@@ -41,6 +43,7 @@ public class MainActivity3 extends AppCompatActivity {
     private String meal="After Dinner";
     private String timeDuration="9.00PM - 10.00PM";
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,9 +74,16 @@ public class MainActivity3 extends AppCompatActivity {
         ImageButton toPrescription;
         toPrescription=findViewById(R.id.patientPrescriptionSeeall);
 
+        Intent i=getIntent();
+        String Username =i.getStringExtra("username");
+
+        name= findViewById(R.id.textView185);
+        name.setText(Username);
+
         final Intent intent= new Intent(this,Patient_prescriptionView.class);
         String flag="P";
         intent.putExtra("Flag",flag);
+
 
 
         displayDate(year, month, day);

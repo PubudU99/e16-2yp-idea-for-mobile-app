@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.TextView;
 
 public class adminHome extends AppCompatActivity {
 
@@ -16,13 +18,18 @@ public class adminHome extends AppCompatActivity {
     ImageView updateImg;
     ImageView viewImg;
     ImageButton goBackBtn;
-
+    TextView name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_home);
 
         goBackBtn = findViewById(R.id.imageButton);
+        Intent intent=getIntent();
+        String Username =intent.getStringExtra("username");
+
+        name= findViewById(R.id.textView24);
+        name.setText(Username);
 
         goBackBtn.setOnClickListener(new View.OnClickListener() {
             @Override

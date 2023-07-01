@@ -47,6 +47,7 @@ public class Doctor_HomePage extends AppCompatActivity {
     TextView dateTxt;
     ImageView toAppoin, viewBtn;
     ImageButton goBackBtn;
+    TextView name;
 
     ArrayList<doctorTodayPatientsModel> doctorTodayPatientsModels= new ArrayList<>();
     String[] PatientNames={"Mahesha Madhushanka","Kavindu Bambaragama","Dinushika Abrew","Nikalshi Sepalika","Pasindu Rangana","Pubudu Madhushith","Uthsara wikramarachchi","Sapuni Nithya","Tharidi Sadewmi","John Seena"};
@@ -70,6 +71,12 @@ public class Doctor_HomePage extends AppCompatActivity {
                 startActivity(i2);
             }
         });
+
+        Intent intent=getIntent();
+        String Username =intent.getStringExtra("username");
+
+        name= findViewById(R.id.textView185);
+        name.setText(Username);
 
         dateTxt=findViewById(R.id.txtdatedoctorhome);
 
@@ -150,12 +157,14 @@ public class Doctor_HomePage extends AppCompatActivity {
     ////retrievieng data to a list
     public void retrieveData()
     {
-        Toast.makeText(Doctor_HomePage.this, "wada.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Doctor_HomePage.this, "Login Successful!", Toast.LENGTH_SHORT).show();
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("patient");
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot datasnapshot) {
+
+
 
 
                 //getting patients
