@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -62,6 +63,8 @@ public class patientAdmittance extends AppCompatActivity {
                 String date = datePicker();
 
                 searchAndUpdateUser(patientNIC_s, caregiverID_s, nurse_s, wardID_s, bedID_s, date);
+                updateNumberOfBeds(wardID_s);
+
             }
         });
 
@@ -122,6 +125,52 @@ public class patientAdmittance extends AppCompatActivity {
             }
         });
     }
+
+    private void updateNumberOfBeds(String wardID) {
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference usersRef = database.getReference("ward");
+
+        DatabaseReference wardRef = usersRef.child(wardID);
+
+        wardRef.child("beds").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String bedCountStr = dataSnapshot.getValue(String.class);
+                if (bedCountStr != null) {
+                    int bedCount = Integer.parseInt(bedCountStr);
+                    if (bedCount > 0) {
+                        bedCount--; // Decrease the bed count by 1
+                        wardRef.child("beds").setValue(String.valueOf(bedCount))
+                                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void aVoid) {
+                                        // Bed count updated successfully
+                                        Toast.makeText(patientAdmittance.this, "Bed count updated", Toast.LENGTH_SHORT).show();
+                                    }
+                                })
+                                .addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        // Failed to update bed count
+                                        Toast.makeText(patientAdmittance.this, "Failed to update bed count", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                    } else {
+                        // No available beds in the ward
+                        Toast.makeText(patientAdmittance.this, "No available beds in the ward", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                // Error occurred while retrieving bed count
+                Toast.makeText(patientAdmittance.this, "Failed to retrieve bed count", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
 
 
     private String datePicker() {

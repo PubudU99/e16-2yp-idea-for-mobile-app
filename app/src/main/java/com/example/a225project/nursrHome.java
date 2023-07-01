@@ -31,7 +31,7 @@ public class nursrHome extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(getApplicationContext(), nurseNewReports.class));
+                startActivity(new Intent(getApplicationContext(), nursePatientDetails.class));
             }
         });
     }

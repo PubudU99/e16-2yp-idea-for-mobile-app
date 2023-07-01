@@ -16,12 +16,6 @@
             android:name=".admin_viewAllNurses"
             android:exported="false" />
         <activity
-            android:name=".admin_viewAllDoctors"
-            android:exported="false" />
-        <activity
-            android:name=".Admin_viewAllPatients"
-            android:exported="false" />
-        <activity
             android:name=".ForgotPassword"
             android:exported="false" />
         <activity
@@ -102,9 +96,11 @@
         <activity
             android:name=".doctorAddPrescription"
             android:exported="false" />
+
         <activity
             android:name=".doctorNewAdmission"
             android:exported="false" />
+
         <activity
             android:name=".SplashScreen"
             android:exported="true">

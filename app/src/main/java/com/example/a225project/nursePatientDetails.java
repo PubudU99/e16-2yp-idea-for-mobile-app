@@ -7,8 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class doctorPatientDetails extends AppCompatActivity {
-    ImageView reportHistory, prescriptionHistory, addPrescription;
+public class nursePatientDetails extends AppCompatActivity {
+
+    ImageView reportHistory, prescriptionHistory, newReport;
 
     String adminID = "p_janaka";
 
@@ -19,7 +20,7 @@ public class doctorPatientDetails extends AppCompatActivity {
 
         reportHistory = findViewById(R.id.imageView185);
         prescriptionHistory = findViewById(R.id.imageView186);
-        addPrescription = findViewById(R.id.imageView188);
+        newReport = findViewById(R.id.imageView188);
 
         reportHistory.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,7 +38,7 @@ public class doctorPatientDetails extends AppCompatActivity {
             }
         });
 
-        addPrescription.setOnClickListener(new View.OnClickListener() {
+        newReport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), nurseNewReports.class));
