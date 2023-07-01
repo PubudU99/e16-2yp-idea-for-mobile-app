@@ -20,7 +20,7 @@ import java.time.LocalDateTime;
 
 public class doctorAddPrescription extends AppCompatActivity {
 
-    ImageView submitButton;
+    ImageView submitButton, goBackBtn;
 
     String patientId = "get from Intent";
     String docId = "get from Intent";
@@ -30,6 +30,15 @@ public class doctorAddPrescription extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_add_prescription);
+
+        goBackBtn = findViewById(R.id.imageView156);
+        goBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i2 = new Intent(getApplicationContext(), Doctor_HomePage.class);
+                startActivity(i2);
+            }
+        });
 
         Uploadillness =findViewById(R.id.editTextText2);
         Uploadnote = findViewById(R.id.editTextTextMultiLine);
@@ -61,8 +70,6 @@ public class doctorAddPrescription extends AppCompatActivity {
                         intent.putExtra("prescriptionId",prescriptionKey);
                         startActivity(intent);
                         Toast.makeText(getApplicationContext(), "Data added successfully", Toast.LENGTH_SHORT).show();
-
-
 
                     }
                 }).addOnFailureListener(new OnFailureListener() {

@@ -31,7 +31,6 @@ import java.util.HashMap;
 public class patientAdmittance extends AppCompatActivity {
 
     ImageView admitBtn, goBackBtn;
-
     EditText patientNIC, caregiverID, nurse, wardID, bedID, notes;
 
     @Override
@@ -40,6 +39,15 @@ public class patientAdmittance extends AppCompatActivity {
         setContentView(R.layout.activity_patient_admittance);
         AndroidThreeTen.init(this);
 
+        //go back function
+        goBackBtn = findViewById(R.id.imageView161);
+        goBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i2 = new Intent(getApplicationContext(), adminHome.class);
+                startActivity(i2);
+            }
+        });
 
         patientNIC = findViewById(R.id.editTextText24);
         caregiverID = findViewById(R.id.editTextText38);
@@ -172,7 +180,6 @@ public class patientAdmittance extends AppCompatActivity {
     }
 
 
-
     private String datePicker() {
         LocalDate currentDate = LocalDate.now(org.threeten.bp.ZoneId.systemDefault());
         DateTimeFormatter formatter = new DateTimeFormatterBuilder()
@@ -185,4 +192,14 @@ public class patientAdmittance extends AppCompatActivity {
         String dateString = currentDate.format(formatter);
         return dateString;
     }
+
+    private void clear(EditText patientNIC, EditText caregiverID, EditText nurse, EditText wardID, EditText bedID, EditText notes){
+        patientNIC.setText("");
+        caregiverID.setText("");
+        nurse.setText("");
+        wardID.setText("");
+        bedID.setText("");
+        notes.setText("");
+    }
+
 }

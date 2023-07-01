@@ -73,13 +73,11 @@ public class adminReg extends AppCompatActivity {
                 String NIC_s = NIC.getText().toString().trim();
                 String birthDate_s = birthDate.getText().toString().trim();
                 String email_s = (email.getText().toString().trim()).toLowerCase();
-                String adminIdk_s = (adminID.getText().toString().trim()).toLowerCase(); // admin id shoud pass as username
+                String adminIdk_s = (adminID.getText().toString().trim()).toLowerCase(); // admin id should pass as username
                 String pw_s = password.getText().toString().trim();
                 String image_s = "";
 
                 // Check whether the all fields are filled.
-
-
 
                 if(pw_s.length() >= 6){
 
@@ -100,7 +98,6 @@ public class adminReg extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
 
                 }
-
 
             }
         });

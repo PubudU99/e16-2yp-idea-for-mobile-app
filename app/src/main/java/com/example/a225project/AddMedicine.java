@@ -19,13 +19,23 @@ import java.time.LocalDateTime;
 
 public class AddMedicine extends AppCompatActivity {
 
-    ImageView add_more,finish;
+    ImageView add_more,finish, goBackBtn;
     EditText UploadMedicine,UploadWeight,UploadDose,UploadDays,UploadPerDay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_medicine);
+
+        goBackBtn = findViewById(R.id.imageView154);
+
+        goBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i2 = new Intent(getApplicationContext(), doctorAddPrescription.class);
+                startActivity(i2);
+            }
+        });
 
         Intent intent=getIntent();
         String prescriptionId=intent.getStringExtra("prescriptionId");
@@ -46,9 +56,6 @@ public class AddMedicine extends AppCompatActivity {
         add_more.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
-
 
                 LocalDateTime date =null;
 
