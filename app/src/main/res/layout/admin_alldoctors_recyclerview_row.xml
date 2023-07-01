@@ -39,7 +39,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/txtPatiendID"
+                android:id="@+id/txtDoctorID"
                 android:layout_width="163dp"
                 android:layout_height="26dp"
                 android:text="TextView"
@@ -65,14 +65,14 @@
                 app:layout_constraintVertical_bias="0.076" />
 
             <TextView
-                android:id="@+id/txtName"
+                android:id="@+id/txtDoctorName"
                 android:layout_width="158dp"
                 android:layout_height="23dp"
+                android:layout_marginStart="24dp"
                 android:text="TextView"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView172"
-                app:layout_constraintEnd_toEndOf="@+id/txtPatiendID"
-                app:layout_constraintStart_toStartOf="@+id/txtPatiendID"
+                app:layout_constraintStart_toEndOf="@+id/textView172"
                 app:layout_constraintTop_toTopOf="@+id/textView172" />
 
             <TextView
@@ -82,7 +82,8 @@
                 android:text=":"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView110"
-                app:layout_constraintEnd_toStartOf="@+id/txtPatiendID"
+                app:layout_constraintEnd_toStartOf="@+id/txtDoctorID"
+                app:layout_constraintHorizontal_bias="0.31"
                 app:layout_constraintStart_toEndOf="@+id/textView110"
                 app:layout_constraintTop_toTopOf="@+id/textView110" />
 

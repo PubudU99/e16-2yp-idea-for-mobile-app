@@ -6,33 +6,40 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import java.util.ArrayList;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Admin_viewAllPatients extends AppCompatActivity {
 
-    ArrayList<admin_ViewAllPatients_Model> adminViewAllPatientsModels=new ArrayList<>();
-    String[] PatientNames={"David", "Emma", "Frank", "Grace", "Henry", "Ivy", "Jack"};
-    String[] patientID={"001","002","003","004","005","006","007"};
-
-    RecyclerView patientRecycler;
+    private RecyclerView recyclerView;
+    private admin_ViewAllPatients_Adapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_view_all_patients);
 
-        patientRecycler=findViewById(R.id.MyRecyclerview);
+        recyclerView = findViewById(R.id.MyRecyclerview);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        setup_adminViewAllPatientsModels();
+        FirebaseRecyclerOptions<MainModel> options =
+                new FirebaseRecyclerOptions.Builder<MainModel>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("patient"), MainModel.class)
+                        .build();
 
-        admin_ViewAllPatients_Adapter adapter = new admin_ViewAllPatients_Adapter(this,adminViewAllPatientsModels);
-        patientRecycler.setAdapter(adapter);
-        patientRecycler.setLayoutManager(new LinearLayoutManager(this));
+        adapter = new admin_ViewAllPatients_Adapter(options);
+        recyclerView.setAdapter(adapter);
     }
 
-    private  void setup_adminViewAllPatientsModels(){
-        for(int i=0;i<PatientNames.length;i++){
-            adminViewAllPatientsModels.add(new admin_ViewAllPatients_Model(PatientNames[i],patientID[i]));
-        }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        adapter.startListening();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        adapter.stopListening();
     }
 }
