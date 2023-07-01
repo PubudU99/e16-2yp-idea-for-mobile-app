@@ -22,7 +22,6 @@
         <activity
             android:name=".caregiverHome"
             android:exported="false" />
-
         <activity
             android:name=".nursePatientDetails"
             android:exported="false" />
@@ -120,6 +119,10 @@
 
         <activity
             android:name=".doctorNewAdmission"
+            android:exported="false" />
+
+        <activity
+            android:name=".doctorPatientDetails"
             android:exported="false" />
 
         <activity
