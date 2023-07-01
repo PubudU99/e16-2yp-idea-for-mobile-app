@@ -8,12 +8,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class Patient_prescriptionView extends AppCompatActivity {
 
     ArrayList <PrescripionModel> prescriptionmodels = new ArrayList<>();
+    static String  patientID = nursePatientDetails.adminID;
 
     String[] TabletNames = {"Penadol","Penadol","Penadol","Penadol","Penadol","Penadol","Penadol"};
     String[] TabletWeights = {"350mg","350mg","350mg","350mg","350mg","350mg","350mg"};
@@ -25,7 +27,6 @@ public class Patient_prescriptionView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_prescription_view);
-
         RecyclerView recyclerView= findViewById(R.id.prescriptionRecyclerView);
         setUpPrescriptionModels();
         Patient_presctiption_Adapter adapter = new Patient_presctiption_Adapter(this,prescriptionmodels);

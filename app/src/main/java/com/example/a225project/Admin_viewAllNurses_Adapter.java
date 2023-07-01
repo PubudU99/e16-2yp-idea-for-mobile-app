@@ -1,6 +1,5 @@
 package com.example.a225project;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,47 +8,35 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 
-public class admin_viewAllNurses_Adapter  extends RecyclerView.Adapter<admin_viewAllNurses_Adapter.MyViewHolder> {
-    Context context;
-    ArrayList<admin_viewAallNurse_Model> adminViewAallNurseModels;
+public class Admin_viewAllNurses_Adapter extends FirebaseRecyclerAdapter<MainModel, Admin_viewAllNurses_Adapter.ViewHolder> {
 
-    public admin_viewAllNurses_Adapter(Context context, ArrayList<admin_viewAallNurse_Model> adminViewAallNurseModels){
-        this.context=context;
-        this.adminViewAallNurseModels=adminViewAallNurseModels;
+    public Admin_viewAllNurses_Adapter(@NonNull FirebaseRecyclerOptions<MainModel> options) {
+        super(options);
+    }
+
+    @Override
+    protected void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull MainModel model) {
+        holder.txtPatiendID.setText(model.getAdminID());
+        holder.txtName.setText(model.getName());
     }
 
     @NonNull
     @Override
-    public admin_viewAllNurses_Adapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater inflater= LayoutInflater.from(context);
-        View view=inflater.inflate(R.layout.admin_view_all_nurses,parent,false);
-
-
-        return new admin_viewAllNurses_Adapter.MyViewHolder(view);
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.admin_view_all_nurses, parent, false);
+        return new ViewHolder(view);
     }
 
-    @Override
-    public void onBindViewHolder(@NonNull admin_viewAllNurses_Adapter.MyViewHolder holder, int position) {
-        holder.txtName.setText(adminViewAallNurseModels.get(position).getPatientName());
-        holder.txtPatiendID.setText(adminViewAallNurseModels.get(position).getPatientID());
-    }
+    class ViewHolder extends RecyclerView.ViewHolder {
+        TextView txtPatiendID, txtName;
 
-    @Override
-    public int getItemCount() {
-        return adminViewAallNurseModels.size();
-    }
-    public static  class MyViewHolder extends RecyclerView.ViewHolder {
-
-        TextView txtPatiendID;
-        TextView txtName;
-
-        public MyViewHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
-
-            txtPatiendID=itemView.findViewById(R.id.txtPatiendID);
-            txtName=itemView.findViewById(R.id.txtName);
+            txtPatiendID = itemView.findViewById(R.id.txtPatiendID);
+            txtName = itemView.findViewById(R.id.txtName);
         }
     }
 }

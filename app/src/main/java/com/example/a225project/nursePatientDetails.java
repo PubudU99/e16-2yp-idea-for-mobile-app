@@ -33,9 +33,18 @@ public class nursePatientDetails extends AppCompatActivity {
     ImageView reportHistory, prescriptionHistory, newReport;
     StorageReference storageReference;
 
+    static String adminID;
 
 
-    String adminID = "p_boss";
+    private void getIntend(){
+        Intent intent = getIntent();
+        String message = intent.getStringExtra("patientId");
+
+        if (message != null) {
+            adminID = message;
+        }
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +54,7 @@ public class nursePatientDetails extends AppCompatActivity {
         reportHistory = findViewById(R.id.imageView185);
         prescriptionHistory = findViewById(R.id.imageView186);
         newReport = findViewById(R.id.imageView188);
+        getIntend();
         retrieveData();
 
         reportHistory.setOnClickListener(new View.OnClickListener() {
