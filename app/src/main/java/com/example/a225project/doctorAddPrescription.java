@@ -33,14 +33,14 @@ public class doctorAddPrescription extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_add_prescription);
 
-        goBackBtn = findViewById(R.id.imageView156);
-        goBackBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i2 = new Intent(getApplicationContext(), Doctor_HomePage.class);
-                startActivity(i2);
-            }
-        });
+//        goBackBtn = findViewById(R.id.imageView156);
+//        goBackBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i2 = new Intent(getApplicationContext(), Doctor_HomePage.class);
+//                startActivity(i2);
+//            }
+//        });
 
         Uploadillness =findViewById(R.id.editTextText2);
         Uploadnote = findViewById(R.id.editTextTextMultiLine);
