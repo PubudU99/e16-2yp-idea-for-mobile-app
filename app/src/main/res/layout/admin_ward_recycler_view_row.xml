@@ -33,7 +33,7 @@
                 android:layout_height="25dp"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="20dp"
-                android:text="Nurse ID"
+                android:text="Ward ID"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/imageView203"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -53,9 +53,9 @@
 
             <TextView
                 android:id="@+id/textView172"
-                android:layout_width="81dp"
+                android:layout_width="wrap_content"
                 android:layout_height="25dp"
-                android:text="Name"
+                android:text="Ward Name"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/textView110"
