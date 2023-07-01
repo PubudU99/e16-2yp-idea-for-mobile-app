@@ -71,6 +71,10 @@ public class MainActivity3 extends AppCompatActivity {
         ImageButton toPrescription;
         toPrescription=findViewById(R.id.patientPrescriptionSeeall);
 
+        final Intent intent= new Intent(this,Patient_prescriptionView.class);
+        String flag="P";
+        intent.putExtra("Flag",flag);
+
 
         displayDate(year, month, day);
 
@@ -79,8 +83,8 @@ public class MainActivity3 extends AppCompatActivity {
         toPrescription.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i5= new Intent(getApplicationContext(),Patient_prescriptionView.class);
-                startActivity(i5);
+                //Intent i5= new Intent(getApplicationContext(),Patient_prescriptionView.class);
+                startActivity(intent);
             }
         });
 

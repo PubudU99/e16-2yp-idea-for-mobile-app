@@ -23,11 +23,15 @@ import java.util.List;
 
 public class nursrHome extends AppCompatActivity {
 
+
     private RecyclerView recyclerView;
     private NursePatientRecyclerViewAdapter adapter;
     private List<Patient> patientList;
     ImageView patientDetails, profilePic;
     ImageButton goBackBtn;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +40,16 @@ public class nursrHome extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.MyRecyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+
+//        goBackBtn = findViewById(R.id.imageButton_nurse);
+//        goBackBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i2 = new Intent(getApplicationContext(), MainActivity.class);
+//                startActivity(i2);
+//            }
+//        });
 
         patientList = new ArrayList<>();
         adapter = new NursePatientRecyclerViewAdapter(patientList, this);
@@ -63,6 +77,6 @@ public class nursrHome extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 // Handle any errors
             }
-        });
-    }
+   });
+}
 }

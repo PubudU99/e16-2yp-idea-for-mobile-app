@@ -156,7 +156,7 @@
         app:srcCompat="@drawable/topback" />
 
     <ImageView
-        android:id="@+id/imageView174"
+        android:id="@+id/imagedescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -227,7 +227,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView174"
+        app:layout_constraintTop_toBottomOf="@+id/imagedescription"
         app:srcCompat="@drawable/rectan8" />
 
     <TextView
@@ -274,7 +274,7 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView176"
         app:layout_constraintStart_toStartOf="@+id/imageView176"
-        app:layout_constraintTop_toBottomOf="@+id/imageView174" />
+        app:layout_constraintTop_toBottomOf="@+id/imagedescription" />
 
     <EditText
         android:id="@+id/editTextText29"

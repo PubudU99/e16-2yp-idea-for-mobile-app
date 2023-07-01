@@ -39,11 +39,11 @@
             android:layout_marginTop="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView174"
+            app:layout_constraintTop_toBottomOf="@+id/imagedescription"
             app:srcCompat="@drawable/rectangle_13" />
 
         <ImageView
-            android:id="@+id/imageView174"
+            android:id="@+id/imagedescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
