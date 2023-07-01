@@ -62,6 +62,7 @@ public class Doctor_HomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_home_page);
 
+
         goBackBtn = findViewById(R.id.imageButton3);
 
         goBackBtn.setOnClickListener(new View.OnClickListener() {
@@ -74,6 +75,9 @@ public class Doctor_HomePage extends AppCompatActivity {
 
         Intent intent=getIntent();
         String Username =intent.getStringExtra("username");
+        Intent i1= new Intent(Doctor_HomePage.this,doctorAddPrescription.class);
+        i1.putExtra("docId",Username);
+        startActivity(i1);
 
         name= findViewById(R.id.textView185);
         name.setText(Username);
@@ -128,6 +132,7 @@ public class Doctor_HomePage extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), doctorNewAdmission.class));
                 System.out.println("hello");
+
             }
         });
 

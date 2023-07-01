@@ -3,6 +3,7 @@ package com.example.a225project;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -25,22 +26,25 @@ public class doctorAddPrescription extends AppCompatActivity {
     ImageButton goBackBtn;
 
     String patientId = "get from Intent";
-    String docId = "get from Intent";
+    String docId;
     EditText Uploadillness,Uploadnote;
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_add_prescription);
+        Intent i1 = getIntent();
+        docId=i1.getStringExtra("docId");
 
-//        goBackBtn = findViewById(R.id.imageView156);
-//        goBackBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i2 = new Intent(getApplicationContext(), Doctor_HomePage.class);
-//                startActivity(i2);
-//            }
-//        });
+        goBackBtn = findViewById(R.id.imageView156);
+        goBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i2 = new Intent(getApplicationContext(), Doctor_HomePage.class);
+                startActivity(i2);
+            }
+        });
 
         Uploadillness =findViewById(R.id.editTextText2);
         Uploadnote = findViewById(R.id.editTextTextMultiLine);
