@@ -4,18 +4,26 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FileDownloadTask;
+import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,7 +35,7 @@ public class nursePatientDetails extends AppCompatActivity {
 
 
 
-    String adminID = "p_pubu";
+    String adminID = "p_boss";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,11 +94,9 @@ public class nursePatientDetails extends AppCompatActivity {
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot datasnapshot) {
-
- //               try {}
-
-
                 //getting patients
+                retrieveImage(); //calling image
+
                 for (DataSnapshot snapshot : datasnapshot.getChildren()){
                     String patientKey = snapshot.getKey();
                     patientIDList.add(patientKey);   //list of the patients
@@ -124,9 +130,6 @@ public class nursePatientDetails extends AppCompatActivity {
                         patientBedNumber.setText(patientBedList.get(i));
 
                     }
-
-
-
                 }
 
             }
@@ -137,6 +140,32 @@ public class nursePatientDetails extends AppCompatActivity {
         });
     }
 
+
+    //retrieving the image
+    public void retrieveImage (){
+        // Create a FirebaseStorage instance
+
+        FirebaseStorage storage = FirebaseStorage.getInstance();
+        StorageReference storageRef = storage.getReference().child("profile_pictures/"+adminID+".jpeg");
+        File localFile = new File(getCacheDir(), adminID+".jpg");
+        storageRef.getFile(localFile)
+                .addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                        Bitmap bitmap = BitmapFactory.decodeFile(localFile.getAbsolutePath());
+
+                        ImageView imageView = findViewById(R.id.imageView184);
+                        imageView.setImageBitmap(bitmap);
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        // Handle any errors that occur during image download
+                        Toast.makeText(nursePatientDetails.this, "Image download failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
 
 
 
