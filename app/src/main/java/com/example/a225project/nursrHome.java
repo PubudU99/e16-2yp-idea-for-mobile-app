@@ -38,15 +38,13 @@ public class nursrHome extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         patientList = new ArrayList<>();
-        adapter = new NursePatientRecyclerViewAdapter(patientList);
+        adapter = new NursePatientRecyclerViewAdapter(patientList, this);
         recyclerView.setAdapter(adapter);
-
-
 
         profilePic = findViewById(R.id.imageView195);
 
         // Replace "nurseName" with the actual nurse's name you want to filter
-        String nurseName = "jgj";
+        String nurseName = "n_sathya";
 
         Query query = FirebaseDatabase.getInstance().getReference().child("patient")
                 .orderByChild("nurse").equalTo(nurseName);

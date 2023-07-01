@@ -9,10 +9,10 @@ import android.os.Bundle;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class admin_viewAllNurses extends AppCompatActivity {
+public class Admin_viewAllNurses extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private admin_viewAllNurses_Adapter adapter;
+    private Admin_viewAllNurses_Adapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,7 @@ public class admin_viewAllNurses extends AppCompatActivity {
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("nurse"), MainModel.class)
                         .build();
 
-        adapter = new admin_viewAllNurses_Adapter(options);
+        adapter = new Admin_viewAllNurses_Adapter(options);
         recyclerView.setAdapter(adapter);
     }
 

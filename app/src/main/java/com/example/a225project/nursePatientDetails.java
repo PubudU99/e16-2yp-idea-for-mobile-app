@@ -73,11 +73,6 @@ public class nursePatientDetails extends AppCompatActivity {
     }
 
 
-
-
-
-
-
     ////retrievieng data to a list
     public void retrieveData()
     {

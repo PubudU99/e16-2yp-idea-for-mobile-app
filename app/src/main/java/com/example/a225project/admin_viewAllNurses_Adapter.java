@@ -11,9 +11,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
-public class admin_viewAllNurses_Adapter extends FirebaseRecyclerAdapter<MainModel, admin_viewAllNurses_Adapter.ViewHolder> {
+public class Admin_viewAllNurses_Adapter extends FirebaseRecyclerAdapter<MainModel, Admin_viewAllNurses_Adapter.ViewHolder> {
 
-    public admin_viewAllNurses_Adapter(@NonNull FirebaseRecyclerOptions<MainModel> options) {
+    public Admin_viewAllNurses_Adapter(@NonNull FirebaseRecyclerOptions<MainModel> options) {
         super(options);
     }
 

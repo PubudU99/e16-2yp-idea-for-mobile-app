@@ -10,12 +10,19 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+
+import android.content.Context;
+import android.content.Intent;
+
+
 public class NursePatientRecyclerViewAdapter extends RecyclerView.Adapter<NursePatientRecyclerViewAdapter.PatientViewHolder> {
 
     private List<Patient> patientList;
+    private Context context;
 
-    public NursePatientRecyclerViewAdapter(List<Patient> patientList) {
+    public NursePatientRecyclerViewAdapter(List<Patient> patientList, Context context) {
         this.patientList = patientList;
+        this.context = context;
     }
 
     @NonNull
@@ -29,6 +36,14 @@ public class NursePatientRecyclerViewAdapter extends RecyclerView.Adapter<NurseP
     public void onBindViewHolder(@NonNull PatientViewHolder holder, int position) {
         Patient patient = patientList.get(position);
         holder.bind(patient);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, nursePatientDetails.class);
+                intent.putExtra("patientId", patient.getAdminID());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

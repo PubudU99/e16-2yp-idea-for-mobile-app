@@ -12,10 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.225Project"
         tools:targetApi="31">
-
-
-
-
+        <activity
+            android:name=".NextActivity"
+            android:exported="false" />
         <activity
             android:name=".ForgotPassword"
             android:exported="false" />
@@ -28,9 +27,6 @@
         <activity
             android:name=".Doctor_HomePage"
             android:exported="false" />
-
-
-
         <activity
             android:name=".Patient_prescriptionView"
             android:exported="false" />
@@ -94,7 +90,6 @@
         <activity
             android:name=".nurseNewReports"
             android:exported="false" />
-
         <activity
             android:name=".admin_viewAllDoctors"
             android:exported="false" />
@@ -107,20 +102,15 @@
         <activity
             android:name=".Admin_viewAllPatients"
             android:exported="false" />
-
         <activity
             android:name=".doctorAddPrescription"
             android:exported="false" />
-
         <activity
-            android:name=".admin_viewAllNurses"
+            android:name=".Admin_viewAllNurses"
             android:exported="false" />
-
-
         <activity
             android:name=".doctorNewAdmission"
             android:exported="false" />
-
         <activity
             android:name=".doctorPatientDetails"
             android:exported="false" />
