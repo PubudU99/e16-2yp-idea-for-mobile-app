@@ -29,11 +29,11 @@
 
             <TextView
                 android:id="@+id/textView110"
-                android:layout_width="81dp"
+                android:layout_width="wrap_content"
                 android:layout_height="25dp"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="20dp"
-                android:text="Ward ID"
+                android:text="Caregiver ID"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/imageView203"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -55,7 +55,7 @@
                 android:id="@+id/textView172"
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
-                android:text="Ward Name"
+                android:text="Caregiver Name"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/textView110"
@@ -66,14 +66,16 @@
 
             <TextView
                 android:id="@+id/txtadminCaregiverName"
-                android:layout_width="158dp"
-                android:layout_height="23dp"
+                android:layout_width="139dp"
+                android:layout_height="22dp"
                 android:text="TextView"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView172"
                 app:layout_constraintEnd_toEndOf="@+id/txtadminCaregiverID"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/txtadminCaregiverID"
-                app:layout_constraintTop_toTopOf="@+id/textView172" />
+                app:layout_constraintTop_toTopOf="@+id/textView172"
+                app:layout_constraintVertical_bias="0.333" />
 
             <TextView
                 android:id="@+id/textView187"

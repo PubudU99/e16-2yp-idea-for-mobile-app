@@ -59,7 +59,7 @@
         app:srcCompat="@drawable/ellipse_31" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/MyRecyclerview"
+        android:id="@+id/MyRecyclerviewAdminDetails"
         android:layout_width="380dp"
         android:layout_height="529dp"
         android:layout_marginTop="26dp"

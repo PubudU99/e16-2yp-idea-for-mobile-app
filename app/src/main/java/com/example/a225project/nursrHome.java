@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -46,7 +45,7 @@ public class nursrHome extends AppCompatActivity {
         name= findViewById(R.id.textView137);
         name.setText(Username);
 
-        recyclerView = findViewById(R.id.MyRecyclerview);
+        recyclerView = findViewById(R.id.MyRecyclerviewAdminDetails);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 

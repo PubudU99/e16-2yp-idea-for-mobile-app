@@ -51,12 +51,24 @@
         app:layout_constraintTop_toTopOf="@+id/imageView222"
         app:layout_constraintVertical_bias="0.57" />
 
+    <ImageButton
+        android:id="@+id/goFromAdminDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ionic_arrow_back" />
+
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/MyRecyclerview"
+        android:id="@+id/MyRecyclerviewAdminDetails"
         android:layout_width="380dp"
         android:layout_height="529dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView224" />
 </androidx.constraintlayout.widget.ConstraintLayout>

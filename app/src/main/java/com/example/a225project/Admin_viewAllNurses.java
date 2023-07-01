@@ -19,7 +19,7 @@ public class Admin_viewAllNurses extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_view_all_nurses);
 
-        recyclerView = findViewById(R.id.MyRecyclerview);
+        recyclerView = findViewById(R.id.MyRecyclerviewAdminDetails);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<MainModel> options =

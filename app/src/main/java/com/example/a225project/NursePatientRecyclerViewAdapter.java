@@ -62,8 +62,8 @@ public class NursePatientRecyclerViewAdapter extends RecyclerView.Adapter<NurseP
 
         public PatientViewHolder(@NonNull View itemView) {
             super(itemView);
-            txtPatientName = itemView.findViewById(R.id.txtadminwardName);
-            txtPatientID = itemView.findViewById(R.id.txtadminWardID);
+            txtPatientName = itemView.findViewById(R.id.txtadminCaregiverName);
+            txtPatientID = itemView.findViewById(R.id.txtadminCaregiverID);
         }
 
         public void bind(Patient patient) {
