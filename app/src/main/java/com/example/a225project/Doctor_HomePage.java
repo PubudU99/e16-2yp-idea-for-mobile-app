@@ -47,6 +47,7 @@ public class Doctor_HomePage extends AppCompatActivity {
     TextView dateTxt;
     ImageView toAppoin, viewBtn;
     ImageButton goBackBtn;
+    TextView name;
 
     ArrayList<doctorTodayPatientsModel> doctorTodayPatientsModels= new ArrayList<>();
     String[] PatientNames={"Mahesha Madhushanka","Kavindu Bambaragama","Dinushika Abrew","Nikalshi Sepalika","Pasindu Rangana","Pubudu Madhushith","Uthsara wikramarachchi","Sapuni Nithya","Tharidi Sadewmi","John Seena"};
@@ -61,6 +62,7 @@ public class Doctor_HomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_home_page);
 
+
         goBackBtn = findViewById(R.id.imageButton3);
 
         goBackBtn.setOnClickListener(new View.OnClickListener() {
@@ -71,6 +73,15 @@ public class Doctor_HomePage extends AppCompatActivity {
             }
         });
 
+        Intent intent=getIntent();
+        String Username =intent.getStringExtra("username");
+        Intent i1= new Intent(Doctor_HomePage.this,doctorAddPrescription.class);
+        i1.putExtra("docId",Username);
+        startActivity(i1);
+
+        name= findViewById(R.id.textView185);
+        name.setText(Username);
+
         dateTxt=findViewById(R.id.txtdatedoctorhome);
 
         calendar = Calendar.getInstance();
@@ -79,6 +90,26 @@ public class Doctor_HomePage extends AppCompatActivity {
         day = calendar.get(Calendar.DAY_OF_MONTH);
 
         retrieveData();
+
+
+        ///////////////////////////////////////////////////////////////////////////
+
+
+
+        ImageView myImage = findViewById(R.id.imageButton5);
+
+        myImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start the second activity when the image is clicked
+                Intent intent = new Intent(Doctor_HomePage.this, doctorPatientDetails.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+        ///////////////////////////////////////////////////////////////////////////
 
         //WardNo=wardIDList.toArray(new String[wardIDList.size()]);
         //bedNo=bedIDList.toArray(new String[bedIDList.size()]);
@@ -101,8 +132,10 @@ public class Doctor_HomePage extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), doctorNewAdmission.class));
                 System.out.println("hello");
+
             }
         });
+
 
 
         RecyclerView recyclerView= findViewById(R.id.DoctorHomeRecyclerView);
@@ -129,12 +162,14 @@ public class Doctor_HomePage extends AppCompatActivity {
     ////retrievieng data to a list
     public void retrieveData()
     {
-        Toast.makeText(Doctor_HomePage.this, "wada.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Doctor_HomePage.this, "Login Successful!", Toast.LENGTH_SHORT).show();
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("patient");
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot datasnapshot) {
+
+
 
 
                 //getting patients

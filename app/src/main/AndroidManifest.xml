@@ -13,7 +13,10 @@
         android:theme="@style/Theme.225Project"
         tools:targetApi="31">
         <activity
-            android:name=".admin_viewAllNurses"
+            android:name=".Admin_ViewAll_Admins"
+            android:exported="false" />
+        <activity
+            android:name=".NextActivity"
             android:exported="false" />
         <activity
             android:name=".ForgotPassword"
@@ -21,7 +24,6 @@
         <activity
             android:name=".caregiverHome"
             android:exported="false" />
-
         <activity
             android:name=".nursePatientDetails"
             android:exported="false" />
@@ -92,19 +94,29 @@
             android:name=".nurseNewReports"
             android:exported="false" />
         <activity
+            android:name=".admin_viewAllDoctors"
+            android:exported="false" />
+        <activity
             android:name=".nurseBloodReport"
             android:exported="false" />
         <activity
             android:name=".nurseUrineReport"
             android:exported="false" />
         <activity
+            android:name=".Admin_viewAllPatients"
+            android:exported="false" />
+        <activity
             android:name=".doctorAddPrescription"
             android:exported="false" />
-
+        <activity
+            android:name=".Admin_viewAllNurses"
+            android:exported="false" />
         <activity
             android:name=".doctorNewAdmission"
             android:exported="false" />
-
+        <activity
+            android:name=".doctorPatientDetails"
+            android:exported="false" />
         <activity
             android:name=".SplashScreen"
             android:exported="true">

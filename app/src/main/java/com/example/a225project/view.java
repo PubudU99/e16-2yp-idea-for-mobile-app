@@ -32,7 +32,7 @@ public class view extends AppCompatActivity {
         viewPatients.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i1= new Intent(getApplicationContext(),Admin_viewAllPatients.class);
+                Intent i1= new Intent(getApplicationContext(), Admin_viewAllPatients.class);
                 startActivity(i1);
             }
         });
@@ -50,7 +50,7 @@ public class view extends AppCompatActivity {
         viewNurses.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i4= new Intent(getApplicationContext(), admin_viewAllNurses.class);
+                Intent i4= new Intent(getApplicationContext(), Admin_viewAllNurses.class);
                 startActivity(i4);
             }
         });

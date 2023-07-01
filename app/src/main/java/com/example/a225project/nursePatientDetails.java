@@ -33,18 +33,32 @@ public class nursePatientDetails extends AppCompatActivity {
     ImageView reportHistory, prescriptionHistory, newReport;
     StorageReference storageReference;
 
+    static String adminID;
 
 
-    String adminID = "p_boss";
+    private void getIntend(){
+        Intent intent = getIntent();
+        String message = intent.getStringExtra("patientId");
+
+        if (message != null) {
+            adminID = message;
+        }
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nurse_patient_details);
 
+        final Intent intent= new Intent(this,Patient_prescriptionView.class);
+        String flag="N";
+        intent.putExtra("Flag",flag);
+
         reportHistory = findViewById(R.id.imageView185);
         prescriptionHistory = findViewById(R.id.imageView186);
         newReport = findViewById(R.id.imageView188);
+        getIntend();
         retrieveData();
 
         reportHistory.setOnClickListener(new View.OnClickListener() {
@@ -58,8 +72,8 @@ public class nursePatientDetails extends AppCompatActivity {
         prescriptionHistory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Patient_prescriptionView.class));
-
+                //startActivity(new Intent(getApplicationContext(), Patient_prescriptionView.class));
+                startActivity(intent);
             }
         });
 
@@ -71,11 +85,6 @@ public class nursePatientDetails extends AppCompatActivity {
             }
         });
     }
-
-
-
-
-
 
 
     ////retrievieng data to a list

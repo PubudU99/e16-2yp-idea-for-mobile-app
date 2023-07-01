@@ -4,16 +4,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.ComponentName;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
+import android.widget.ImageView;
+import android.widget.Switch;
 
 import java.util.ArrayList;
 
 public class Patient_prescriptionView extends AppCompatActivity {
 
     ArrayList <PrescripionModel> prescriptionmodels = new ArrayList<>();
+    static String  patientID = nursePatientDetails.adminID;
 
     String[] TabletNames = {"Aspirin","Ibuprofen","Paracetamol","Cetirizine","Amoxicillin","Omeprazole","Loratadine"};
     String[] TabletWeights = {"100mg","200mg","500mg","10mg","250mg","20mg","5mg"};
@@ -27,6 +34,24 @@ public class Patient_prescriptionView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_prescription_view);
 
+        ImageView imagedescription= findViewById(R.id.imagedescription);
+
+
+        Intent intent = getIntent();
+        String VarFlag=intent.getStringExtra("Flag");
+        switch(VarFlag){
+            case "P":
+                bitmapPatient = BitmapFactory.decodeResource(getResources(), R.drawable.parientviewprescription);
+                imagedescription.setImageBitmap(bitmapPatient);
+                break;
+            case "N":
+                bitmapNurse = BitmapFactory.decodeResource(getResources(), R.drawable.nurseviewprescription);
+                imagedescription.setImageBitmap(bitmapNurse);
+                break;
+        }
+
+
+
         RecyclerView recyclerView= findViewById(R.id.prescriptionRecyclerView);
         setUpPrescriptionModels();
         Patient_presctiption_Adapter adapter = new Patient_presctiption_Adapter(this,prescriptionmodels);
@@ -37,8 +62,18 @@ public class Patient_prescriptionView extends AppCompatActivity {
         gobacktoHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i1= new Intent(getApplicationContext(), MainActivity3.class);
-                startActivity(i1);
+
+                switch(VarFlag){
+                    case "P":
+                        Intent i1= new Intent(getApplicationContext(), MainActivity3.class);
+                        startActivity(i1);
+                        break;
+                    case "N":
+                        Intent i2= new Intent(getApplicationContext(), nursePatientDetails.class);
+                        startActivity(i2);
+                        break;
+                }
+
             }
         });
 
