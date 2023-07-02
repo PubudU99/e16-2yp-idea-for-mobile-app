@@ -38,6 +38,7 @@ public class EditProfile extends AppCompatActivity {
     String userType;
     String username;
 
+    String adminID;
     private static final int PICK_IMAGE_REQUEST_CODE = 2;
 
     @Override
@@ -49,6 +50,9 @@ public class EditProfile extends AppCompatActivity {
         selectImageButton = findViewById(R.id.imageButton4);
 
         ImageButton goBack = findViewById(R.id.editProfileGoBack);
+
+        adminID = getIntent().getStringExtra("username");
+        System.out.println(adminID);
 
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,7 +81,8 @@ public class EditProfile extends AppCompatActivity {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImageUri);
                 profileImageView.setImageBitmap(bitmap);
 
-                username = "p_brother";
+                username = adminID;
+                System.out.println(username);
                 userType = checkUser(username);
                 saveImageToFirebase(bitmap, userType, username);
 

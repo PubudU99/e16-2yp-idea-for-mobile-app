@@ -97,6 +97,8 @@ public class MainActivity3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i4=new Intent(getApplicationContext(),EditProfile.class);
+
+                i4.putExtra("username",username);
                 startActivity(i4);
             }
         });
