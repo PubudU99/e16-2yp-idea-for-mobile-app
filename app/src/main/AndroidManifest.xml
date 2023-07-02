@@ -26,6 +26,10 @@
             android:exported="false" />
 
         <activity
+            android:name=".DoctorView_PatientDetails"
+            android:exported="false" />
+
+        <activity
             android:name=".Admin_viewAllNurses"
             android:exported="false" />
 
