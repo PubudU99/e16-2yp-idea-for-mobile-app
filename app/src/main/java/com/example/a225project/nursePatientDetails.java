@@ -23,6 +23,7 @@ import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,6 +33,7 @@ public class nursePatientDetails extends AppCompatActivity {
 
     ImageView reportHistory, prescriptionHistory, newReport;
     StorageReference storageReference;
+
 
     static String adminID;
 
@@ -137,9 +139,6 @@ public class nursePatientDetails extends AppCompatActivity {
                         patientBedNumber.setText(patientBedList.get(i));
 
                     }
-
-
-
                 }
 
             }
@@ -172,9 +171,11 @@ public class nursePatientDetails extends AppCompatActivity {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         // Handle any errors that occur during image download
-                        Toast.makeText(nursePatientDetails.this, "Image download failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
+
+        ImageView imageView = findViewById(R.id.imageView);
+
     }
 
 

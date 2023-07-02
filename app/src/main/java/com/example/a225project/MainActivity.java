@@ -29,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText usernameEditText, passwordEditText;
 
+    static String username;
+    static String password;
+
     ImageButton loginButton;
     Button btnPasswordReset;
     ImageView forgotPasswordBtn;
@@ -58,8 +61,8 @@ public class MainActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = usernameEditText.getText().toString().trim();
-                String password = passwordEditText.getText().toString().trim();
+                username = usernameEditText.getText().toString().trim();
+                password = passwordEditText.getText().toString().trim();
 
 
                 //startActivity(new Intent(getApplicationContext(), adminHome.class));
@@ -200,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
             return Doctor_HomePage.class;
 
         }else if (usertype.equals("caregiver")) {
-            return MainActivity3.class;
+            return caregiverHome.class;
         }
         else{
             return adminHome.class; // return admin class.

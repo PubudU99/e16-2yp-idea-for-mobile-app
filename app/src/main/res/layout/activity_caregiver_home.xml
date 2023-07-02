@@ -7,6 +7,15 @@
     android:background="#6877A1"
     tools:context=".patientApppointments">
 
+    <ImageView
+        android:id="@+id/imageView225"
+        android:layout_width="438dp"
+        android:layout_height="541dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/overlay" />
+
     <TextView
         android:id="@+id/textView137"
         android:layout_width="wrap_content"
@@ -35,38 +44,33 @@
         android:id="@+id/imageView186"
         android:layout_width="368dp"
         android:layout_height="54dp"
-        android:layout_marginBottom="96dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView169"
-        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/type" />
 
     <TextView
         android:id="@+id/textView169"
         android:layout_width="187dp"
         android:layout_height="33dp"
-        android:layout_marginTop="184dp"
         android:text="15"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.745"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView184" />
+        app:layout_constraintTop_toBottomOf="@+id/textView168" />
 
     <TextView
         android:id="@+id/textView168"
         android:layout_width="187dp"
         android:layout_height="33dp"
-        android:layout_marginTop="152dp"
         android:text="w001"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.745"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView184" />
+        app:layout_constraintTop_toBottomOf="@+id/textView167" />
 
     <TextView
         android:id="@+id/textView167"
@@ -94,13 +98,12 @@
         android:id="@+id/textView165"
         android:layout_width="187dp"
         android:layout_height="33dp"
-        android:layout_marginTop="52dp"
         android:text="p00001"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.745"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView184" />
+        app:layout_constraintTop_toBottomOf="@+id/textView154" />
 
     <TextView
         android:id="@+id/textView159"
@@ -142,14 +145,15 @@
         android:id="@+id/textView171"
         android:layout_width="206dp"
         android:layout_height="29dp"
-        android:layout_marginTop="8dp"
         android:text="View Prescription"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView186"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.544"
+        app:layout_constraintHorizontal_bias="0.556"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView186" />
+        app:layout_constraintTop_toTopOf="@+id/imageView186"
+        app:layout_constraintVertical_bias="0.36" />
 
     <TextView
         android:id="@+id/textView156"

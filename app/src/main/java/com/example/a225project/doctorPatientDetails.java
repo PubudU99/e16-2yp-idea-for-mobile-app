@@ -38,9 +38,10 @@ public class doctorPatientDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_my_patients);
 
-        reportHistory = findViewById(R.id.imageView185);
-        prescriptionHistory = findViewById(R.id.imageView186);
-        addPrescription = findViewById(R.id.imageView188);
+        //reportHistory = findViewById(R.id.imageView185);
+        //prescriptionHistory = findViewById(R.id.imageView186);
+        //
+        // addPrescription = findViewById(R.id.imageView188);
         retrieveData();
 
         reportHistory.setOnClickListener(new View.OnClickListener() {
@@ -152,8 +153,6 @@ public class doctorPatientDetails extends AppCompatActivity {
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        // Handle any errors that occur during image download
-                        Toast.makeText(doctorPatientDetails.this, "Image download failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
     }
