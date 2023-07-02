@@ -8,14 +8,14 @@ import android.widget.TextView;
 
 public class DoctorView_PatientDetails extends AppCompatActivity {
 
-    ImageView profilePic ;
-    TextView Name ;
-    TextView ID ;
-    TextView Age ;
-    TextView WardID ;
-    TextView BedID ;
-    TextView Illness;
-    TextView AppointTime;
+//    ImageView profilePic ;
+//    TextView Name ;
+//    TextView ID ;
+//    TextView Age ;
+//    TextView WardID ;
+//    TextView BedID ;
+//    TextView Illness;
+//    TextView AppointTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,7 @@ public class DoctorView_PatientDetails extends AppCompatActivity {
         TextView Illness = findViewById(R.id.textView209);
         TextView AppointTime = findViewById(R.id.textView210);
 
-        profilePic.setImageResource(Integer.parseInt(getIntent().getStringExtra("DP")));
+        profilePic.setImageResource(getIntent().getIntExtra("DP",0));
         Name.setText(getIntent().getStringExtra("NAME"));
         ID.setText(getIntent().getStringExtra("ID"));
         Age.setText(getIntent().getStringExtra("AGE"));
