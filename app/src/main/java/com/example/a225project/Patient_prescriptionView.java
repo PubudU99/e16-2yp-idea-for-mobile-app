@@ -27,7 +27,8 @@ public class Patient_prescriptionView extends AppCompatActivity {
     String[] amountsPerMeal = {"1 tablet","2 tablet","1 tablet","2 tablet","1 tablet","2 tablet","1 tablet"};
     String[] noOfDays = {"5 days","4 days","5 days","6 days","5 days","2 days","3 days"};
     String[] noOfMeals = {"3 per day","2 per day","1 per day","3 per day","2 per day","3 per day","1 per day"};
-
+    Bitmap bitmapPatient;
+    Bitmap bitmapNurse;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
