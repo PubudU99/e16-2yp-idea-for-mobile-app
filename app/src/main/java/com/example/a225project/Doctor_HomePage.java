@@ -54,6 +54,9 @@ public class Doctor_HomePage extends AppCompatActivity implements Doctor_Recycle
     String[] PatientNames={"Mahesha Madhushanka","Kavindu Bambaragama","Dinushika Abrew","Nikalshi Sepalika","Pasindu Rangana","Pubudu Madhushith","Uthsara wikramarachchi","Sapuni Nithya","Tharidi Sadewmi","John Seena"};
     String[] WardNo={"102D","133F","202A","402H","202D","102D","133F","202D","202A","102D"};
     String[] bedNo={"10","7","3","6","14","9","33","62","13","12"};
+    String[] Illness = {"Fever","Fever","Fever","Fever","Fever","Fever","Fever","Fever","Fever","Fever"};
+    String[] Age={"30","30","30","30","30","30","30","30","30","30"};
+    String[] ID={"001","002","003","004","005","006","007","008","009","010"};
     String[] tTime={"10.00 AM","10.30 AM","11.00 AM","11.30 AM","12.00 PM","01.00 PM","02.00 PM","02.30 PM","03.00 PM","03.30 PM"};
     int[] patientProfilePics={R.drawable.pdp1,R.drawable.pdp2,R.drawable.pdp3,R.drawable.pdp4,R.drawable.pdp5,R.drawable.pdp6,R.drawable.pdp7,R.drawable.pdp8,R.drawable.pdp9,R.drawable.pdp10};
 
@@ -146,7 +149,7 @@ public class Doctor_HomePage extends AppCompatActivity implements Doctor_Recycle
     private void setUpDoctorTodayPatientsModels(){
         for(int i=0;i<PatientNames.length;i++){
             //doctorTodayPatientsModels.add(new doctorTodayPatientsModel(PatientNames[i],WardNo[i],bedNo[i],tTime[i],patientProfilePics));
-            doctorTodayPatientsModels.add(new doctorTodayPatientsModel(PatientNames[i],WardNo[i],bedNo[i],tTime[i],patientProfilePics[i]));
+            doctorTodayPatientsModels.add(new doctorTodayPatientsModel(PatientNames[i],WardNo[i],bedNo[i],tTime[i],Illness[i],Age[i],ID[i],patientProfilePics[i]));
         }
 
     }
@@ -205,6 +208,17 @@ public class Doctor_HomePage extends AppCompatActivity implements Doctor_Recycle
     @Override
     public void onItemClick(int position) {
         Toast.makeText(getApplicationContext(), "inOnItemClickListner", Toast.LENGTH_SHORT).show();
+        Intent intent =new Intent(Doctor_HomePage.this,DoctorView_PatientDetails.class);
 
+        intent.putExtra("NAME",doctorTodayPatientsModels.get(position).getPatient_Name());
+        intent.putExtra("WardNO",doctorTodayPatientsModels.get(position).getWard_ID());
+        intent.putExtra("BedNO",doctorTodayPatientsModels.get(position).getBed_No());
+        intent.putExtra("TIME",doctorTodayPatientsModels.get(position).getTime());
+        intent.putExtra("ID",doctorTodayPatientsModels.get(position).getPatientID());
+        intent.putExtra("ILLNESS",doctorTodayPatientsModels.get(position).getIllness());
+        intent.putExtra("AGE",doctorTodayPatientsModels.get(position).getAge());
+        intent.putExtra("DP",doctorTodayPatientsModels.get(position).getPatient_profilePic());
+
+        startActivity(intent);
     }
 }
