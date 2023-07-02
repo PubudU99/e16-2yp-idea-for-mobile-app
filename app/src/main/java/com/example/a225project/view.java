@@ -14,7 +14,10 @@ public class view extends AppCompatActivity {
     ImageView viewDoctors;
     ImageView viewNurses;
 
+    ImageView viewAdmins;
     ImageView wardBtn;
+
+    ImageView caregiversButoon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +68,29 @@ public class view extends AppCompatActivity {
                 startActivity(i5);
             }
         });
+
+        viewAdmins = findViewById(R.id.imageView76);
+
+        viewAdmins.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i5= new Intent(getApplicationContext(), Admin_ViewAll_Admins.class);
+                startActivity(i5);
+            }
+        });
+
+        caregiversButoon = findViewById(R.id.imageView75);
+
+        caregiversButoon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i5= new Intent(getApplicationContext(), admin_viewAllCaregivers.class);
+                startActivity(i5);
+            }
+        });
+
+
+
 
 
 

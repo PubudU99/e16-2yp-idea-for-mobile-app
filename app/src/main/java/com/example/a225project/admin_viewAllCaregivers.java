@@ -9,25 +9,25 @@ import android.os.Bundle;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class Admin_ViewAll_Admins extends AppCompatActivity {
+public class admin_viewAllCaregivers extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private Admin_viewAll_AdminsAdapter adapter;
+    private admin_viewAllCaregiverAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_view_all_admins);
+        setContentView(R.layout.admin_view_allcargivers);
 
         recyclerView = findViewById(R.id.MyRecyclerviewAdminDetails);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<MainModel> options =
                 new FirebaseRecyclerOptions.Builder<MainModel>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("admin"), MainModel.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("caregiver"), MainModel.class)
                         .build();
 
-        adapter = new Admin_viewAll_AdminsAdapter(options);
+        adapter = new admin_viewAllCaregiverAdapter(options);
         recyclerView.setAdapter(adapter);
     }
 
