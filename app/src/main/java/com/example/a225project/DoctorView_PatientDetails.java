@@ -44,7 +44,7 @@ public class DoctorView_PatientDetails extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i1=new Intent(getApplicationContext(),Medical_Report.class);
-                String flag="N";
+                String flag="D";
                 i1.putExtra("Flag",flag);
                 i1.putExtra("username","Default");
                 startActivity(i1);
@@ -55,7 +55,7 @@ public class DoctorView_PatientDetails extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i2=new Intent(getApplicationContext(),Patient_prescriptionView.class);
-                String flag="N";
+                String flag="D";
                 i2.putExtra("Flag",flag);
                 i2.putExtra("username","Default");
                 startActivity(i2);
