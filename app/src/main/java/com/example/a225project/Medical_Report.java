@@ -90,6 +90,11 @@ public class Medical_Report extends AppCompatActivity {
         month = calendar.get(Calendar.MONTH);
         day = calendar.get(Calendar.DAY_OF_MONTH);
 
+        // intent got from previous page
+
+        String flag = getIntent().getStringExtra("Flag");
+        System.out.println(flag);
+
 
         displayDate(year, month + 1, day);
         String username = getIntent().getStringExtra("username");
