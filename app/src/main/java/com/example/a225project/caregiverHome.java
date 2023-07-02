@@ -30,20 +30,45 @@ import java.util.List;
 import android.widget.TextView;
 
 public class caregiverHome extends AppCompatActivity {
-static String careGiverID;
+// static String careGiverID;
 static String patientIDValue;
-
 
     TextView name;
 
-    ImageView viewPrescription;
+    String CareGiverID;
+
+    ImageView viewPrescription, profImage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        careGiverID = MainActivity.username;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_caregiver_home);
+
+        // Patient Image
+
+        Intent intent=getIntent();
+        CareGiverID =intent.getStringExtra("username");
+
+        name= findViewById(R.id.textView137);
+        name.setText(CareGiverID);
+
         retrieveData();
+
+        profImage = findViewById(R.id.imageViewPatient);
+
+        profImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(getApplicationContext(), EditProfile.class);
+                i.putExtra("username", CareGiverID);
+                startActivity(i);
+
+            }
+        });
+
+
+
 
         viewPrescription = findViewById(R.id.imageView186);
 
@@ -97,7 +122,7 @@ static String patientIDValue;
 
                     String patientCareGiver = patientCareGiverList.get(i);
 
-                    if ( careGiverID.equals(patientCareGiver) ) {
+                    if ( CareGiverID.equals(patientCareGiver) ) {
                         patientIDValue = patientIDList.get(i);
 
                         TextView patientID = findViewById(R.id.textView165);
@@ -134,15 +159,15 @@ static String patientIDValue;
         // Care Giver Image
 
         FirebaseStorage storage = FirebaseStorage.getInstance();
-        StorageReference storageRef = storage.getReference().child("profile_pictures/"+careGiverID+".jpeg");
-        File localFile = new File(getCacheDir(), careGiverID+".jpeg");
+        StorageReference storageRef = storage.getReference().child("profile_pictures/"+CareGiverID+".jpeg");
+        File localFile = new File(getCacheDir(), CareGiverID+".jpeg");
         storageRef.getFile(localFile)
                 .addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
                         Bitmap bitmap = BitmapFactory.decodeFile(localFile.getAbsolutePath());
 
-                        ImageView imageView = findViewById(R.id.imageView150);
+                        ImageView imageView = findViewById(R.id.imageViewPatient);
                         imageView.setImageBitmap(bitmap);
                     }
                 })
@@ -153,13 +178,7 @@ static String patientIDValue;
                     }
                 });
 
-        // Patient Image
 
-        Intent intent=getIntent();
-        String Username =intent.getStringExtra("username");
-
-        name= findViewById(R.id.textView137);
-        name.setText(Username);
         FirebaseStorage storage2 = FirebaseStorage.getInstance();
         System.out.println("The value of num is: " + patientIDValue);
         StorageReference storageRef2 = storage2.getReference().child("profile_pictures/"+patientIDValue+".jpeg");

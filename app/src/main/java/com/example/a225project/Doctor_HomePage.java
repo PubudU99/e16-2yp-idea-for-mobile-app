@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +21,8 @@ import java.util.HashMap;
 import java.util.List;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -26,6 +30,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.GenericTypeIndicator;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -45,7 +51,7 @@ public class Doctor_HomePage extends AppCompatActivity implements Doctor_Recycle
     Calendar calendar;
     int day, month, year;
     TextView dateTxt;
-    ImageView image, viewBtn;
+    ImageView profilePic, viewBtn;
     ImageButton goBackBtn;
 
     TextView name;
@@ -66,6 +72,54 @@ public class Doctor_HomePage extends AppCompatActivity implements Doctor_Recycle
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_home_page);
 
+        Intent intent=getIntent();
+        String Username =intent.getStringExtra("username");
+
+        name= findViewById(R.id.textView185);
+        name.setText(Username);
+
+
+        profilePic =  findViewById(R.id.imageViewPatient);
+
+        profilePic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), EditProfile.class);
+                i.putExtra("username", Username);
+                startActivity(i);
+
+            }
+        });
+
+        // Image details
+        String imageName = Username+".jpeg"; // Replace with the image file name
+
+        // Firebase Storage
+        FirebaseStorage storage = FirebaseStorage.getInstance();
+        StorageReference storageRef = storage.getReference().child("profile_pictures").child(imageName); // Replace "images" with your folder name
+
+        // Download the image and set it to the ImageView
+        final long MAX_IMAGE_SIZE_BYTES = 1024 * 1024; // 1MB (adjust as needed)
+        storageRef.getBytes(MAX_IMAGE_SIZE_BYTES)
+                .addOnSuccessListener(new OnSuccessListener<byte[]>() {
+                    @Override
+                    public void onSuccess(byte[] bytes) {
+                        // Decode the byte array into a Bitmap
+                        Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+
+                        // Set the bitmap to the ImageView
+                        profilePic.setImageBitmap(bitmap);
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception exception) {
+                        // Handle any errors
+                        // For example, set a placeholder image or show an error message
+                        profilePic.setImageResource(R.drawable.a_laraa);
+                    }
+                });
+
 
         goBackBtn = findViewById(R.id.imageButton3);
 
@@ -77,11 +131,7 @@ public class Doctor_HomePage extends AppCompatActivity implements Doctor_Recycle
             }
         });
 
-        Intent intent=getIntent();
-        String Username =intent.getStringExtra("username");
 
-        name= findViewById(R.id.textView185);
-        name.setText(Username);
 
         dateTxt=findViewById(R.id.txtdatedoctorhome);
 

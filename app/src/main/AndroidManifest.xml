@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.225Project"
         tools:targetApi="31">
+
         <activity
             android:name=".Admin_ViewAll_Admins"
             android:exported="false" />
@@ -24,25 +25,19 @@
         <activity
             android:name=".caregiverHome"
             android:exported="false" />
-
         <activity
             android:name=".DoctorView_PatientDetails"
             android:exported="false" />
-
         <activity
             android:name=".Admin_viewAllNurses"
             android:exported="false" />
-
         <activity
             android:name=".admin_viewAllCaregivers"
             android:exported="false" />
-
         <activity
             android:name=".admin_ward_details"
             android:exported="false" />
-        <activity
-            android:name=".nursePatientDetails"
-            android:exported="false" />
+
         <activity
             android:name=".Doctor_HomePage"
             android:exported="false" />
@@ -50,6 +45,9 @@
             android:name=".admin_ward_inside_details"
             android:exported="false" />
 
+        <activity
+            android:name=".nursePatientDetails"
+            android:exported="false" />
 
         <activity
             android:name=".Patient_prescriptionView"
@@ -144,6 +142,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
     </application>
 
 </manifest>

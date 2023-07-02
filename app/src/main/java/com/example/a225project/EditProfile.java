@@ -107,7 +107,7 @@ public class EditProfile extends AppCompatActivity {
         String timestamp = String.valueOf(System.currentTimeMillis());
 
         System.out.println(username);
-        String filename = "profile_picture_" + userId + "_" + timestamp + ".jpg";
+        String filename = userId + ".jpeg";
 
         StorageReference imageRef = storageRef.child("profile_pictures/" + filename);
         UploadTask uploadTask = imageRef.putBytes(imageData);

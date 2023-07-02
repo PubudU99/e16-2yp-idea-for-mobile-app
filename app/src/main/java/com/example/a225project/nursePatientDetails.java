@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -24,19 +25,13 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-
 public class nursePatientDetails extends AppCompatActivity {
 
     ImageView reportHistory, prescriptionHistory, newReport;
-    StorageReference storageReference;
-
 
     static String adminID;
-
+    TextView name, adminIDt, phoneNumber, wardID, bedNo;
+    ImageView imageViewpatient;
 
     private void getIntend(){
         Intent intent = getIntent();
@@ -46,6 +41,8 @@ public class nursePatientDetails extends AppCompatActivity {
             adminID = message;
         }
 
+        System.out.println(adminID);
+
     }
 
     @Override
@@ -53,15 +50,56 @@ public class nursePatientDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nurse_patient_details);
 
-        final Intent intent= new Intent(this,Patient_prescriptionView.class);
-        String flag="N";
-        intent.putExtra("Flag",flag);
+        imageViewpatient = findViewById(R.id.imageViewPatient);
+
+        getIntend();
+
+        name = findViewById(R.id.textView154);
+        adminIDt = findViewById(R.id.textView165);
+        phoneNumber = findViewById(R.id.textView166);
+        wardID = findViewById(R.id.textView167);
+        bedNo = findViewById(R.id.textView168);
+
+        String patientID = adminID;
 
         reportHistory = findViewById(R.id.imageView185);
         prescriptionHistory = findViewById(R.id.imageView186);
         newReport = findViewById(R.id.imageView188);
-        getIntend();
-        retrieveData();
+
+
+        // Retrieve patient details from Firebase Realtime Database
+        FirebaseDatabase.getInstance().getReference().child("patient").child(patientID)
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if (dataSnapshot.exists()) {
+                            // Retrieve patient details
+                            String patientName = dataSnapshot.child("name").getValue(String.class);
+                            String patientID = dataSnapshot.child("adminID").getValue(String.class);
+                            String phoneNumber1 = dataSnapshot.child("phoneNumber").getValue(String.class);
+                            String patientBed = dataSnapshot.child("bedID").getValue(String.class);
+                            String patientWard = dataSnapshot.child("wardID").getValue(String.class);
+                            String imageLink = dataSnapshot.child("image").getValue(String.class);
+
+                            // Update the UI with patient details
+                            name.setText(patientName);
+                            adminIDt.setText(patientID);
+                            phoneNumber.setText(phoneNumber1);
+                            wardID.setText(patientWard);
+                            bedNo.setText(patientBed);
+
+                            // Load and display the patient's image
+                            loadAndDisplayImage(imageLink); // <-- Add this line
+                        } else {
+                            Toast.makeText(nursePatientDetails.this, "Patient not found", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                        Toast.makeText(nursePatientDetails.this, "Failed to retrieve patient details", Toast.LENGTH_SHORT).show();
+                    }
+                });
 
         reportHistory.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,98 +137,43 @@ public class nursePatientDetails extends AppCompatActivity {
 
             }
         });
+
+
     }
 
-
-    ////retrievieng data to a list
-    public void retrieveData()
-    {
-        ////////// lists related to patients ////////////////
-        List<String> patientIDList = new ArrayList<>();
-        List<String> patientNameList = new ArrayList<>();
-        List<String> patientPhoneList = new ArrayList<>();
-        List<String> patientWardList = new ArrayList<>();
-        List<String> patientBedList = new ArrayList<>();
-
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("patient");
-        reference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot datasnapshot) {
-                //getting patients
-                retrieveImage(); //calling image
-
-                for (DataSnapshot snapshot : datasnapshot.getChildren()){
-                    String patientKey = snapshot.getKey();
-                    patientIDList.add(patientKey);   //list of the patients
-
-                    HashMap<String, Object> ma = (HashMap<String, Object>) snapshot.getValue();
-
-                    patientNameList.add(ma.get("name").toString());      //list of nic
-                    patientPhoneList.add(ma.get("phoneNumber").toString());      //list of admit date
-                    patientWardList.add(ma.get("wardID").toString());      //list of nurse
-                    patientBedList.add(ma.get("bedID").toString());        //list of ward ID
-
-                }
-
-                for (int i = 0; i < patientIDList.size(); i++) {
-                    String patient = patientIDList.get(i);
-
-                    if ( adminID.equals(patient) ) {
-                        TextView patientID = findViewById(R.id.textView165);
-                        patientID.setText(patient);
-
-                        TextView patientName = findViewById(R.id.textView154);
-                        patientName.setText(patientNameList.get(i));
-
-                        TextView patientPhoneNumber = findViewById(R.id.textView167);
-                        patientPhoneNumber.setText(patientPhoneList.get(i));
-
-                        TextView patientWardID = findViewById(R.id.textView168);
-                        patientWardID.setText(patientWardList.get(i));
-
-                        TextView patientBedNumber = findViewById(R.id.textView169);
-                        patientBedNumber.setText(patientBedList.get(i));
-
-                    }
-                }
-
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-    }
-
-
-    //retrieving the image
-    public void retrieveImage (){
-        // Create a FirebaseStorage instance
+    private void loadAndDisplayImage(String imageLink) {
+        if (TextUtils.isEmpty(imageLink)) {
+            // Handle case where image link is empty
+            // For example, display a default image or show an error message
+            imageViewpatient.setImageResource(R.drawable.a_laraa);
+            Toast.makeText(nursePatientDetails.this, "No image available", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         FirebaseStorage storage = FirebaseStorage.getInstance();
-        StorageReference storageRef = storage.getReference().child("profile_pictures/"+adminID+".jpeg");
-        File localFile = new File(getCacheDir(), adminID+".jpg");
-        storageRef.getFile(localFile)
-                .addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
-                    @Override
-                    public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
-                        Bitmap bitmap = BitmapFactory.decodeFile(localFile.getAbsolutePath());
+        StorageReference storageRef = storage.getReferenceFromUrl(imageLink);
 
-                        ImageView imageView = findViewById(R.id.imageView184);
-                        imageView.setImageBitmap(bitmap);
+        final long MAX_IMAGE_SIZE_BYTES = 1024 * 1024; // 1MB (adjust as needed)
+        storageRef.getBytes(MAX_IMAGE_SIZE_BYTES)
+                .addOnSuccessListener(new OnSuccessListener<byte[]>() {
+                    @Override
+                    public void onSuccess(byte[] bytes) {
+                        // Decode the byte array into a Bitmap
+                        Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+
+                        // Display the image in the circular ImageView
+                        imageViewpatient.setImageBitmap(bitmap);
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
-                    public void onFailure(@NonNull Exception e) {
-                        // Handle any errors that occur during image download
+                    public void onFailure(@NonNull Exception exception) {
+                        // Handle failure to load the image
+                        // For example, display a default image or show an error message
+                        imageViewpatient.setImageResource(R.drawable.a_laraa);
+                        Toast.makeText(nursePatientDetails.this, "Failed to load patient image", Toast.LENGTH_SHORT).show();
                     }
                 });
-
-        ImageView imageView = findViewById(R.id.imageView);
-
     }
-
-
 
 }

@@ -11,6 +11,15 @@
     android:background="#6877A1"
     tools:context=".patientApppointments">
 
+    <ImageView
+        android:id="@+id/imageView218"
+        android:layout_width="436dp"
+        android:layout_height="539dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/overlay" />
+
     <TextView
         android:id="@+id/textView137"
         android:layout_width="wrap_content"
@@ -30,7 +39,6 @@
         android:layout_height="793dp"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView137"
         app:srcCompat="@drawable/doctor_white" />
@@ -47,76 +55,64 @@
         app:srcCompat="@drawable/type" />
 
     <TextView
-        android:id="@+id/textView169"
-        android:layout_width="187dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="184dp"
-        android:text=""
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.745"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView184" />
-
-    <TextView
         android:id="@+id/textView168"
         android:layout_width="187dp"
         android:layout_height="33dp"
-        android:layout_marginTop="152dp"
         android:text=""
-        android:textSize="24sp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView159"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.745"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView184" />
+        app:layout_constraintTop_toTopOf="@+id/textView159" />
 
     <TextView
         android:id="@+id/textView167"
         android:layout_width="187dp"
         android:layout_height="33dp"
         android:text=""
-        android:textSize="24sp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView158"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.745"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView166" />
+        app:layout_constraintTop_toTopOf="@+id/textView158" />
 
     <TextView
         android:id="@+id/textView166"
         android:layout_width="187dp"
         android:layout_height="33dp"
         android:text=""
-        android:textSize="24sp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView157"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.745"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView165" />
-
-
-
+        app:layout_constraintTop_toTopOf="@+id/textView157" />
 
 
     <TextView
         android:id="@+id/textView165"
         android:layout_width="187dp"
         android:layout_height="33dp"
-        android:layout_marginTop="52dp"
         android:text=""
-        android:textSize="24sp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView155"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.745"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView184" />
+        app:layout_constraintTop_toTopOf="@+id/textView155" />
 
     <TextView
         android:id="@+id/textView159"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Bed No"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.144"
+        app:layout_constraintHorizontal_bias="0.132"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView158" />
 
@@ -124,24 +120,23 @@
         android:id="@+id/imageView185"
         android:layout_width="358dp"
         android:layout_height="55dp"
-        android:layout_marginBottom="128dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView169"
-        app:layout_constraintVertical_bias="0.37"
+        app:layout_constraintTop_toBottomOf="@+id/textView159"
         app:srcCompat="@drawable/type" />
 
     <TextView
         android:id="@+id/textView158"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Ward ID"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.144"
+        app:layout_constraintHorizontal_bias="0.134"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView157" />
 
@@ -149,13 +144,14 @@
         android:id="@+id/textView157"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Phone No"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.144"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView156" />
+        app:layout_constraintTop_toBottomOf="@+id/textView155" />
 
     <ImageView
         android:id="@+id/imageView210"
@@ -180,18 +176,6 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView186" />
-
-    <TextView
-        android:id="@+id/textView156"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Age"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.144"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView155" />
 
     <ImageView
         android:id="@+id/imageView188"
@@ -235,11 +219,13 @@
         android:id="@+id/textView155"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
         android:text="ID"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.144"
+        app:layout_constraintHorizontal_bias="0.089"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView147" />
 
@@ -247,13 +233,13 @@
         android:id="@+id/textView154"
         android:layout_width="187dp"
         android:layout_height="33dp"
-        android:layout_marginTop="20dp"
         android:text=""
-        android:textSize="24sp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView147"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.745"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView184" />
+        app:layout_constraintTop_toTopOf="@+id/textView147" />
 
     <ImageView
         android:id="@+id/imageView184"
@@ -261,10 +247,21 @@
         android:layout_height="181dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView170"
-        app:srcCompat="@drawable/ellipse_31" />
+
+        tools:visibility="visible" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageViewPatient"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView184"
+        app:layout_constraintEnd_toEndOf="@+id/imageView184"
+        app:layout_constraintStart_toStartOf="@+id/imageView184"
+        app:layout_constraintTop_toTopOf="@+id/imageView184" />
 
     <TextView
         android:id="@+id/textView136"
@@ -282,12 +279,13 @@
         android:id="@+id/textView147"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:text="Name"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.144"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView184" />
 

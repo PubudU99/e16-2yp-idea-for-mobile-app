@@ -12,9 +12,6 @@
 
 
 
-
-
-
     <ImageView
         android:id="@+id/imageView196"
         android:layout_width="434dp"
@@ -30,7 +27,7 @@
         android:layout_height="523dp"
         android:layout_marginStart="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.621"
+        app:layout_constraintHorizontal_bias="0.409"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/overlay" />
@@ -46,17 +43,17 @@
         app:layout_constraintTop_toTopOf="@+id/imageView196"
         app:srcCompat="@drawable/rectangle_13" />
 
-    <ImageView
-        android:id="@+id/imageView199"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/imageView198"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageViewPatient"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.89"
+        app:layout_constraintHorizontal_bias="0.93"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView196"
-        app:layout_constraintVertical_bias="0.659"
-        app:srcCompat="@drawable/doc_img" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045"
+        />
 
     <TextView
         android:id="@+id/textView185"
@@ -68,8 +65,9 @@
         android:textStyle="bold"
         android:typeface="normal"
         app:layout_constraintBottom_toTopOf="@+id/imageView198"
-        app:layout_constraintEnd_toStartOf="@+id/imageView199"
-        app:layout_constraintHorizontal_bias="0.229"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView184"
         app:layout_constraintVertical_bias="0.0" />
@@ -82,8 +80,9 @@
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView198"
-        app:layout_constraintEnd_toStartOf="@+id/imageView199"
-        app:layout_constraintHorizontal_bias="0.221"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.026"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.494" />

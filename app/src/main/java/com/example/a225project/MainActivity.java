@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
         usernameEditText = findViewById(R.id.editTextTextEmailAddress);
         passwordEditText = findViewById(R.id.editTextTextPassword);
 
+
+
         forgotPasswordBtn=findViewById(R.id.forgorPassword);
         forgotPasswordBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,9 +66,6 @@ public class MainActivity extends AppCompatActivity {
                 username = usernameEditText.getText().toString().trim();
                 password = passwordEditText.getText().toString().trim();
 
-
-                //startActivity(new Intent(getApplicationContext(), adminHome.class));
-
                 // check user type.
                 String invalidUserReturns = "invalid";
                 String userType;
@@ -79,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 if(invalidUserReturns.equals(userType)){
-                    Toast.makeText(MainActivity.this, "Invalid username1.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Invalid username.", Toast.LENGTH_SHORT).show();
 
                 }else{
                     // class for each usertype.
@@ -137,8 +136,6 @@ public class MainActivity extends AppCompatActivity {
                     if (email != null) {
                         // Email found for the given username
 
-                        Toast.makeText(MainActivity.this, "Email: " + email,
-                                Toast.LENGTH_SHORT).show();
                         loginUserWithEmail(email, password, userActivity,username);
 
                     } else {

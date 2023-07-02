@@ -27,7 +27,7 @@ public class nurseUrineReport extends AppCompatActivity {
 
     EditText color, appearance, specific_gravity,ph, protein, glucose, ketones;
     ImageView submitBtn;
-    String adminID = "p_john"; //  adminID = username... I used that please use it everywhere.
+    String adminID; //  adminID = username... I used that please use it everywhere.
 
     // initialize user images
 
@@ -36,6 +36,8 @@ public class nurseUrineReport extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nurse_urine_report);
         AndroidThreeTen.init(this);
+
+        adminID = getIntent().getStringExtra("adminID");
 
         color = findViewById(R.id.editTextText5);
         appearance = findViewById(R.id.editTextText8);
