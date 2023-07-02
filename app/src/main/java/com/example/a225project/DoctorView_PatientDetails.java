@@ -2,20 +2,15 @@ package com.example.a225project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class DoctorView_PatientDetails extends AppCompatActivity {
 
-//    ImageView profilePic ;
-//    TextView Name ;
-//    TextView ID ;
-//    TextView Age ;
-//    TextView WardID ;
-//    TextView BedID ;
-//    TextView Illness;
-//    TextView AppointTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +34,50 @@ public class DoctorView_PatientDetails extends AppCompatActivity {
         BedID.setText(getIntent().getStringExtra("BedNO"));
         Illness.setText(getIntent().getStringExtra("ILLNESS"));
         AppointTime.setText(getIntent().getStringExtra("TIME"));
+
+        ImageButton boBack= findViewById(R.id.imageButton8);
+        ImageButton toReports= findViewById(R.id.imageButton9);
+        ImageButton toPrescriptions=  findViewById(R.id.imageButton10);
+        ImageButton toMakeAppointments= findViewById(R.id.imageButton11);
+
+        toReports.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1=new Intent(getApplicationContext(),Medical_Report.class);
+                String flag="N";
+                i1.putExtra("Flag",flag);
+                i1.putExtra("username","Default");
+                startActivity(i1);
+            }
+        });
+
+        toPrescriptions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i2=new Intent(getApplicationContext(),Patient_prescriptionView.class);
+                String flag="N";
+                i2.putExtra("Flag",flag);
+                i2.putExtra("username","Default");
+                startActivity(i2);
+
+            }
+        });
+
+        toMakeAppointments.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),doctorNewAdmission.class));
+            }
+        });
+
+        boBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), Doctor_HomePage.class));
+            }
+        });
+
+
 
 
     }
