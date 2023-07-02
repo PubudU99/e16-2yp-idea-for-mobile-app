@@ -84,7 +84,7 @@ public class MainActivity3 extends AppCompatActivity {
         toPrescription.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //final Intent intent= new Intent(this,Patient_prescriptionView.class);
+
                 Intent i5= new Intent(getApplicationContext(),Patient_prescriptionView.class);
                 String flag="P";
                 i5.putExtra("Flag",flag);
@@ -105,8 +105,13 @@ public class MainActivity3 extends AppCompatActivity {
         toReport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent i3= new Intent(getApplicationContext(), Medical_Report.class);
                 i3.putExtra("username",username);
+
+                // to indicate it's from patient.
+                String flag="P";
+                i3.putExtra("Flag", flag);
                 startActivity(i3);
 
             }

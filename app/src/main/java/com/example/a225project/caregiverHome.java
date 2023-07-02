@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,6 +35,8 @@ static String patientIDValue;
 
 
     TextView name;
+
+    ImageView viewPrescription;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -41,6 +44,21 @@ static String patientIDValue;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_caregiver_home);
         retrieveData();
+
+        viewPrescription = findViewById(R.id.imageView186);
+
+        viewPrescription.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i5= new Intent(getApplicationContext(),Patient_prescriptionView.class);
+                String flag="C";
+                i5.putExtra("Flag",flag);
+
+                startActivity(i5);
+
+            }
+        });
 
     }
     ////retrievieng data to a list
