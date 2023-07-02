@@ -23,6 +23,7 @@ public class nurseNewReports extends AppCompatActivity {
 
     EditText heartRate, pressure, lungs, temperature;
 
+    String adminID;
 
 
 
@@ -44,6 +45,10 @@ public class nurseNewReports extends AppCompatActivity {
 
         ImageView goBack =findViewById(R.id.imageView209);
 
+        Intent intent = getIntent();
+        adminID = intent.getStringExtra("adminID");
+
+
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,7 +65,6 @@ public class nurseNewReports extends AppCompatActivity {
                 String pressure_s = pressure.getText().toString().trim();
                 String lungs_s = lungs.getText().toString().trim();
                 String temperature_s = temperature.getText().toString().trim();
-                String adminID = "p_john";
 
                 updateUserInfo(heartRate_s,pressure_s,lungs_s,temperature_s,adminID);
 
@@ -71,7 +75,9 @@ public class nurseNewReports extends AppCompatActivity {
         Blood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), nurseBloodReport.class));
+                Intent intent = new Intent(nurseNewReports.this, nurseBloodReport.class);
+                intent.putExtra("adminID", adminID);
+                startActivity(intent);
 
             }
         });
@@ -79,7 +85,9 @@ public class nurseNewReports extends AppCompatActivity {
         Urine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), nurseUrineReport.class));
+                Intent intent = new Intent(nurseNewReports.this, nurseUrineReport.class);
+                intent.putExtra("adminID", adminID);
+                startActivity(intent);
 
             }
         });

@@ -41,14 +41,14 @@ public class Patient_prescriptionView extends AppCompatActivity {
         Intent intent = getIntent();
         String VarFlag=intent.getStringExtra("Flag");
         switch(VarFlag){
-            case "P":
-                bitmapPatient = BitmapFactory.decodeResource(getResources(), R.drawable.parientviewprescription);
-                imagedescription.setImageBitmap(bitmapPatient);
-                break;
-            case "N":
-                bitmapNurse = BitmapFactory.decodeResource(getResources(), R.drawable.nurseviewprescription);
-                imagedescription.setImageBitmap(bitmapNurse);
-                break;
+//            case "P":
+//                bitmapPatient = BitmapFactory.decodeResource(getResources(), R.drawable.parientviewprescription);
+//                imagedescription.setImageBitmap(bitmapPatient);
+//                break;
+//            case "N":
+//                bitmapNurse = BitmapFactory.decodeResource(getResources(), R.drawable.nurseviewprescription);
+//                imagedescription.setImageBitmap(bitmapNurse);
+//                break;
         }
 
 

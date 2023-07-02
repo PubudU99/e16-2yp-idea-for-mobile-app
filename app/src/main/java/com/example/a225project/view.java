@@ -14,6 +14,8 @@ public class view extends AppCompatActivity {
     ImageView viewDoctors;
     ImageView viewNurses;
 
+    ImageView wardBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +56,17 @@ public class view extends AppCompatActivity {
                 startActivity(i4);
             }
         });
+
+        wardBtn=findViewById(R.id.imageView70);
+        wardBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i5= new Intent(getApplicationContext(), admin_ward_details.class);
+                startActivity(i5);
+            }
+        });
+
+
 
     }
 

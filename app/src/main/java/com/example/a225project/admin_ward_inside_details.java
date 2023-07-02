@@ -12,19 +12,23 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 
-public class admin_ward_inside_details
-        extends AppCompatActivity {
+public class admin_ward_inside_details extends AppCompatActivity {
 
     private DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_admin_ward_inside_details);
+
+        String wardId = getIntent().getStringExtra("wardId");
+
+        // Print the ward ID
+        System.out.println("Ward ID: " + wardId);
+
 
         // Initialize Firebase
-        FirebaseApp.initializeApp(this);
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("wards");
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("ward").child(wardId);
 
         // Retrieve data from Firebase
         retrieveData();
@@ -34,16 +38,17 @@ public class admin_ward_inside_details
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                // Handle the retrieved data
-                for (DataSnapshot wardSnapshot : dataSnapshot.getChildren()) {
-                    String wardName = wardSnapshot.child("wardName").getValue(String.class);
-                    String doctorIncharge = wardSnapshot.child("doctorIncharge").getValue(String.class);
-                    String nurseIncharge = wardSnapshot.child("nurseIncharge").getValue(String.class);
-                    String emergency = wardSnapshot.child("emergency").getValue(String.class);
-                    int availableBeds = wardSnapshot.child("availableBeds").getValue(Integer.class);
+                // Check if the ward exists
+                if (dataSnapshot.exists()) {
+                    // Get the ward details directly from the snapshot
+                    String wardName = dataSnapshot.child("wardName").getValue(String.class);
+                    String doctorIncharge = dataSnapshot.child("doctorIncharge").getValue(String.class);
+                    String nurseIncharge = dataSnapshot.child("nurseIncharge").getValue(String.class);
+                    String emergency = dataSnapshot.child("emergency").getValue(String.class);
+                    String availableBeds = dataSnapshot.child("availableBeds").getValue(String.class);
 
                     // Update the UI with the retrieved data
-                    updateUI(wardName, doctorIncharge, nurseIncharge, emergency, availableBeds);
+                    //updateUI(wardName, doctorIncharge, nurseIncharge, emergency, availableBeds);
                 }
             }
 
@@ -52,23 +57,5 @@ public class admin_ward_inside_details
                 // Handle any errors
             }
         });
-    }
-
-    private void updateUI(String wardName, String doctorIncharge, String nurseIncharge, String emergency, int availableBeds) {
-        // Update the relevant TextViews and ImageView with the retrieved data
-        TextView wardNameTextView = findViewById(R.id.textView123);
-        wardNameTextView.setText(wardName);
-
-        TextView doctorInchargeTextView = findViewById(R.id.textView110);
-        doctorInchargeTextView.setText(doctorIncharge);
-
-        TextView nurseInchargeTextView = findViewById(R.id.textView113);
-        nurseInchargeTextView.setText(nurseIncharge);
-
-        TextView emergencyTextView = findViewById(R.id.textView119);
-        emergencyTextView.setText(emergency);
-
-        TextView availableBedsTextView = findViewById(R.id.textView172);
-        availableBedsTextView.setText(String.valueOf(availableBeds));
     }
 }

@@ -24,11 +24,20 @@
         <activity
             android:name=".caregiverHome"
             android:exported="false" />
+
+        <activity
+            android:name=".admin_ward_details"
+            android:exported="false" />
+
         <activity
             android:name=".nursePatientDetails"
             android:exported="false" />
         <activity
             android:name=".Doctor_HomePage"
+            android:exported="false" />
+
+        <activity
+            android:name=".admin_ward_inside_details"
             android:exported="false" />
         <activity
             android:name=".Patient_prescriptionView"
