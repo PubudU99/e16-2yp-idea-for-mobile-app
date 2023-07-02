@@ -77,8 +77,11 @@ public class nursePatientDetails extends AppCompatActivity {
         prescriptionHistory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //startActivity(new Intent(getApplicationContext(), Patient_prescriptionView.class));
-                startActivity(intent);
+                Intent i5= new Intent(getApplicationContext(),Patient_prescriptionView.class);
+                String flag="N";
+                i5.putExtra("Flag",flag);
+
+                startActivity(i5);
             }
         });
 

@@ -40,6 +40,9 @@ public class Patient_prescriptionView extends AppCompatActivity {
 
         Intent intent = getIntent();
         String VarFlag=intent.getStringExtra("Flag");
+
+        System.out.println(VarFlag);
+
         switch(VarFlag){
 //            case "P":
 //                bitmapPatient = BitmapFactory.decodeResource(getResources(), R.drawable.parientviewprescription);
