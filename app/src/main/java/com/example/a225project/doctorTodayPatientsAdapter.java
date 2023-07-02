@@ -14,12 +14,17 @@ import java.util.ArrayList;
 
 public class doctorTodayPatientsAdapter extends RecyclerView.Adapter<doctorTodayPatientsAdapter.MyViewHolder> {
 
+    private final Doctor_RecyclerInterface doctor_recyclerInterface ;
+
+
     Context context;
     ArrayList<doctorTodayPatientsModel> doctorTodayPatientsModels;
 
-    public doctorTodayPatientsAdapter(Context context , ArrayList<doctorTodayPatientsModel> doctorTodayPatientsModels){
+    public doctorTodayPatientsAdapter(Context context , ArrayList<doctorTodayPatientsModel> doctorTodayPatientsModels,
+                       Doctor_RecyclerInterface doctor_recyclerInterface ){
         this.context=context;
         this.doctorTodayPatientsModels=doctorTodayPatientsModels;
+        this.doctor_recyclerInterface =doctor_recyclerInterface;
     }
     @NonNull
     @Override
@@ -27,7 +32,7 @@ public class doctorTodayPatientsAdapter extends RecyclerView.Adapter<doctorToday
 
         LayoutInflater inflater= LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.doctor_home_recyclerview_columns,parent,false);
-        return new doctorTodayPatientsAdapter.MyViewHolder(view);
+        return new doctorTodayPatientsAdapter.MyViewHolder(view,doctor_recyclerInterface );
     }
 
     @Override
@@ -50,7 +55,7 @@ public class doctorTodayPatientsAdapter extends RecyclerView.Adapter<doctorToday
         ImageView profilePic;
         TextView PatientName,WardID,BedID,Time;
 
-        public MyViewHolder(@NonNull View itemView) {
+        public MyViewHolder(@NonNull View itemView,Doctor_RecyclerInterface doctor_recyclerInterface) {
             super(itemView);
 
             profilePic = itemView.findViewById(R.id.parientProfilePic);
@@ -58,6 +63,19 @@ public class doctorTodayPatientsAdapter extends RecyclerView.Adapter<doctorToday
             WardID=itemView.findViewById(R.id.txtWardID);
             BedID=itemView.findViewById(R.id.txtBedNO);
             Time=itemView.findViewById(R.id.txtTime);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(doctor_recyclerInterface!=null){
+                        int pos=getAdapterPosition();
+
+                        if (pos!=RecyclerView.NO_POSITION){
+                            doctor_recyclerInterface.onItemClick(pos);
+                        }
+                    }
+                }
+            });
         }
     }
 }

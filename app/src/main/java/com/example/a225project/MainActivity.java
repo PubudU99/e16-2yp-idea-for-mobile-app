@@ -199,6 +199,7 @@ public class MainActivity extends AppCompatActivity {
         }else if (usertype.equals("doctor")) {
             return Doctor_HomePage.class;
 
+
         }else if (usertype.equals("caregiver")) {
             return MainActivity3.class;
         }

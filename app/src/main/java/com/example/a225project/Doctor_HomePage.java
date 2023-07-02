@@ -40,7 +40,7 @@ import java.util.List;
 
 
 
-public class Doctor_HomePage extends AppCompatActivity {
+public class Doctor_HomePage extends AppCompatActivity implements Doctor_RecyclerInterface{
 
     Calendar calendar;
     int day, month, year;
@@ -140,7 +140,7 @@ public class Doctor_HomePage extends AppCompatActivity {
 
         RecyclerView recyclerView= findViewById(R.id.DoctorHomeRecyclerView);
         setUpDoctorTodayPatientsModels();
-        doctorTodayPatientsAdapter adapter= new doctorTodayPatientsAdapter(this,doctorTodayPatientsModels);
+        doctorTodayPatientsAdapter adapter= new doctorTodayPatientsAdapter(this,doctorTodayPatientsModels,this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
     }
@@ -204,5 +204,9 @@ public class Doctor_HomePage extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onItemClick(int position) {
+        Toast.makeText(getApplicationContext(), "inOnItemClickListner", Toast.LENGTH_SHORT).show();
 
+    }
 }
