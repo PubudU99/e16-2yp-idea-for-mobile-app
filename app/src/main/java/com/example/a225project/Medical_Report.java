@@ -7,12 +7,15 @@ import androidx.fragment.app.DialogFragment;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -89,6 +92,30 @@ public class Medical_Report extends AppCompatActivity {
         year = calendar.get(Calendar.YEAR);
         month = calendar.get(Calendar.MONTH);
         day = calendar.get(Calendar.DAY_OF_MONTH);
+        ImageView imagedescription= findViewById(R.id.imageView27);
+
+
+        Intent intent = getIntent();
+        String VarFlag=intent.getStringExtra("Flag");
+
+        System.out.println(VarFlag);
+
+        switch(VarFlag){
+            case "P":
+                Bitmap bitmapPatient = BitmapFactory.decodeResource(getResources(), R.drawable.healthstatus_of_patient);
+                imagedescription.setImageBitmap(bitmapPatient);
+                break;
+            case "N":
+                Bitmap bitmapNurse = BitmapFactory.decodeResource(getResources(), R.drawable.healthstatus_of_nursedoctor);
+                imagedescription.setImageBitmap(bitmapNurse);
+                break;
+            case "D":
+                bitmapNurse = BitmapFactory.decodeResource(getResources(), R.drawable.healthstatus_of_nursedoctor);
+                imagedescription.setImageBitmap(bitmapNurse);
+                break;
+            default:
+                break;
+        }
 
         // intent got from previous page
 

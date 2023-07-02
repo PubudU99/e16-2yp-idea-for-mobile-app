@@ -61,7 +61,7 @@
         android:id="@+id/textView134"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="8dp"
         android:text="Time"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,20 +73,19 @@
         android:id="@+id/textView135"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="176dp"
+        android:layout_marginTop="8dp"
         android:text="Notes"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.058"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView165" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView166" />
 
     <ImageView
         android:id="@+id/imageView165"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView133"
         app:srcCompat="@drawable/type" />
@@ -95,13 +94,13 @@
         android:id="@+id/textView133"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="8dp"
         android:text="Date"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.058"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView164" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextText24" />
 
     <TextView
         android:id="@+id/textView130"
@@ -120,7 +119,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.739"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView130"
         app:srcCompat="@drawable/type" />
@@ -140,7 +138,6 @@
         android:layout_width="399dp"
         android:layout_height="187dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.916"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView135"
         app:srcCompat="@drawable/bgg" />
@@ -150,11 +147,11 @@
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView168"
         app:srcCompat="@drawable/rectan8" />
 
     <EditText
@@ -164,10 +161,9 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/edittext_bg"
         android:ems="10"
-        android:inputType="text"
         android:hint="Time"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="@+id/imageView164"
-        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView166" />
 
@@ -175,14 +171,15 @@
         android:id="@+id/textView107"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
         android:text="SUBMIT"
         android:textColor="#FAF7F7"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView168" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.32" />
 
     <ImageView
         android:id="@+id/imageView206"
@@ -207,7 +204,7 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView168"
         app:layout_constraintStart_toStartOf="@+id/imageView168"
         app:layout_constraintTop_toTopOf="@+id/imageView168"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.386" />
 
     <EditText
         android:id="@+id/editTextText25"
@@ -230,10 +227,10 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/edittext_bg"
         android:ems="10"
-        android:inputType="text"
         android:hint="Recommended Doctor"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="@+id/imageView164"
-        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintHorizontal_bias="0.641"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView164" />
 </androidx.constraintlayout.widget.ConstraintLayout>
