@@ -45,8 +45,9 @@ public class Doctor_HomePage extends AppCompatActivity {
     Calendar calendar;
     int day, month, year;
     TextView dateTxt;
-    ImageView toAppoin, viewBtn;
+    ImageView image, viewBtn;
     ImageButton goBackBtn;
+
     TextView name;
 
     ArrayList<doctorTodayPatientsModel> doctorTodayPatientsModels= new ArrayList<>();
@@ -75,9 +76,6 @@ public class Doctor_HomePage extends AppCompatActivity {
 
         Intent intent=getIntent();
         String Username =intent.getStringExtra("username");
-        Intent i1= new Intent(Doctor_HomePage.this,doctorAddPrescription.class);
-        i1.putExtra("docId",Username);
-        startActivity(i1);
 
         name= findViewById(R.id.textView185);
         name.setText(Username);
@@ -96,16 +94,16 @@ public class Doctor_HomePage extends AppCompatActivity {
 
 
 
-        ImageView myImage = findViewById(R.id.imageButton5);
-
-        myImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Start the second activity when the image is clicked
-                Intent intent = new Intent(Doctor_HomePage.this, doctorPatientDetails.class);
-                startActivity(intent);
-            }
-        });
+//        myImage = findViewById(R.id.imageButton5);
+//
+//        myImage.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                // Start the second activity when the image is clicked
+//                Intent intent = new Intent(Doctor_HomePage.this, doctorPatientDetails.class);
+//                startActivity(intent);
+//            }
+//        });
 
 
 
@@ -115,26 +113,26 @@ public class Doctor_HomePage extends AppCompatActivity {
         //bedNo=bedIDList.toArray(new String[bedIDList.size()]);
 
         displayDate(year, month, day);
-
-        toAppoin =  findViewById(R.id.imageView199);
-        viewBtn=findViewById(R.id.imageButton5);
+//
+//        image =  findViewById(R.id.imageView199);
+        viewBtn = findViewById(R.id.imageButton5);
         viewBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),doctorPatientDetails.class);
+                Intent i = new Intent(getApplicationContext(),Admin_viewAllPatients.class);
                 startActivity(i);
 
             }
         });
 
-        toAppoin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), doctorNewAdmission.class));
-                System.out.println("hello");
-
-            }
-        });
+//        image.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(getApplicationContext(), doctorNewAdmission.class));
+//
+//
+//            }
+//        });
 
 
 

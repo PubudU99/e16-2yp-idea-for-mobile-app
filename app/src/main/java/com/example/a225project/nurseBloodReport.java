@@ -27,15 +27,20 @@ public class nurseBloodReport extends AppCompatActivity {
 
     EditText himoglobin, whileBlood, Platelet, Chorestrol, tryglisarides, ldl, hdl;
     ImageView submitBtn;
-    String adminID = "p_john"; //  adminID = username... I used that please use it everywhere.
+
+    String adminID;
 
     // initialize user images
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nurse_blood_report);
         AndroidThreeTen.init(this);
+
+        Intent intent = getIntent();
+        adminID = intent.getStringExtra("adminID");
 
         himoglobin = findViewById(R.id.editTextText5);
         whileBlood = findViewById(R.id.editTextText8);

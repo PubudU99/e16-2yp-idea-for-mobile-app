@@ -66,7 +66,10 @@ public class nursePatientDetails extends AppCompatActivity {
         reportHistory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Medical_Report.class));
+
+                Intent intent = new Intent(nursePatientDetails.this, Medical_Report.class);
+                intent.putExtra("adminID", adminID);
+                startActivity(intent);
 
             }
         });
@@ -82,7 +85,11 @@ public class nursePatientDetails extends AppCompatActivity {
         newReport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), nurseNewReports.class));
+
+                Intent intent = new Intent(nursePatientDetails.this, nurseNewReports.class);
+                intent.putExtra("adminID", adminID);
+                startActivity(intent);
+
 
             }
         });
