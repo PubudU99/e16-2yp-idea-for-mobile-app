@@ -2,7 +2,6 @@ package com.example.a225project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +16,8 @@ public class MainActivity3 extends AppCompatActivity {
 
     TextView checkupType;
     TextView heartRate;
+
+    TextView textView2;
     TextView DocName;
     TextView DocTitle;
     TextView dateTxt;
@@ -29,7 +30,6 @@ public class MainActivity3 extends AppCompatActivity {
     Calendar calendar;
     ImageView profilePic;
     int day, month, year;
-    TextView name;
 
     private  String text_Checkup_type="Medical Checkup- Routine";
     private String Doc_Name="Dr. Dhammike Kumara";
@@ -43,7 +43,6 @@ public class MainActivity3 extends AppCompatActivity {
     private String meal="After Dinner";
     private String timeDuration="9.00PM - 10.00PM";
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +52,7 @@ public class MainActivity3 extends AppCompatActivity {
         goBackButton=findViewById(R.id.goBackbttn1);
         DocName=findViewById(R.id.docName);
         DocTitle=findViewById(R.id.docTitle);
+        textView2=findViewById(R.id.textView2);
         prescription=findViewById(R.id.prescription);
         toReport=findViewById(R.id.toReport);
         checkupType.setText(text_Checkup_type);
@@ -74,43 +74,41 @@ public class MainActivity3 extends AppCompatActivity {
         ImageButton toPrescription;
         toPrescription=findViewById(R.id.patientPrescriptionSeeall);
 
-        Intent i=getIntent();
-        String Username =i.getStringExtra("username");
-
-        name= findViewById(R.id.textView185);
-        name.setText(Username);
-
-        final Intent intent= new Intent(this,Patient_prescriptionView.class);
-        String flag="P";
-        intent.putExtra("Flag",flag);
-
-
 
         displayDate(year, month, day);
 
         profilePic=findViewById(R.id.imageView11);
-
+        String username = getIntent().getStringExtra("username");
+        //username = username.substring(2);
+        textView2.setText(username.substring(2));
         toPrescription.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent i5= new Intent(getApplicationContext(),Patient_prescriptionView.class);
-                startActivity(intent);
+                //final Intent intent= new Intent(this,Patient_prescriptionView.class);
+                Intent i5= new Intent(getApplicationContext(),Patient_prescriptionView.class);
+                String flag="P";
+                i5.putExtra("Flag",flag);
+
+                startActivity(i5);
             }
         });
 
         profilePic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i6=new Intent(getApplicationContext(),EditProfile.class);
-                startActivity(i6);
+                Intent i4=new Intent(getApplicationContext(),EditProfile.class);
+                startActivity(i4);
             }
         });
+
 
         toReport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i3= new Intent(getApplicationContext(), Medical_Report.class);
+                i3.putExtra("username",username);
                 startActivity(i3);
+
             }
         });
         appointmentSeeAll.setOnClickListener(new View.OnClickListener() {

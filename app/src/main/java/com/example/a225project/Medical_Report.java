@@ -31,6 +31,14 @@ public class Medical_Report extends AppCompatActivity {
     TextView urineRepo;
     TextView urineValues;
     TextView TxtDate;
+
+    TextView heart;//heart
+
+    TextView pressure; //Pressure5
+
+    TextView Lungs; //Lungs6
+
+    TextView Tempurature; //Temperature8
     ImageButton goBackbtn;
     ImageButton calenderBtn;
     //DatePicker datePicker;
@@ -47,44 +55,25 @@ public class Medical_Report extends AppCompatActivity {
             "Triglycerides:\n" +
             "LDL Cholesterol:\n" +
             "HDL Cholesterol:\n";
-//    private String bloodvalues = "14.2 g/dL\n" +
-//            "7,500 cells/mm³\n" +
-//            "220,000 cells/mm³\n" +
-//            "90 mg/dL\n" +
-//            "180 mg/dL\n" +
-//            "120 mg/dL\n" +
-//            "110 mg/dL\n" +
-//            "50 mg/dL\n";
     private String urinerepo = "Color:\n" +
             "Appearance:\n" +
             "Specific Gravity:\n" +
             "pH:\n" +
             "Protein:\n" +
             "Glucose:\n" +
-            "Ketones:\n" +
-            "Blood:\n" +
-            "Nitrite:\n" +
-            "Leukocytes:\n" +
-            "Bilirubin:\n" +
-            "Urobilinogen:\n";
-    private String urinevalues = "Pale yellow\n" +
-            "Clear\n" +
-            "1.020\n" +
-            "6.0\n" +
-            "Negative\n" +
-            "Negative\n" +
-            "Negative\n" +
-            "Negative\n" +
-            "Negative\n" +
-            "Negative\n" +
-            "Negative\n" +
-            "Normal\n";
+            "Ketones:\n" ;
+
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medical_report);
+        heart = findViewById(R.id.textView);
+        pressure = findViewById(R.id.textView5);
+        Lungs = findViewById(R.id.textView6);
+        Tempurature = findViewById(R.id.textView8);
         bloodDisplay = findViewById(R.id.bloodRepo);
         bloodDisplay.setText(bloodrepo);
         bloodVlues = findViewById(R.id.bloodvalues);
@@ -92,7 +81,7 @@ public class Medical_Report extends AppCompatActivity {
         urineRepo = findViewById(R.id.urinerepo);
         urineValues = findViewById(R.id.urinevalues);
         urineRepo.setText(urinerepo);
-        urineValues.setText(urinevalues);
+        //urineValues.setText(urinevalues);
         TxtDate = findViewById(R.id.txtDate);
 //        bloodVlues.setText(bloodvalues);
         // create a calender instance
@@ -103,16 +92,86 @@ public class Medical_Report extends AppCompatActivity {
 
 
         displayDate(year, month + 1, day);
-        String username2 = getIntent().getStringExtra("username");
+        String username = getIntent().getStringExtra("username");
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         String selectedDate = TxtDate.getText().toString();
-        DatabaseReference bloodValuesRef = database.getReference("reportsblood").child("a_bro").child(selectedDate);
+        //System.out.println(username);
+        DatabaseReference blockview = database.getReference("patient").child(username);
+        DatabaseReference bloodValuesRef = database.getReference("reportsblood").child(username).child(selectedDate);
         System.out.println(selectedDate);
+        DatabaseReference urineVlaueRef = database.getReference("urinereport").child(username).child(selectedDate);
+        DatabaseReference patientRef = database.getReference("patient").child(username);
+        patientRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    // Retrieve the patient data as a HashMap
+                    HashMap<String, Object> patientData = (HashMap<String, Object>) dataSnapshot.getValue();
+
+                    if (patientData != null) {
+                        // Retrieve the specific values
+                        String heartRate = (String) patientData.get("heartRate");
+                        String lungs = (String) patientData.get("lungs");
+                        String pressure2 = (String) patientData.get("pressure");
+                        String temperature = (String) patientData.get("temperature");
+                        System.out.println(heartRate);
+                        // Set the values in the respective TextViews
+                        heart.setText(heartRate);
+                        Lungs.setText(lungs);
+                        pressure.setText(pressure2);
+                        Tempurature.setText(temperature);
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                // Handle any errors that occur during data retrieval
+            }
+        });
+
+        urineVlaueRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // Retrieve the data as a HashMap
+                HashMap<String, Object> urineReportData = (HashMap<String, Object>) dataSnapshot.getValue();
+
+                if (urineReportData != null) {
+                    // Access individual values from the HashMap
+                    String appearance = (String) urineReportData.get("appearance");
+                    String color = (String) urineReportData.get("color");
+                    String glucose = (String) urineReportData.get("glucose");
+                    String ketones = (String) urineReportData.get("ketones");
+                    String pH = (String) urineReportData.get("ph");
+                    String protein = (String) urineReportData.get("protein");
+                    String specificGravity = (String) urineReportData.get("specific_gravity");
+
+
+
+
+
+
+                    // Create the urine report string
+                    String urineReport =
+                            appearance + "\n" + color + "\n" + glucose + "\n" + protein + "\n"+  pH + "\n" + ketones + "\n"+ specificGravity + "\n" ;
+
+                    // Set the urine report text
+                    urineValues.setText(urineReport);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                // Handle any errors that occur during data retrieval
+            }
+        });
+
         bloodValuesRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // Retrieve the data as a HashMap
                 HashMap<String, Object> reportData = (HashMap<String, Object>) dataSnapshot.getValue();
+
 
                 if (reportData != null) {
                     // Access individual values from the HashMap
@@ -153,6 +212,7 @@ public class Medical_Report extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i1 = new Intent(getApplicationContext(), MainActivity3.class);
+                i1.putExtra("username",username);
                 startActivity(i1);
 
             }
@@ -180,8 +240,44 @@ public class Medical_Report extends AppCompatActivity {
                         TxtDate.setText(date);
                         FirebaseDatabase database = FirebaseDatabase.getInstance();
                         String selectedDate = TxtDate.getText().toString();
-                        DatabaseReference bloodValuesRef = database.getReference("reportsblood").child("a_bro").child(selectedDate);
-                        System.out.println(selectedDate);
+                        DatabaseReference bloodValuesRef = database.getReference("reportsblood").child(username).child(selectedDate);
+                        DatabaseReference urineVlaueRef = database.getReference("urinereport").child(username).child(selectedDate);
+                        urineVlaueRef.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot dataSnapshot) {
+                                // Retrieve the data as a HashMap
+                                HashMap<String, Object> urineReportData = (HashMap<String, Object>) dataSnapshot.getValue();
+
+                                if (urineReportData != null) {
+                                    // Access individual values from the HashMap
+                                    String appearance = (String) urineReportData.get("appearance");
+                                    String color = (String) urineReportData.get("color");
+                                    String glucose = (String) urineReportData.get("glucose");
+                                    String ketones = (String) urineReportData.get("ketones");
+                                    String pH = (String) urineReportData.get("ph");
+                                    String protein = (String) urineReportData.get("protein");
+                                    String specificGravity = (String) urineReportData.get("specific_gravity");
+
+
+
+
+
+
+                                    // Create the urine report string
+                                    String urineReport =
+                                            appearance + "\n" + color + "\n" + glucose + "\n" + protein + "\n"+  pH + "\n" + ketones + "\n"+ specificGravity + "\n" ;
+
+                                    // Set the urine report text
+                                    urineValues.setText(urineReport);
+                                }
+                            }
+
+                            @Override
+                            public void onCancelled(DatabaseError databaseError) {
+                                // Handle any errors that occur during data retrieval
+                            }
+                        });
+                        //System.out.println(selectedDate);
                         bloodValuesRef.addValueEventListener(new ValueEventListener() {
                             @Override
                             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -232,10 +328,44 @@ public class Medical_Report extends AppCompatActivity {
                 month=month+1;
                 String date = year+"-"+month+"-"+dayOfMonth;
                 TxtDate.setText(date);
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
+
                 String selectedDate = TxtDate.getText().toString();
-                DatabaseReference bloodValuesRef = database.getReference("reportsblood").child("a_bro").child(selectedDate);
-                System.out.println(selectedDate);
+                DatabaseReference bloodValuesRef = database.getReference("reportsblood").child(username).child(selectedDate);
+                //System.out.println(selectedDate);
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference urineVlaueRef = database.getReference("urinereport").child("p_john").child(selectedDate);
+                urineVlaueRef.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        // Retrieve the data as a HashMap
+                        HashMap<String, Object> urineReportData = (HashMap<String, Object>) dataSnapshot.getValue();
+
+                        if (urineReportData != null) {
+                            // Access individual values from the HashMap
+                            String appearance = (String) urineReportData.get("appearance");
+                            String color = (String) urineReportData.get("color");
+                            String glucose = (String) urineReportData.get("glucose");
+                            String ketones = (String) urineReportData.get("ketones");
+                            String pH = (String) urineReportData.get("ph");
+                            String protein = (String) urineReportData.get("protein");
+                            String specificGravity = (String) urineReportData.get("specific_gravity");
+
+
+                            // Create the urine report string
+                            String urineReport =
+                                    appearance + "\n" + color + "\n" + glucose + "\n" + protein + "\n"+  pH + "\n" + ketones + "\n"+ specificGravity + "\n" ;
+
+                            // Set the urine report text
+                            urineValues.setText(urineReport);
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                        // Handle any errors that occur during data retrieval
+                    }
+                });
+
                 bloodValuesRef.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {

@@ -109,9 +109,6 @@
             android:name=".doctorAddPrescription"
             android:exported="false" />
         <activity
-            android:name=".Admin_viewAllNurses"
-            android:exported="false" />
-        <activity
             android:name=".doctorNewAdmission"
             android:exported="false" />
         <activity

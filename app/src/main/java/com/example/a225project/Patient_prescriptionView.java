@@ -22,12 +22,12 @@ public class Patient_prescriptionView extends AppCompatActivity {
     ArrayList <PrescripionModel> prescriptionmodels = new ArrayList<>();
     static String  patientID = nursePatientDetails.adminID;
 
-    String[] TabletNames = {"Penadol","Penadol","Penadol","Penadol","Penadol","Penadol","Penadol"};
-    String[] TabletWeights = {"350mg","350mg","350mg","350mg","350mg","350mg","350mg"};
-    String[] amountsPerMeal={"x2","x2","x2","x2","x2","x2","x2"};
-    String[] noOfDays={"3 Days","3 Days","3 Days","3 Days","3 Days","3 Days","3 Days"};
-    String[] noOfMeals={"3 perDay","3 perDay","3 perDay","3 perDay","3 perDay","3 perDay","3 perDay"};
-    Bitmap bitmapPatient ;
+    String[] TabletNames = {"Aspirin","Ibuprofen","Paracetamol","Cetirizine","Amoxicillin","Omeprazole","Loratadine"};
+    String[] TabletWeights = {"100mg","200mg","500mg","10mg","250mg","20mg","5mg"};
+    String[] amountsPerMeal = {"1 tablet","2 tablet","1 tablet","2 tablet","1 tablet","2 tablet","1 tablet"};
+    String[] noOfDays = {"5 days","4 days","5 days","6 days","5 days","2 days","3 days"};
+    String[] noOfMeals = {"3 per day","2 per day","1 per day","3 per day","2 per day","3 per day","1 per day"};
+    Bitmap bitmapPatient;
     Bitmap bitmapNurse;
 
     @Override
