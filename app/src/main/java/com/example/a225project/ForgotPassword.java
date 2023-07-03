@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -20,6 +21,8 @@ public class ForgotPassword extends AppCompatActivity {
     EditText emailtxt;
     ImageView btnSubmit;
     private FirebaseAuth mAuth;
+
+    ImageButton goBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,14 @@ public class ForgotPassword extends AppCompatActivity {
             public void onClick(View view) {
                 String email = emailtxt.getText().toString().trim();
                 resetPassword(email);
+            }
+        });
+
+        goBack=findViewById(R.id.imageButton6);
+        goBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
             }
         });
     }
