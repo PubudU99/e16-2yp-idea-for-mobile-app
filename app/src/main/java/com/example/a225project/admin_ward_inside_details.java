@@ -2,7 +2,9 @@ package com.example.a225project;
 
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.FirebaseApp;
@@ -14,7 +16,9 @@ import com.google.firebase.database.ValueEventListener;
 
 public class admin_ward_inside_details extends AppCompatActivity {
 
-    private DatabaseReference databaseReference;
+
+    TextView wardID, name, doctor, nurse, beds;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,36 +30,44 @@ public class admin_ward_inside_details extends AppCompatActivity {
         // Print the ward ID
         System.out.println("Ward ID: " + wardId);
 
+        wardID = findViewById(R.id.textView119);
+        name = findViewById(R.id.textView109);
+        doctor = findViewById(R.id.textView110);
+        nurse = findViewById(R.id.textView113);
+        beds = findViewById(R.id.textView172);
 
-        // Initialize Firebase
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("ward").child(wardId);
 
-        // Retrieve data from Firebase
-        retrieveData();
-    }
+        FirebaseDatabase.getInstance().getReference().child("ward").child(wardId)
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if (dataSnapshot.exists()) {
+                            // Retrieve patient details
+                            String wardID_s = dataSnapshot.child("id").getValue(String.class);
+                            String name_s = dataSnapshot.child("name").getValue(String.class);
+                            String doctor_s = dataSnapshot.child("doctor").getValue(String.class);
+                            String nurse_s = dataSnapshot.child("nurse").getValue(String.class);
+                            String beds_s = dataSnapshot.child("beds").getValue(String.class);
 
-    private void retrieveData() {
-        databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // Check if the ward exists
-                if (dataSnapshot.exists()) {
-                    // Get the ward details directly from the snapshot
-                    String wardName = dataSnapshot.child("wardName").getValue(String.class);
-                    String doctorIncharge = dataSnapshot.child("doctorIncharge").getValue(String.class);
-                    String nurseIncharge = dataSnapshot.child("nurseIncharge").getValue(String.class);
-                    String emergency = dataSnapshot.child("emergency").getValue(String.class);
-                    String availableBeds = dataSnapshot.child("availableBeds").getValue(String.class);
 
-                    // Update the UI with the retrieved data
-                    //updateUI(wardName, doctorIncharge, nurseIncharge, emergency, availableBeds);
-                }
-            }
+                            // Update the UI with patient details
+                            wardID.setText(wardID_s);
+                            name.setText(name_s);
+                            doctor.setText(doctor_s);
+                            nurse.setText(nurse_s);
+                            beds.setText(beds_s);
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                // Handle any errors
-            }
-        });
-    }
+                        } else {
+                            Toast.makeText(admin_ward_inside_details.this, "Ward not found", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                        Toast.makeText(admin_ward_inside_details.this, "Failed to retrieve ward details", Toast.LENGTH_SHORT).show();
+                    }
+              });
+}
+
+
 }
