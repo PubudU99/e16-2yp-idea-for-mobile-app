@@ -2,10 +2,17 @@ package com.example.a225project;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
+import android.app.AlarmManager;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -25,6 +32,7 @@ import com.google.firebase.storage.StorageReference;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import android.widget.TextView;
@@ -85,7 +93,7 @@ static String patientIDValue;
             public void onClick(View v) {
 
                 Intent i5= new Intent(getApplicationContext(),Patient_prescriptionView.class);
-                String flag="C";
+                String flag="N";
                 i5.putExtra("Flag",flag);
 
                 startActivity(i5);
@@ -208,6 +216,58 @@ static String patientIDValue;
                     }
                 });
 
+    }
+
+    private void scheduleNotifications() {
+        // Get the current time
+        Calendar calendar = Calendar.getInstance();
+
+        // Set the notification times (after breakfast, after lunch, after dinner)
+        // Adjust the hour and minute values according to your requirements
+        int breakfastHour = 8;
+        int breakfastMinute = 0;
+        int lunchHour = 13;
+        int lunchMinute = 0;
+        int dinnerHour = 20;
+        int dinnerMinute = 0;
+
+        // Schedule the notifications
+        scheduleNotification(calendar, breakfastHour, breakfastMinute, "After Breakfast");
+        scheduleNotification(calendar, lunchHour, lunchMinute, "After Lunch");
+        scheduleNotification(calendar, dinnerHour, dinnerMinute, "After Dinner");
+    }
+
+    private void scheduleNotification(Calendar calendar, int hour, int minute, String notificationTitle) {
+        // Set the notification time
+        calendar.set(Calendar.HOUR_OF_DAY, hour);
+        calendar.set(Calendar.MINUTE, minute);
+        calendar.set(Calendar.SECOND, 0);
+
+        // Create an intent to launch the activity or perform an action when the notification is clicked
+        Intent intent = new Intent(this, Patient_prescriptionView.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        // Create a notification
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "channel_id")
+                .setSmallIcon(R.drawable.notification_icon)
+                .setContentTitle(notificationTitle)
+                .setContentText("You have to give Patient's next Doses Now!!!")
+                .setContentIntent(pendingIntent)
+                .setAutoCancel(true);
+
+        // Get the system notification service
+        NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+
+        // Create a notification channel if targeting Android 8.0 (API level 26) or higher
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel("channel_id", "Channel Name", NotificationManager.IMPORTANCE_DEFAULT);
+            notificationManager.createNotificationChannel(channel);
+        }
+
+        // Schedule the notification using AlarmManager
+        AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+        PendingIntent notificationPendingIntent = PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, notificationPendingIntent);
     }
 
 }
