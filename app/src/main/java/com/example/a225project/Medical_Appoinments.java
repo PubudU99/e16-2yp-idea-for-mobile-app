@@ -17,25 +17,25 @@ public class Medical_Appoinments extends AppCompatActivity {
     ArrayList<TodayAppointmentsModel> TomorrowAppointmentModels = new ArrayList<>();
     ArrayList<TodayAppointmentsModel> NextAppointmentModels = new ArrayList<>();
     //Today Data
-    String[] DoctorNamesToday ={"Kavindu bambaragama","Pubuduu madushith",};
-    String[] DoctorTitleToday ={"Medical Specialist","Dental Sergen"};
-    String[] AppointmentTypesToday = {"Medical checkup","Dental checkup"};
-    String[] timePeriodsToday = {"10.00AM - 11.00AM","10.00AM - 11.00AM"};
-    int[] ProfilePicsToday ={R.drawable.dp4,R.drawable.dp5};
+    String[] DoctorNamesToday ={"J.M. Mendis","I. Eragama"};
+    String[] DoctorTitleToday ={"Rheumatology","Neurologist"};
+    String[] AppointmentTypesToday = {"Medical checkup","Neuron checkup"};
+    String[] timePeriodsToday = {"6.00PM","7.00PM"};
+    int[] ProfilePicsToday ={R.drawable.dp1,R.drawable.dp4};
 
     //Tomorrow data
-    String[] DoctorNamesTomorrow ={"Kavindu bambaragama","Pubuduu madushith","Mahesha Madhushanka"};
-    String[] DoctorTitleTomorrow ={"Medical Specialist","Dental Sergen","Medical Specialist"};
-    String[] AppointmentTypesTomorrow = {"Medical checkup","Dental checkup","Medical checkup"};
-    String[] timePeriodsTomorrow = {"10.00AM - 11.00AM","10.00AM - 11.00AM","10.00AM - 11.00AM"};
-    int[] ProfilePicsTomorrow ={R.drawable.dp3,R.drawable.dp4,R.drawable.dp5};
+    String[] DoctorNamesTomorrow ={"R.K. James"};
+    String[] DoctorTitleTomorrow ={"General Medicine"};
+    String[] AppointmentTypesTomorrow = {"Dental checkup"};
+    String[] timePeriodsTomorrow = {"11.00AM"};
+    int[] ProfilePicsTomorrow ={R.drawable.dp3};
 
     //next 2-5 days
-    String[] DoctorNamesNext ={"Kavindu bambaragama","Pubuduu madushith","Mahesha Madhushanka","Pasindu Rangana","Uthsata Wikramarachchi"};
-    String[] DoctorTitleNext  ={"Medical Specialist","Dental Sergen","Medical Specialist","Radiologist","Heart Specialist"};
-    String[] AppointmentTypesNext  = {"Medical checkup","Dental checkup","Medical checkup","X-ray test","Heart checkup"};
-    String[] timePeriodsNext = {"10.00AM - 11.00AM","10.00AM - 11.00AM","10.00AM - 11.00AM","10.00AM - 11.00AM","10.00AM - 11.00AM"};
-    int[] ProfilePicsNext ={R.drawable.dp1,R.drawable.dp2,R.drawable.dp3,R.drawable.dp4,R.drawable.dp5};
+    String[] DoctorNamesNext ={"A.T. Kethaka","H.O. Shenal","V.U. Uthsara","K.D. Dinushika"};
+    String[] DoctorTitleNext  ={"Pediatric","Orthopdics","Pathology","Radiologist","Heart Specialist"};
+    String[] AppointmentTypesNext  = {"Medical checkup","x_rays","Eye checkup","X-ray test"};
+    String[] timePeriodsNext = {"10.00AM","4.ppPM","6.00PM","8.00PM"};
+    int[] ProfilePicsNext ={R.drawable.dp1,R.drawable.dp2,R.drawable.dp3,R.drawable.dp4};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,7 +69,7 @@ public class Medical_Appoinments extends AppCompatActivity {
 
     private  void setUpTodayAppointmentModels(){
         for(int i=0; i<DoctorNamesToday.length;i++){
-            TodayAppointmentModels.add(new TodayAppointmentsModel(AppointmentTypesNext[i],timePeriodsNext[i],DoctorNamesNext[i],DoctorTitleNext[i],ProfilePicsNext[i]));
+            TodayAppointmentModels.add(new TodayAppointmentsModel(AppointmentTypesToday[i],timePeriodsToday[i],DoctorNamesToday[i],DoctorTitleToday[i],ProfilePicsToday[i]));
 
         }
     }

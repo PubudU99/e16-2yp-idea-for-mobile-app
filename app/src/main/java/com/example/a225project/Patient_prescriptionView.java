@@ -22,11 +22,11 @@ public class Patient_prescriptionView extends AppCompatActivity {
     ArrayList <PrescripionModel> prescriptionmodels = new ArrayList<>();
     static String  patientID = nursePatientDetails.adminID;
 
-    String[] TabletNames = {"Aspirin","Ibuprofen","Paracetamol","Cetirizine","Amoxicillin","Omeprazole","Loratadine"};
-    String[] TabletWeights = {"100mg","200mg","500mg","10mg","250mg","20mg","5mg"};
-    String[] amountsPerMeal = {"1 tablet","2 tablet","1 tablet","2 tablet","1 tablet","2 tablet","1 tablet"};
-    String[] noOfDays = {"5 days","4 days","5 days","6 days","5 days","2 days","3 days"};
-    String[] noOfMeals = {"3 per day","2 per day","1 per day","3 per day","2 per day","3 per day","1 per day"};
+    String[] TabletNames = {"Aspirin","Ibuprofen","Paracetamol","Cetirizine"};
+    String[] TabletWeights = {"100mg","200mg","500mg","10mg"};
+    String[] amountsPerMeal = {"1 tablet","2 tablet","1 tablet","2 tablet"};
+    String[] noOfDays = {"5 days","4 days","5 days","6 days"};
+    String[] noOfMeals = {"3 per day","2 per day","1 per day","3 per day"};
     Bitmap bitmapPatient;
     Bitmap bitmapNurse;
 

@@ -57,14 +57,14 @@ public class Doctor_HomePage extends AppCompatActivity implements Doctor_Recycle
     TextView name;
 
     ArrayList<doctorTodayPatientsModel> doctorTodayPatientsModels= new ArrayList<>();
-    String[] PatientNames={"Mahesha Madhushanka","Kavindu Bambaragama","Dinushika Abrew","Nikalshi Sepalika","Pasindu Rangana","Pubudu Madhushith","Uthsara wikramarachchi","Sapuni Nithya","Tharidi Sadewmi","John Seena"};
-    String[] WardNo={"102D","133F","202A","402H","202D","102D","133F","202D","202A","102D"};
-    String[] bedNo={"10","7","3","6","14","9","33","62","13","12"};
-    String[] Illness = {"Fever","Fever","Fever","Fever","Fever","Fever","Fever","Fever","Fever","Fever"};
-    String[] Age={"30","30","30","30","30","30","30","30","30","30"};
-    String[] ID={"001","002","003","004","005","006","007","008","009","010"};
-    String[] tTime={"10.00 AM","10.30 AM","11.00 AM","11.30 AM","12.00 PM","01.00 PM","02.00 PM","02.30 PM","03.00 PM","03.30 PM"};
-    int[] patientProfilePics={R.drawable.pdp1,R.drawable.pdp2,R.drawable.pdp3,R.drawable.pdp4,R.drawable.pdp5,R.drawable.pdp6,R.drawable.pdp7,R.drawable.pdp8,R.drawable.pdp9,R.drawable.pdp10};
+    String[] PatientNames={"Peter Johens","Pubudu Silva","H.U.Jagath","N.Sepalika","P.Rangana","P. Madhushith","U. Uhsara","Sapuni Nithya","T.Sadewmi"};
+    String[] WardNo={"W01","W02","W03","W01","W03","W02","W04","W04","W02"};
+    String[] bedNo={"10","1","15","11","9","10","13","12","4"};
+    String[] Illness = {"Fever","Diabeties","Fever","Fever","Fever","Fever","Fever","Fever","Fever"};
+    String[] Age={"30","52","23","30","35","40","30","32","25"};
+    String[] ID={"p_john","p_pubu","p_jagath","n_sepalika","p_ranage","p_madu","p_uhsara","p_nithya","p_sadew"};
+    String[] tTime={"6.00 PM","7..30 pM","11.00 AM","11.30 AM","12.00 PM","01.00 PM","02.00 PM","02.30 PM","03.00 PM"};
+    int[] patientProfilePics={R.drawable.pdp1,R.drawable.pdp2,R.drawable.pdp3,R.drawable.pdp4,R.drawable.pdp5,R.drawable.pdp6,R.drawable.pdp7,R.drawable.pdp8,R.drawable.pdp9};
 
 
     @Override

@@ -40,8 +40,8 @@ public class MainActivity3 extends AppCompatActivity {
     int day, month, year;
 
     private  String text_Checkup_type="Medical Checkup- Routine";
-    private String Doc_Name="Dr. Dhammike Kumara";
-    private  String Doc_Title="Medical Specialist";
+    private String Doc_Name="J.M. Mendis";
+    private  String Doc_Title="Rheumatologist";
     private double bpmRate= 90.6;
     private  String tabletDetails="Aspirin: 2 tablets of 325 mg each\n" +
             "Amoxicillin: 1 capsule of 500 mg\n" +
@@ -81,6 +81,9 @@ public class MainActivity3 extends AppCompatActivity {
         day = calendar.get(Calendar.DAY_OF_MONTH);
         ImageButton toPrescription;
         toPrescription=findViewById(R.id.patientPrescriptionSeeall);
+
+        ImageView docProfile =findViewById(R.id.imageView18);
+        docProfile.setImageResource(R.drawable.dp1);
 
 
         displayDate(year, month, day);

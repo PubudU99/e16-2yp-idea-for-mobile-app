@@ -64,7 +64,7 @@ public class DoctorView_PatientDetails extends AppCompatActivity {
                 Intent i1=new Intent(getApplicationContext(),Medical_Report.class);
                 String flag="D";
                 i1.putExtra("Flag",flag);
-                i1.putExtra("username","Default");
+                i1.putExtra("username","p_john");
                 startActivity(i1);
             }
         });
