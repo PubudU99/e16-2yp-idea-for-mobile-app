@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
@@ -19,6 +21,14 @@ public class admin_ward_details extends AppCompatActivity implements admin_wardA
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_ward_details);
+
+        ImageView goBack=findViewById(R.id.imageView157);
+        goBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         recyclerView = findViewById(R.id.wardRecyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
