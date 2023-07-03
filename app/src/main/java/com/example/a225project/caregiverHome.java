@@ -37,12 +37,20 @@ static String patientIDValue;
 
     String CareGiverID;
 
-    ImageView viewPrescription, profImage;
+    ImageView viewPrescription, profImage,goBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_caregiver_home);
+
+        goBack=findViewById(R.id.imageView151);
+        goBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            }
+        });
 
         // Patient Image
 
