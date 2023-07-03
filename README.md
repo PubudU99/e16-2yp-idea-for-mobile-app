@@ -8,7 +8,7 @@
 <ul>
   <li><a href="https://github.com/Bambara123"><b><i>Bambara123</i></b></a> E/19/034 BAMBARAGAMA H.M.K.D. MR</li>
   <li><a href="https://github.com/Madhushanka00"><b><i>Madhushanka00</i></b></a> E/19/226 MADHUSHANKA K.G.M. MR</li>
-  <li><b><i>E/19/426 WEERASINGHE P.M. MR</i></b></li>
+  <li><a href="https://github.com/PubudU99"><b><i>PubudU99</i></b></a> E/19/426 WEERASINGHE P.M. MR </li>
   <li><a href="https://github.com/PasinduRR"><b><i>PasinduRR</i></b></a> E/19/310 RANAGE R.D.P.R. MR</li>
 </ul>
 
