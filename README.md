@@ -15,7 +15,7 @@
 <h4>Group 10</h4>
 <ul>
   <li><b><i>E/19/432 WICKRAMAARACHCHI U.I. MR</i></b></li>
-  <li><b><i>E/19/167 JAYAWARDENA H.D.N.S. MISS</i></b></li>
+  <li><a href="https://github.com/sath8"><b><i>Sathya</i></b></a> E/19/167 JAYAWARDENA H.D.N.S. MISS</li>
   <li><a href="https://github.com/NilakshiInduwara"><b><i>NilakshiInduwara</i></b></a> E/19/028 ATUGEDARA A.N.I. MISS</li>
   <li><a href="https://github.com/DhinushikaAbrew"><b><i>DhinushikaAbrew</i></b></a>  E/19/006 ABREW S.T.D. MISS</li>
 </ul>
