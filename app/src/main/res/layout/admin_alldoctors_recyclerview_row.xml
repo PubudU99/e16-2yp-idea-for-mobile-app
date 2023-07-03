@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView203"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/details" />
+
+            <TextView
+                android:id="@+id/textView110"
+                android:layout_width="81dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="20dp"
+                android:text="Doctor ID"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/imageView203"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtDoctorID"
+                android:layout_width="163dp"
+                android:layout_height="26dp"
+                android:text="TextView"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView110"
+                app:layout_constraintEnd_toEndOf="@+id/imageView203"
+                app:layout_constraintHorizontal_bias="0.373"
+                app:layout_constraintStart_toEndOf="@+id/textView110"
+                app:layout_constraintTop_toTopOf="@+id/textView110"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView172"
+                android:layout_width="81dp"
+                android:layout_height="25dp"
+                android:text="Name"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textView110"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView110"
+                app:layout_constraintTop_toBottomOf="@+id/textView110"
+                app:layout_constraintVertical_bias="0.076" />
+
+            <TextView
+                android:id="@+id/txtDoctorName"
+                android:layout_width="158dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="24dp"
+                android:text="TextView"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView172"
+                app:layout_constraintStart_toEndOf="@+id/textView172"
+                app:layout_constraintTop_toTopOf="@+id/textView172" />
+
+            <TextView
+                android:id="@+id/textView187"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView110"
+                app:layout_constraintEnd_toStartOf="@+id/txtDoctorID"
+                app:layout_constraintHorizontal_bias="0.31"
+                app:layout_constraintStart_toEndOf="@+id/textView110"
+                app:layout_constraintTop_toTopOf="@+id/textView110" />
+
+            <TextView
+                android:id="@+id/textView188"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView172"
+                app:layout_constraintEnd_toStartOf="@+id/txtadminCaregiverName"
+                app:layout_constraintHorizontal_bias="0.545"
+                app:layout_constraintStart_toEndOf="@+id/textView172"
+                app:layout_constraintTop_toTopOf="@+id/textView172" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

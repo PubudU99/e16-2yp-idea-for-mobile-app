@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A4BBFA">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#A4BBFA"
+        tools:context=".Medical_Report">
+
+        <ImageView
+            android:id="@+id/imageView25"
+            android:layout_width="439dp"
+            android:layout_height="533dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/overlay" />
+
+        <ImageView
+            android:id="@+id/imageView57"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/coverarea" />
+
+        <ImageView
+            android:id="@+id/imageView26"
+            android:layout_width="467dp"
+            android:layout_height="677dp"
+            android:layout_marginTop="204dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView25"
+            app:srcCompat="@drawable/rectangle_13" />
+
+        <ImageButton
+            android:id="@+id/goBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView25"
+            app:srcCompat="@drawable/ionic_arrow_back" />
+
+        <ImageView
+            android:id="@+id/imageView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/imageView26"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.071"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/goBack"
+            app:layout_constraintVertical_bias="0.863"
+            app:srcCompat="@drawable/healthstatus" />
+
+        <ImageButton
+            android:id="@+id/calander"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="#00FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView27"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.805"
+            app:srcCompat="@drawable/calander_icon" />
+
+        <ImageView
+            android:id="@+id/imageView42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView26"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.115"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView26"
+            app:layout_constraintVertical_bias="0.105"
+            app:srcCompat="@drawable/roundbox1" />
+
+        <ImageView
+            android:id="@+id/imageView46"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView42"
+            app:layout_constraintEnd_toEndOf="@+id/imageView42"
+            app:layout_constraintHorizontal_bias="0.09"
+            app:layout_constraintStart_toStartOf="@+id/imageView42"
+            app:layout_constraintTop_toTopOf="@+id/imageView42"
+            app:layout_constraintVertical_bias="0.26"
+            app:srcCompat="@drawable/heartbeat" />
+
+        <ImageView
+            android:id="@+id/imageView43"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView42"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView42"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/roundbox1" />
+
+        <ImageView
+            android:id="@+id/imageView44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.115"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView42"
+            app:srcCompat="@drawable/roundbox1" />
+
+        <ImageView
+            android:id="@+id/imageView45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.382"
+            app:layout_constraintStart_toEndOf="@+id/imageView44"
+            app:layout_constraintTop_toBottomOf="@+id/imageView43"
+            app:srcCompat="@drawable/roundbox1" />
+
+        <ImageView
+            android:id="@+id/imageView47"
+            android:layout_width="49dp"
+            android:layout_height="48dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView43"
+            app:layout_constraintEnd_toEndOf="@+id/imageView43"
+            app:layout_constraintHorizontal_bias="0.097"
+            app:layout_constraintStart_toStartOf="@+id/imageView43"
+            app:layout_constraintTop_toTopOf="@+id/imageView43"
+            app:layout_constraintVertical_bias="0.217"
+            app:srcCompat="@drawable/preasure" />
+
+        <ImageView
+            android:id="@+id/imageView48"
+            android:layout_width="44dp"
+            android:layout_height="49dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView44"
+            app:layout_constraintEnd_toEndOf="@+id/imageView44"
+            app:layout_constraintHorizontal_bias="0.105"
+            app:layout_constraintStart_toStartOf="@+id/imageView44"
+            app:layout_constraintTop_toTopOf="@+id/imageView44"
+            app:layout_constraintVertical_bias="0.17"
+            app:srcCompat="@drawable/lungs" />
+
+        <ImageView
+            android:id="@+id/imageView49"
+            android:layout_width="66dp"
+            android:layout_height="69dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView45"
+            app:layout_constraintEnd_toEndOf="@+id/imageView45"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView45"
+            app:layout_constraintTop_toTopOf="@+id/imageView45"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/temparaturre" />
+
+        <ImageView
+            android:id="@+id/imageView54"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.472"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView44"
+            app:srcCompat="@drawable/bloodreport" />
+
+        <ImageView
+            android:id="@+id/imageView50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView42"
+            app:layout_constraintEnd_toEndOf="@+id/imageView42"
+            app:layout_constraintHorizontal_bias="0.87"
+            app:layout_constraintStart_toStartOf="@+id/imageView42"
+            app:layout_constraintTop_toTopOf="@+id/imageView42"
+            app:layout_constraintVertical_bias="0.29"
+            app:srcCompat="@drawable/hearttxt" />
+
+        <ImageView
+            android:id="@+id/imageView51"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView43"
+            app:layout_constraintEnd_toEndOf="@+id/imageView43"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView43"
+            app:layout_constraintTop_toTopOf="@+id/imageView43"
+            app:layout_constraintVertical_bias="0.29"
+            app:srcCompat="@drawable/preasuretxt" />
+
+        <ImageView
+            android:id="@+id/imageView52"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView44"
+            app:layout_constraintEnd_toEndOf="@+id/imageView44"
+            app:layout_constraintHorizontal_bias="0.866"
+            app:layout_constraintStart_toStartOf="@+id/imageView44"
+            app:layout_constraintTop_toTopOf="@+id/imageView44"
+            app:layout_constraintVertical_bias="0.29"
+            app:srcCompat="@drawable/lungstxt" />
+
+        <ImageView
+            android:id="@+id/imageView53"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView45"
+            app:layout_constraintEnd_toEndOf="@+id/imageView45"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView45"
+            app:layout_constraintTop_toTopOf="@+id/imageView45"
+            app:layout_constraintVertical_bias="0.29"
+            app:srcCompat="@drawable/tempraturetxt" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="70 bpm"
+            android:textAlignment="textEnd"
+            android:textColor="#0C2F96"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView42"
+            app:layout_constraintEnd_toEndOf="@+id/imageView42"
+            app:layout_constraintHorizontal_bias="0.7"
+            app:layout_constraintStart_toStartOf="@+id/imageView42"
+            app:layout_constraintTop_toTopOf="@+id/imageView42"
+            app:layout_constraintVertical_bias="0.77" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="118 mmHg"
+            android:textAlignment="textEnd"
+            android:textColor="#0C2F96"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView43"
+            app:layout_constraintEnd_toEndOf="@+id/imageView43"
+            app:layout_constraintHorizontal_bias="0.632"
+            app:layout_constraintStart_toStartOf="@+id/imageView43"
+            app:layout_constraintTop_toTopOf="@+id/imageView43"
+            app:layout_constraintVertical_bias="0.797" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16 bpm"
+            android:textColor="#0C2F96"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView44"
+            app:layout_constraintEnd_toEndOf="@+id/imageView44"
+            app:layout_constraintHorizontal_bias="0.727"
+            app:layout_constraintStart_toStartOf="@+id/imageView44"
+            app:layout_constraintTop_toTopOf="@+id/imageView44"
+            app:layout_constraintVertical_bias="0.841" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="36.8 c"
+            android:textColor="#0C2F96"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView45"
+            app:layout_constraintEnd_toEndOf="@+id/imageView45"
+            app:layout_constraintHorizontal_bias="0.734"
+            app:layout_constraintStart_toStartOf="@+id/imageView45"
+            app:layout_constraintTop_toTopOf="@+id/imageView45"
+            app:layout_constraintVertical_bias="0.837" />
+
+        <ImageView
+            android:id="@+id/imageView55"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.472"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView54"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ureport" />
+
+        <TextView
+            android:id="@+id/bloodRepo"
+            android:layout_width="325dp"
+            android:layout_height="241dp"
+            android:lineSpacingExtra="8sp"
+            android:text="TextView"
+            android:textAlignment="textStart"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView54"
+            app:layout_constraintEnd_toEndOf="@+id/imageView54"
+            app:layout_constraintHorizontal_bias="0.548"
+            app:layout_constraintStart_toStartOf="@+id/imageView54"
+            app:layout_constraintTop_toTopOf="@+id/imageView54"
+            app:layout_constraintVertical_bias="0.87" />
+
+        <TextView
+            android:id="@+id/bloodvalues"
+            android:layout_width="201dp"
+            android:layout_height="241dp"
+            android:lineSpacingExtra="8sp"
+            android:text="TextView"
+            android:textAlignment="textEnd"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/bloodRepo"
+            app:layout_constraintEnd_toEndOf="@+id/bloodRepo"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/bloodRepo"
+            app:layout_constraintTop_toTopOf="@+id/imageView54"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/urinerepo"
+            android:layout_width="221dp"
+            android:layout_height="290dp"
+            android:lineSpacingExtra="8sp"
+            android:text="TextView"
+            android:textAlignment="textStart"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView55"
+            app:layout_constraintEnd_toEndOf="@+id/imageView55"
+            app:layout_constraintHorizontal_bias="0.17"
+            app:layout_constraintStart_toStartOf="@+id/imageView55"
+            app:layout_constraintTop_toTopOf="@+id/imageView55"
+            app:layout_constraintVertical_bias="0.73" />
+
+        <TextView
+            android:id="@+id/urinevalues"
+            android:layout_width="221dp"
+            android:layout_height="290dp"
+            android:lineSpacingExtra="8sp"
+            android:text="TextView"
+            android:textAlignment="textEnd"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView55"
+            app:layout_constraintEnd_toEndOf="@+id/imageView55"
+            app:layout_constraintHorizontal_bias="0.896"
+            app:layout_constraintStart_toStartOf="@+id/imageView55"
+            app:layout_constraintTop_toTopOf="@+id/imageView55"
+            app:layout_constraintVertical_bias="0.73" />
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--/--/----"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/imageView42"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.079"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView26"
+            app:layout_constraintVertical_bias="0.809" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
