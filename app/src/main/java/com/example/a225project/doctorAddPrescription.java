@@ -23,68 +23,45 @@ import java.time.LocalDateTime;
 public class doctorAddPrescription extends AppCompatActivity {
 
     ImageView submitButton;
-    ImageButton goBackBtn;
+    ImageView goBackBtn;
 
     String patientId = "get from Intent";
-    String docId;
+    String docId = "g";
     EditText Uploadillness,Uploadnote;
 
-    @SuppressLint("WrongViewCast")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_add_prescription);
-        Intent i1 = getIntent();
-        docId=i1.getStringExtra("docId");
 
         goBackBtn = findViewById(R.id.imageView156);
         goBackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i2 = new Intent(getApplicationContext(), Doctor_HomePage.class);
-                startActivity(i2);
+                Intent i4 = new Intent(getApplicationContext(),Doctor_HomePage.class);
+                i4.putExtra("username","d_james");
+                startActivity(i4);
+
             }
         });
 
-        Uploadillness =findViewById(R.id.editTextText2);
-        Uploadnote = findViewById(R.id.editTextTextMultiLine);
-        submitButton =findViewById(R.id.imageView170);
 
-
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference databaseReference = database.getReference("prescriptions");
+        submitButton =findViewById(R.id.imageView36);
 
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                LocalDateTime date =null;
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                     date= LocalDateTime.now();
-                }
-                String illness = Uploadillness.getText().toString().trim();
-                String note = Uploadnote.getText().toString().trim();
-
-
-                IllnessDetails details =new IllnessDetails(patientId,docId,illness,date,note);
-
-                String prescriptionKey = databaseReference.push().getKey();
-
-                databaseReference.child(prescriptionKey).setValue(details).addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
-                        Intent intent=new Intent(doctorAddPrescription.this, AddMedicine.class );
-                        intent.putExtra("prescriptionId",prescriptionKey);
-                        startActivity(intent);
-                        Toast.makeText(getApplicationContext(), "Data added successfully", Toast.LENGTH_SHORT).show();
-
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-
-                    }
-                });
-
+                Intent i3 = new Intent(getApplicationContext(),AddMedicine.class);
+                i3.putExtra("NAME",getIntent().getStringExtra("NAME"));
+                i3.putExtra("WardNO",getIntent().getStringExtra("WardNO"));
+                i3.putExtra("BedNO",getIntent().getStringExtra("BedNO"));
+                i3.putExtra("TIME",getIntent().getStringExtra("TIME"));
+                i3.putExtra("ID",getIntent().getStringExtra("ID"));
+                i3.putExtra("ILLNESS",getIntent().getStringExtra("ILLNESS"));
+                i3.putExtra("AGE",getIntent().getStringExtra("AGE"));
+                i3.putExtra("DP",getIntent().getIntExtra("DP",0));
+                startActivity(i3);
             }
         });
 

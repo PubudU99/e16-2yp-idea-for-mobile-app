@@ -39,6 +39,24 @@ public class DoctorView_PatientDetails extends AppCompatActivity {
         ImageButton toReports= findViewById(R.id.imageButton9);
         ImageButton toPrescriptions=  findViewById(R.id.imageButton10);
         ImageButton toMakeAppointments= findViewById(R.id.imageButton11);
+        ImageButton addPrescriptions = findViewById(R.id.imageButton15);
+
+        addPrescriptions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i3 = new Intent(getApplicationContext(),doctorAddPrescription.class);
+
+                i3.putExtra("NAME",getIntent().getStringExtra("NAME"));
+                i3.putExtra("WardNO",getIntent().getStringExtra("WardNO"));
+                i3.putExtra("BedNO",getIntent().getStringExtra("BedNO"));
+                i3.putExtra("TIME",getIntent().getStringExtra("TIME"));
+                i3.putExtra("ID",getIntent().getStringExtra("ID"));
+                i3.putExtra("ILLNESS",getIntent().getStringExtra("ILLNESS"));
+                i3.putExtra("AGE",getIntent().getStringExtra("AGE"));
+                i3.putExtra("DP",getIntent().getIntExtra("DP",0));
+                startActivity(i3);
+            }
+        });
 
         toReports.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,7 +91,10 @@ public class DoctorView_PatientDetails extends AppCompatActivity {
         boBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Doctor_HomePage.class));
+
+                Intent i4 =  new Intent(getApplicationContext(), Doctor_HomePage.class);
+                i4.putExtra("username","d_james");
+                startActivity(i4);
             }
         });
 

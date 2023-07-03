@@ -114,8 +114,17 @@ public class AddMedicine extends AppCompatActivity {
                     @Override
                     public void onSuccess(Void unused) {
                         Toast.makeText(getApplicationContext(), "Data added successfully", Toast.LENGTH_SHORT).show();
-                        Intent i = new Intent(AddMedicine.this, doctorAddPrescription.class);
-                        startActivity(i);
+                        Intent i3 = new Intent(AddMedicine.this, DoctorView_PatientDetails.class);
+                        i3.putExtra("NAME",getIntent().getStringExtra("NAME"));
+                        i3.putExtra("WardNO",getIntent().getStringExtra("WardNO"));
+                        i3.putExtra("BedNO",getIntent().getStringExtra("BedNO"));
+                        i3.putExtra("TIME",getIntent().getStringExtra("TIME"));
+                        i3.putExtra("ID",getIntent().getStringExtra("ID"));
+                        i3.putExtra("ILLNESS",getIntent().getStringExtra("ILLNESS"));
+                        i3.putExtra("AGE",getIntent().getStringExtra("AGE"));
+                        i3.putExtra("DP",getIntent().getIntExtra("DP",0));
+                        startActivity(i3);
+
 
                     }
                 }).addOnFailureListener(new OnFailureListener() {
