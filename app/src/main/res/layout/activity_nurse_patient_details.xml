@@ -35,7 +35,7 @@
 
     <ImageView
         android:id="@+id/imageView170"
-        android:layout_width="759dp"
+        android:layout_width="wrap_content"
         android:layout_height="793dp"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -166,16 +166,16 @@
 
     <TextView
         android:id="@+id/textView171"
-        android:layout_width="286dp"
+        android:layout_width="wrap_content"
         android:layout_height="29dp"
-        android:layout_marginTop="12dp"
         android:text="View Prescription History"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView186" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView186"
+        app:layout_constraintEnd_toEndOf="@+id/imageView186"
+        app:layout_constraintStart_toStartOf="@+id/imageView186"
+        app:layout_constraintTop_toTopOf="@+id/imageView186"
+        app:layout_constraintVertical_bias="0.26" />
 
     <ImageView
         android:id="@+id/imageView188"
@@ -190,30 +190,29 @@
 
     <TextView
         android:id="@+id/textView173"
-        android:layout_width="286dp"
-        android:layout_height="29dp"
-        android:layout_marginTop="8dp"
-        android:text="Add A New Report  "
+        android:layout_width="177dp"
+        android:layout_height="32dp"
+        android:text="Add A New Report"
         android:textColor="#FBFBFB"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.912"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView188"
+        app:layout_constraintEnd_toEndOf="@+id/imageView188"
+        app:layout_constraintStart_toStartOf="@+id/imageView188"
         app:layout_constraintTop_toTopOf="@+id/imageView188" />
 
     <TextView
         android:id="@+id/textView170"
-        android:layout_width="286dp"
+        android:layout_width="wrap_content"
         android:layout_height="29dp"
-        android:layout_marginTop="12dp"
         android:text="View Report History"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.768"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView185" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView185"
+        app:layout_constraintEnd_toEndOf="@+id/imageView185"
+        app:layout_constraintStart_toStartOf="@+id/imageView185"
+        app:layout_constraintTop_toTopOf="@+id/imageView185"
+        app:layout_constraintVertical_bias="0.32" />
 
     <TextView
         android:id="@+id/textView155"

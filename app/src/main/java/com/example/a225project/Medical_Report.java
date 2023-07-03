@@ -243,10 +243,7 @@ public class Medical_Report extends AppCompatActivity {
         goBackbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i1 = new Intent(getApplicationContext(), MainActivity3.class);
-                i1.putExtra("username",username);
-                startActivity(i1);
-
+                onBackPressed();
             }
         });
 //        TxtDate.setOnClickListener(new View.OnClickListener() {

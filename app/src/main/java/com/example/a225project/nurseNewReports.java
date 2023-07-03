@@ -52,8 +52,7 @@ public class nurseNewReports extends AppCompatActivity {
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i1= new Intent(getApplicationContext(),nursrHome.class);
-                startActivity(i1);
+                onBackPressed();
             }
         });
 

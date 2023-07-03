@@ -73,18 +73,10 @@ public class Patient_prescriptionView extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                switch(VarFlag){
-                    case "P":
-                        Intent i1= new Intent(getApplicationContext(), MainActivity3.class);
-                        startActivity(i1);
-                        break;
-                    case "N":
-                        Intent i2= new Intent(getApplicationContext(), nursePatientDetails.class);
-                        startActivity(i2);
-                        break;
+                onBackPressed();
                 }
 
-            }
+
         });
 
     }

@@ -31,7 +31,7 @@ public class nursePatientDetails extends AppCompatActivity {
 
     static String adminID;
     TextView name, adminIDt, phoneNumber, wardID, bedNo;
-    ImageView imageViewpatient;
+    ImageView imageViewpatient,goBack;
 
     private void getIntend(){
         Intent intent = getIntent();
@@ -51,6 +51,13 @@ public class nursePatientDetails extends AppCompatActivity {
         setContentView(R.layout.activity_nurse_patient_details);
 
         imageViewpatient = findViewById(R.id.imageViewPatient);
+        goBack=findViewById(R.id.imageView210);
+        goBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         getIntend();
 

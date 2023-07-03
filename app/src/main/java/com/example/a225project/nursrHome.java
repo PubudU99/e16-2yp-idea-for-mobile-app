@@ -44,7 +44,16 @@ public class nursrHome extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_nursr_home);
+
+        goBackBtn=findViewById(R.id.imageButton13);
+        goBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         Intent intent=getIntent();
         String Username =intent.getStringExtra("username");
