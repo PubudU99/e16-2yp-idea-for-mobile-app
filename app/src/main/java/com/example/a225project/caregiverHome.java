@@ -51,7 +51,7 @@ static String patientIDValue;
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_caregiver_home);
-
+        //scheduleNotifications();
         goBack=findViewById(R.id.imageView151);
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -245,13 +245,14 @@ static String patientIDValue;
 
         // Create an intent to launch the activity or perform an action when the notification is clicked
         Intent intent = new Intent(this, Patient_prescriptionView.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        intent.putExtra("Flag", "N");
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_IMMUTABLE);
 
         // Create a notification
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "channel_id")
                 .setSmallIcon(R.drawable.notification_icon)
                 .setContentTitle(notificationTitle)
-                .setContentText("You have to give Patient's next Doses Now!!!")
+                .setContentText("You have to give the patient's next doses now!")
                 .setContentIntent(pendingIntent)
                 .setAutoCancel(true);
 
@@ -266,10 +267,9 @@ static String patientIDValue;
 
         // Schedule the notification using AlarmManager
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-        PendingIntent notificationPendingIntent = PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent notificationPendingIntent = PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, notificationPendingIntent);
     }
-
 }
 
 
