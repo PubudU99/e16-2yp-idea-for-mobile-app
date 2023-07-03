@@ -5,16 +5,21 @@
 
 <h2>Team Members</h2>
 <h4>Group 04</h4>
-<li>E/19/034 BAMBARAGAMA H.M.K.D. MR</li>
-<li>E/19/226 MADHUSHANKA K.G.M. MR</li>
-<li>E/19/426 WEERASINGHE P.M. MR</li>
-<li>E/19/310 RANAGE R.D.P.R. MR</li>
+<ul>
+  <li><a href="https://github.com/Bambara123"><b><i>Bambara123</i></b></a> E/19/034 BAMBARAGAMA H.M.K.D. MR</li>
+  <li><a href="https://github.com/Madhushanka00"><b><i>Madhushanka00</i></b></a> E/19/226 MADHUSHANKA K.G.M. MR</li>
+  <li><b><i>E/19/426 WEERASINGHE P.M. MR</i></b></li>
+  <li><a href="https://github.com/PasinduRR"><b><i>PasinduRR</i></b></a> E/19/310 RANAGE R.D.P.R. MR</li>
+</ul>
 
 <h4>Group 10</h4>
-<li>E/19/432 WICKRAMAARACHCHI U.I. MR</li>
-<li>E/19/167 JAYAWARDENA H.D.N.S. MISS</li>
-<li>E/19/028 ATUGEDARA A.N.I. MISS</li>
-<li>E/19/006 ABREW S.T.D. MISS</li>
+<ul>
+  <li><b><i>E/19/432 WICKRAMAARACHCHI U.I. MR</i></b></li>
+  <li><b><i>E/19/167 JAYAWARDENA H.D.N.S. MISS</i></b></li>
+  <li><a href="https://github.com/NilakshiInduwara"><b><i>NilakshiInduwara</i></b></a> E/19/028 ATUGEDARA A.N.I. MISS</li>
+  <li><a href="https://github.com/DhinushikaAbrew"><b><i>DhinushikaAbrew</i></b></a>  E/19/006 ABREW S.T.D. MISS</li>
+</ul>
+
 
 
 <head>
@@ -67,7 +72,6 @@
   <p></p>
 </body>
 </html>
-
 
 
 
