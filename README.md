@@ -22,7 +22,7 @@ InCarePro is set to transform the way hospitals manage inpatient care, fostering
 
 <h4>Group 10</h4>
 <ul>
-  <li><a href="https://github.com/uthsaraiw"><b><i>Uthsara</i></b></a>E/19/432 WICKRAMAARACHCHI U.I. MR</li>
+  <li><a href="https://github.com/uthsaraiw"><b><i>Uthsara</i></b></a> E/19/432 WICKRAMAARACHCHI U.I. MR</li>
   <li><a href="https://github.com/sath8"><b><i>Sathya</i></b></a> E/19/167 JAYAWARDENA H.D.N.S. MISS</li>
   <li><a href="https://github.com/NilakshiInduwara"><b><i>Nilakshi</i></b></a> E/19/028 ATUGEDARA A.N.I. MISS</li>
   <li><a href="https://github.com/DhinushikaAbrew"><b><i>Dhinushika</i></b></a>  E/19/006 ABREW S.T.D. MISS</li>
