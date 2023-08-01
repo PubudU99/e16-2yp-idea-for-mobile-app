@@ -74,7 +74,7 @@ InCarePro is set to transform the way hospitals manage inpatient care, fostering
   <p>After discussing with our team members we come up with a plan to design a Android app for all the members in hospital as a solution for the above all problems.</p>
 
   <h2 id="solution-architecture">3. Solution Architecture</h2>
-  <p><img src="docs/images/dataflow.png" alt="Solution_Archi"></p>
+  <p><img src="images/dataflow.png" alt="Solution_Archi"></p>
 
   <h2 id="software-designs">4. Software designs</h2>
   <p></p>
