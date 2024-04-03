@@ -1,5 +1,37 @@
-# e19-CO225-Mobile-app-for-Inpatient-Management-System
-<h1><b>InCarePro</b> - Solution for the Inpatient Hospital Management System</h1>
+
+<h1><b>InCarePro</b></h1>
+<div align = "center">
+  <image src="/image/good.png" alt ="">
+
+</div>      
+
+<h3 align="center">Inpatient Hospital Management System | Android Studio</h3> 
+
+<div align = "center">
+    <a href="https://github.com/bambara123/Food-Delivery-Website-Project-C0226/issues">
+        <img src="https://img.shields.io/github/issues/bambara123/Food-Delivery-Website-Project-C0226" alt="GitHub issues">
+    </a>
+    <a href="https://github.com/bambara123/Food-Delivery-Website-Project-C0226/pulls">
+        <img src="https://img.shields.io/github/issues-pr/bambara123/Food-Delivery-Website-Project-C0226" alt="GitHub pull requests">
+    </a>
+    <a href="https://github.com/bambara123/Food-Delivery-Website-Project-C0226/releases">
+        <img src="https://img.shields.io/github/downloads/bambara123/Food-Delivery-Website-Project-C0226/total" alt="GitHub downloads">
+    </a>
+    <a href="https://github.com/bambara123/Food-Delivery-Website-Project-C0226/releases">
+        <img src="https://img.shields.io/github/v/release/bambara123/Food-Delivery-Website-Project-C0226" alt="GitHub release">
+    </a>
+</div>
+
+<br></br>
+
+
+ <ul>
+    <li><a href="#problem-overview">1. Problem Overview</a></li>
+    <li><a href="#our-solution">2. Our Solution</a></li>
+    <li><a href="#solution-architecture">3. Solution Architecture</a></li>
+    <li><a href="#software-designs">4. Software Designs</a></li>
+  </ul>
+
 InCarePro is an innovative and comprehensive mobile application designed to revolutionize the Inpatient Hospital Management System. With a user-friendly interface and advanced features, this app aims to streamline and enhance the overall patient care experience.
 
 InCarePro provides a centralized platform for managing all aspects of inpatient care, from admission to discharge. It facilitates efficient patient registration, electronic health records (EHR) management, and real-time monitoring of vital signs and medical updates. The app also enables seamless communication among healthcare providers, allowing for swift coordination and collaboration.
@@ -36,12 +68,7 @@ InCarePro is set to transform the way hospitals manage inpatient care, fostering
 <body>
   
   <h1>Table of Contents</h1>
-  <ul>
-    <li><a href="#problem-overview">1. Problem Overview</a></li>
-    <li><a href="#our-solution">2. Our Solution</a></li>
-    <li><a href="#solution-architecture">3. Solution Architecture</a></li>
-    <li><a href="#software-designs">4. Software Designs</a></li>
-  </ul>
+ 
 
   <h2 id="problem-overview">1. Problem Overview</h2>
   <p>When we Ask from patients,Doctors,Staff,non staff members of the hospital, They always says that the Hospital need a Patient management system for a hospital,When we attend to a hospital we also get the need of a Patient management system because the current system has many problems regarding patient management.After a quick research of a hospital management, we came up to some problems of the Patient management system.
