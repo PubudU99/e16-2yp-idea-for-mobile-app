@@ -1,12 +1,10 @@
-
+z  
 <div align="center">
   <img src="docs/images/logo.png" alt="" style="height: 200px; width: 200px;">
   <h1><b>InCarePro</b></h1>
 </div>
  
-
-
-<h3 align="center">Inpatient Hospital Management System | Android Studio</h3> 
+<h4 align="center">Inpatient Hospital Management System | Android Studio</h4> 
 
 <div align = "center">
     <a href="https://github.com/bambara123/Food-Delivery-Website-Project-C0226/issues">
@@ -25,13 +23,16 @@
 
 <br></br>
 
+## Table of Content
 
- <ul>
-    <li><a href="#problem-overview">1. Problem Overview</a></li>
-    <li><a href="#our-solution">2. Our Solution</a></li>
-    <li><a href="#solution-architecture">3. Solution Architecture</a></li>
-    <li><a href="#software-designs">4. Software Designs</a></li>
-  </ul>
+
+<ol style="list-style-type: decimal;">
+  <li><a href="#problem-overview">Problem Overview</a></li>
+  <li><a href="#our-solution">Our Solution</a></li>
+  <li><a href="#solution-architecture">Solution Architecture</a></li>
+  <li><a href="#software-designs">Software Designs</a></li>
+</ol>
+
 
 InCarePro is an innovative and comprehensive mobile application designed to revolutionize the Inpatient Hospital Management System. With a user-friendly interface and advanced features, this app aims to streamline and enhance the overall patient care experience.
 
