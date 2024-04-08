@@ -30,7 +30,7 @@ z
   <li><a href="#problem-overview">Problem Overview</a></li>
   <li><a href="#our-solution">Our Solution</a></li>
   <li><a href="#solution-architecture">Solution Architecture</a></li>
-  <li><a href="#software-designs">Software Designs</a></li>
+  <li><a href="#getting-started">Getting Started</a></li>
 </ol>
 
 
@@ -77,7 +77,7 @@ InCarePro is set to transform the way hospitals manage inpatient care, fostering
   <h2 id="our-solution">Our Solution</h2>
   <p>After discussing with our team members we come up with a plan to design a Android app for all the members in hospital as a solution for the above all problems.</p>
 
-  <h2 id="solution-architecture">3. Solution Architecture</h2>
+  <h2 id="solution-architecture">Solution Architecture</h2>
   <p><img src="docs/images/dataflow.png" alt="Solution_Archi"></p>
 
 ## Getting Started
@@ -86,8 +86,11 @@ Anyone can get started with this project easily.
 
 1. Install android studio to your PC.
 2. Clone the project repository.
-`git clone https://github.com/Bambara123/e19-co225-Mobile-app-for-Inpatient-Management-System.git`
-3. Start improving or use.
+   
+``` 
+git clone https://github.com/Bambara123/e19-co225-Mobile-app-for-Inpatient-Management-System.git
+```
+3. Start improving or using.
 
 <h2>Team Members</h2>
 <h4>Group 04</h4>
