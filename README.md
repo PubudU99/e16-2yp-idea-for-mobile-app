@@ -4,7 +4,7 @@ z
   <h1><b>InCarePro</b></h1>
 </div>
  
-<h4 align="center">Inpatient Hospital Management System | Android Studio</h4> 
+<h4 align="center">Inpatient Hospital Management System 🏥 | Android Studio</h4> 
 
 <div align = "center">
     <a href="https://github.com/bambara123/Food-Delivery-Website-Project-C0226/issues">
