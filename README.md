@@ -1,12 +1,11 @@
-z  
 <div align="center">
   <img src="docs/images/logo.png" alt="" style="height: 200px; width: 200px;">
   <h1><b>InCarePro</b></h1>
 </div>
- 
-<h4 align="center">Inpatient Hospital Management System 🏥 | Android Studio</h4> 
 
-<div align = "center">
+<h4 align="center">Inpatient Hospital Management System 🏥 | Android Studio</h4>
+
+<div align="center">
     <a href="https://github.com/bambara123/Food-Delivery-Website-Project-C0226/issues">
         <img src="https://img.shields.io/github/issues/bambara123/Food-Delivery-Website-Project-C0226" alt="GitHub issues">
     </a>
@@ -23,8 +22,7 @@ z
 
 <br></br>
 
-## Table of Content
-
+## 📜 Table of Content
 
 <ol style="list-style-type: decimal;">
   <li><a href="#problem-overview">Problem Overview</a></li>
@@ -34,7 +32,7 @@ z
 </ol>
 
 
-## Introduction
+## 🚀 Introduction
 
 InCarePro is an innovative and comprehensive mobile application designed to revolutionize the Inpatient Hospital Management System. With a user-friendly interface and advanced features, this app aims to streamline and enhance the overall patient care experience.
 
@@ -47,7 +45,7 @@ InCarePro is set to transform the way hospitals manage inpatient care, fostering
 
 <body>
   
-  <h2 id="problem-overview">Problem Overview</h2>
+  <h2 id="problem-overview">📌 Problem Overview</h2>
   <p>When we Ask from patients,Doctors,Staff,non staff members of the hospital, They always says that the Hospital need a Patient management system for a hospital,When we attend to a hospital we also get the need of a Patient management system because the current system has many problems regarding patient management.After a quick research of a hospital management, we came up to some problems of the Patient management system.
   <h3>Main Problems Found After Research </h3>
   <ol>
@@ -74,22 +72,23 @@ InCarePro is set to transform the way hospitals manage inpatient care, fostering
   </ol>
   </p>
 
-  <h2 id="our-solution">Our Solution</h2>
+  <h2 id="our-solution">💡 Our Solution</h2>
   <p>After discussing with our team members we come up with a plan to design a Android app for all the members in hospital as a solution for the above all problems.</p>
 
-  <h2 id="solution-architecture">Solution Architecture</h2>
+  <h2 id="solution-architecture">🏗️ Solution Architecture</h2>
   <p><img src="docs/images/dataflow.png" alt="Solution_Archi"></p>
 
-## Getting Started
+ <h2 id="getting-started">🛠 Getting Started</h2>
 
 Anyone can get started with this project easily.
 
 1. Install android studio to your PC.
 2. Clone the project repository.
    
-``` 
+```
 git clone https://github.com/Bambara123/e19-co225-Mobile-app-for-Inpatient-Management-System.git
 ```
+
 3. Start improving or using.
 
 <h2>Team Members</h2>
@@ -106,11 +105,5 @@ git clone https://github.com/Bambara123/e19-co225-Mobile-app-for-Inpatient-Manag
   <li><a href="https://github.com/uthsaraiw"><b><i>Uthsara</i></b></a> E/19/432 WICKRAMAARACHCHI U.I. MR</li>
   <li><a href="https://github.com/sath8"><b><i>Sathya</i></b></a> E/19/167 JAYAWARDENA H.D.N.S. MISS</li>
   <li><a href="https://github.com/NilakshiInduwara"><b><i>Nilakshi</i></b></a> E/19/028 ATUGEDARA A.N.I. MISS</li>
-  <li><a href="https://github.com/DhinushikaAbrew"><b><i>Dhinushika</i></b></a>  E/19/006 ABREW S.T.D. MISS</li>
+  <li><a href="https://github.com/DhinushikaAbrew"><b><i>Dhinushika</i></b></a>  E/19
 </ul>
-
-</body>
-</html>
-
-
-
