@@ -1,9 +1,10 @@
 
-<h1><b>InCarePro</b></h1>
-<div align = "center">
-  <image src="/image/good.png" alt ="">
+<div align="center">
+  <img src="docs/images/logo.png" alt="" style="height: 200px; width: 200px;">
+  <h1><b>InCarePro</b></h1>
+</div>
+ 
 
-</div>      
 
 <h3 align="center">Inpatient Hospital Management System | Android Studio</h3> 
 
