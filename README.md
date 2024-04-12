@@ -89,7 +89,7 @@ Anyone can get started with this project easily.
 git clone https://github.com/Bambara123/e19-co225-Mobile-app-for-Inpatient-Management-System.git
 ```
 
-3. Start improving or using.
+3. Start adding any feature using android studio.
 
 <h2>Team Members</h2>
 <h4>Group 04</h4>
