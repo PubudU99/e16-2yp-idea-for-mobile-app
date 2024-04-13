@@ -78,6 +78,11 @@ InCarePro is set to transform the way hospitals manage inpatient care, fostering
   <h2 id="solution-architecture">🏗️ Solution Architecture</h2>
   <p><img src="docs/images/dataflow.png" alt="Solution_Archi"></p>
 
+
+ <h2 id="getting-started">📱 Use the App</h2>
+
+The first release of the app is available under the releases, you can download and check.
+
  <h2 id="getting-started">🛠 Getting Started</h2>
 
 Anyone can get started with this project easily.
