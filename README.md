@@ -78,6 +78,11 @@ InCarePro is set to transform the way hospitals manage inpatient care, fostering
   <h2 id="solution-architecture">🏗️ Solution Architecture</h2>
   <p><img src="docs/images/dataflow.png" alt="Solution_Archi"></p>
 
+
+ <h2 id="getting-started">📱 Use the App</h2>
+
+The first release of the app is available under the releases, you can download and check.
+
  <h2 id="getting-started">🛠 Getting Started</h2>
 
 Anyone can get started with this project easily.
@@ -89,7 +94,7 @@ Anyone can get started with this project easily.
 git clone https://github.com/Bambara123/e19-co225-Mobile-app-for-Inpatient-Management-System.git
 ```
 
-3. Start improving or using.
+3. Start adding any feature using android studio.
 
 <h2>Team Members</h2>
 <h4>Group 04</h4>
