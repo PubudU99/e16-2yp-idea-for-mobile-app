@@ -41,6 +41,7 @@ InCarePro provides a centralized platform for managing all aspects of inpatient 
 Through InCarePro, patients and their families gain access to personalized information, such as treatment plans, medication reminders, and test results. Additionally, the app incorporates advanced analytics to facilitate data-driven decision-making, leading to improved operational efficiency and patient outcomes.
 
 InCarePro is set to transform the way hospitals manage inpatient care, fostering better communication, reducing administrative burdens, and ultimately enhancing the quality of patient care.
+You can get a more clear idea using this [YouTube video](https://youtu.be/ZZDiz_u0Abc).
 
 
 <body>
